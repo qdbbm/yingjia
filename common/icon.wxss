@@ -1,0 +1,84 @@
+.icon-info {
+  width: 23rpx;
+  height: 23rpx;
+}
+
+.icon-edit {
+  width: 22rpx;
+  height: 22rpx;
+}
+
+.icon-eye {
+  width: 18rpx;
+  height: 12rpx;
+}
+
+.icon-eye-active {
+  width: 26rpx;
+  height: 17rpx;
+}
+
+.icon-fav {
+  width: 23rpx;
+  height: 21rpx;
+}
+
+.icon-house {
+  width: 25rpx;
+  height: 22rpx;
+}
+
+.icon-mobile {
+  width: 20rpx;
+  height: 32rpx;
+}
+
+.icon-msg {
+  width: 43rpx;
+  height: 37rpx;
+}
+
+.icon-msg2 {
+  width: 35rpx;
+  height: 31rpx;
+}
+
+.icon-new {
+  width: 26rpx;
+  height: 26rpx;
+}
+
+.icon-safe {
+  width: 27rpx;
+  height: 31rpx;
+}
+
+.icon-search {
+  width: 34rpx;
+  height: 35rpx;
+}
+
+.icon-share {
+  width: 39rpx;
+  height: 32rpx;
+}
+
+.icon-shop {
+  width: 26rpx;
+  height: 24rpx;
+}
+
+.icon-sort {
+  width: 20rpx;
+  height: 25rpx;
+}
+
+.icon-wx {
+  width: 47rpx;
+  height: 37rpx;
+}
+
+.icon-yq {
+  width: 27rpx;
+  height: 27rpx;
+}

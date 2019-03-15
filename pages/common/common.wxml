@@ -1,0 +1,34 @@
+<!--pages/common/common.wxml-->
+<image class="icon-info" src="../../images/icon-info.png"></image>
+
+<image class="icon-edit" src="../../images/icon-edit.png"></image>
+
+<image class="icon-eye" src="../../images/icon-eye.png"></image>
+
+<image class="icon-eye-active" src="../../images/icon-eye-active.png"></image>
+
+<image class="icon-fav" src="../../images/icon-fav.png"></image>
+
+<image class="icon-house" src="../../images/icon-house.png"></image>
+
+<image class="icon-mobile" src="../../images/icon-mobile.png"></image>
+
+<image class="icon-msg" src="../../images/icon-msg.png"></image>
+
+<image class="icon-msg2" src="../../images/icon-msg2.png"></image>
+
+<image class="icon-new" src="../../images/icon-new.png"></image>
+
+<image class="icon-safe" src="../../images/icon-safe.png"></image>
+
+<image class="icon-search" src="../../images/icon-search.png"></image>
+
+<image class="icon-share" src="../../images/icon-share.png"></image>
+
+<image class="icon-shop" src="../../images/icon-shop.png"></image>
+
+<image class="icon-sort" src="../../images/icon-sort.png"></image>
+
+<image class="icon-wx" src="../../images/icon-wx.png"></image>
+
+<image class="icon-yq" src="../../images/icon-yq.png"></image>
