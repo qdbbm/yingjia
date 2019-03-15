@@ -1,4 +1,1 @@
 /* pages/common/common.wxss */
-page {
-  background: #000;
-}

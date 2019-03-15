@@ -11,4 +11,180 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+page {
+  font-size: 28rpx;
+}
+
+/* banner */
+.banner,
+.banner-item {
+  width: 750rpx;
+  height: 350rpx;
+}
+
+/* 搜索 */
+.mod-search {
+  display: flex;
+  align-items: center;
+}
+
+.mod-search__field {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 82rpx;
+  line-height: 82rpx;
+  padding: 0 34rpx;
+  overflow: hidden;
+  border-radius: 41rpx;
+  box-shadow: 0 2rpx 13rpx rgba(0, 0, 0, .13);
+  background-color: #fff;
+}
+
+.mod-search__field-icon {
+  margin-right: 20rpx;
+}
+
+.mod-search__field-input {
+  flex: 1;
+}
+
+.mod-search__btn {
+  position: relative;
+  padding: 0 30rpx 0 20rpx;
+  color: #7b7b7b;
+}
+
+.mod-search__btn .mod-remind-num {
+  top: -20rpx;
+  right: 14rpx;
+}
+
+/* 小红点 */
+.mod-remind-num {
+  position: absolute;
+  display: inline-block;
+  min-width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  padding: 0 5rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  background-color: #c5172c;
+  border-radius: 20rpx;
+  box-sizing: border-box;
+}
+
+/* 房产列表 */
+.mod-house-list {
+  padding: 25rpx;
+}
+
+.mod-house-item {
+  background: #fff;
+  border: 2rpx solid #e7e7e7;
+  border-radius: 15rpx;
+  overflow: hidden;
+}
+
+.mod-house-item:not(:first-child) {
+  margin: 20rpx 0 0;
+}
+
+.mod-house-item__hd {
+  position: relative;
+  overflow: hidden;
+}
+
+.mod-house-item__hd,
+.mod-house-item__hd .mhih-img {
+  width: 700rpx;
+  height: 350rpx;
+}
+
+.mod-house-item__hd .mhih-tle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 66rpx;
+  line-height: 66rpx;
+  padding: 0 30rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .75));
+}
+
+.mod-house-item__hd .mhih-tle .icon {
+  margin: 0 10rpx 0 0;
+}
+
+.mod-house-item__bd {
+  position: relative;
+  padding: 35rpx 30rpx;
+}
+
+.mod-house-item__bd .mhib-status,
+.mod-house-item__bd .mhib-labels .mhib-label {
+  display: inline-block;
+  height: 32rpx;
+  line-height: 32rpx;
+  padding: 0 6rpx;
+  margin: 0 13rpx 0 0;
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 6rpx;  
+}
+
+.mod-house-item__bd .mhib-status {
+  background-color: #b4a078;
+}
+
+.mod-house-item__bd .mhib-labels {
+  margin: 20rpx 0 0 ;
+}
+
+.mod-house-item__bd .mhib-labels .mhib-label:nth-of-type(n) {
+  background-color: #f2cace;
+  color: #c30d22;
+}
+
+.mod-house-item__bd .mhib-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx 0 0;
+}
+
+.mod-house-item__bd .mhib-types {
+  margin: 0 0 -15rpx;
+}
+
+.mod-house-item__bd .mhib-types .mhib-type {
+  margin: 0 15rpx 15rpx 0;
+  font-size: 26rpx;
+  color: #757575;
+}
+
+.mod-house-item__bd .mhib-price {
+  min-width: 200rpx;
+  text-align: right;
+}
+
+.mod-house-item__bd .mhib-price__num,
+.mod-house-item__bd .mhib-price__unit {
+  color: #c5172c;
+}
+
+.mod-house-item__bd .mhib-price__num {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.mod-house-item__bd .mhib-price__unit,
+.mod-house-item__bd .mhib-price__txt {
+  font-size: 24rpx;
+}

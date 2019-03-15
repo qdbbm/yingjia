@@ -7,7 +7,22 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    bannerList: [
+      {
+        imageUrl: 'http://images.zhengzw.com/yingjia/banner.jpg'
+      },
+      {
+        imageUrl: 'http://images.zhengzw.com/yingjia/banner.jpg'
+      },
+      {
+        imageUrl: 'http://images.zhengzw.com/yingjia/banner.jpg'
+      }
+    ],
+    indicatorDots: false,
+    autoplay: true,
+    interval: 3000,
+    duration: 1000,
   },
   //事件处理函数
   bindViewTap: function() {

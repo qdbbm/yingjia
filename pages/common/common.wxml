@@ -1,4 +1,6 @@
 <!--pages/common/common.wxml-->
+<view class="pd-20">小图标</view>
+
 <image class="icon-info" src="../../images/icon-info.png"></image>
 
 <image class="icon-edit" src="../../images/icon-edit.png"></image>
@@ -32,3 +34,71 @@
 <image class="icon-wx" src="../../images/icon-wx.png"></image>
 
 <image class="icon-yq" src="../../images/icon-yq.png"></image>
+
+<image class="icon-lou" src="../../images/icon-lou.png"></image>
+
+
+<view class="pd-20">搜索</view>
+
+<view class="mod-search">
+  <view class="mod-search__field">
+    <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
+    <input class="mod-search__field-input" type="text" placeholder="输入你要搜索的内容"></input>
+  </view>
+</view>
+
+<view class="pd-20">搜索+按钮</view>
+
+<view class="mod-search ptb-15 pl-20">
+  <view class="mod-search__field">
+    <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
+    <input class="mod-search__field-input" type="text" placeholder="输入你要搜索的内容"></input>
+  </view>
+  <view class="mod-search__btn">取消</view>
+</view>
+
+<view class="pd-20">搜索+客服</view>
+
+<view class="mod-search ptb-15 pl-20">
+  <view class="mod-search__field">
+    <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
+    <input class="mod-search__field-input" type="text" placeholder="输入你要搜索的内容"></input>
+  </view>
+  <view class="mod-search__btn">
+    <image class="icon-msg" src="../../images/icon-msg.png"></image>
+    <text class="mod-remind-num">2</text>
+  </view>
+</view>
+
+<view class="pd-20">房产列表</view>
+
+<view class="mod-house-list">
+  <navigator class="mod-house-item" url="{{ item.url }}" wx:for="{{ houseList }}" wx:key="index">
+    <view class="mod-house-item__hd">
+      <image class="mhih-img" src="{{ item.imageUrl }}"></image>
+      <view class="mhih-tle">
+        <image class="icon icon-lou" src="../../images/icon-lou.png"></image>
+        {{ item.tle }}
+      </view>
+    </view>
+    <view class="mod-house-item__bd">
+      <view class="toe">
+        <text class="mhib-status">{{ item.status }}</text>
+        <text>{{ item.txt }}</text>
+      </view>
+      <view class="mhib-labels">
+        <text class="mhib-label" wx:for-item="labelItem" wx:for="{{ item.labels}}">{{ labelItem }}</text>
+      </view>
+      <view class="mhib-group">
+        <view class="mhib-types">
+          <text class="mhib-type" wx:for-item="typeItem" wx:for="{{ item.types}}">{{ typeItem }}</text>
+        </view>
+        <view class="mhib-price">
+          <text class="mhib-price__num">{{ item.price }}</text>
+          <text class="mhib-price__unit">元</text>
+          <text class="mhib-price__txt">㎡起</text>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>

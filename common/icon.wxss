@@ -82,3 +82,8 @@
   width: 27rpx;
   height: 27rpx;
 }
+
+.icon-lou {
+  width: 30rpx;
+  height: 26rpx;
+}
