@@ -1,0 +1,38 @@
+/* button */
+.btn-primary {
+  background-color: #c5172c !important;
+  border-color: #c5172c !important;
+}
+
+.btn-brown {
+  color: #fff !important;
+  background-color: #b4a078 !important;
+  border-color: #b4a078 !important;
+}
+
+.van-button--plain.btn-brown {
+  color: #b4a078 !important;
+  background-color: #fff !important;
+}
+
+.van-button--plain.btn-primary {
+  color: #c5172c !important;
+  background-color: #fff !important;
+}
+
+/* tabbar */
+.van-tabbar-item--active {
+  color: #fff !important;
+}
+
+.van-tabbar-item--active:after {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 78rpx;
+  height: 90rpx;
+  background: #c5172c;
+  border-top-left-radius: 45rpx;
+  border-top-right-radius: 45rpx;
+  content: "";
+}

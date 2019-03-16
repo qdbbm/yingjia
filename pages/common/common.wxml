@@ -87,11 +87,11 @@
         <text>{{ item.txt }}</text>
       </view>
       <view class="mhib-labels">
-        <text class="mhib-label" wx:for-item="labelItem" wx:for="{{ item.labels}}">{{ labelItem }}</text>
+        <text class="mhib-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
       </view>
       <view class="mhib-group">
         <view class="mhib-types">
-          <text class="mhib-type" wx:for-item="typeItem" wx:for="{{ item.types}}">{{ typeItem }}</text>
+          <text class="mhib-type" wx:for-item="typeItem" wx:for="{{ item.types}}" wx:key="index">{{ typeItem }}</text>
         </view>
         <view class="mhib-price">
           <text class="mhib-price__num">{{ item.price }}</text>
@@ -102,3 +102,79 @@
     </view>
   </navigator>
 </view>
+
+<view class="pd-20">星星评分</view>
+<view class="mod-star mod-star--50 mod-star--sm"></view>
+
+<view class="pd-20">按钮</view>
+
+<van-button round type="primary" custom-class="btn-primary">主要按钮</van-button>
+
+<van-button round plain type="primary" custom-class="btn-primary">主要按钮</van-button>
+
+<van-button round custom-class="btn-brown" size="small">报备</van-button>
+
+<van-button round plain custom-class="btn-brown">报备</van-button>
+
+<van-tabbar active="{{ active }}" bind:change="onTabbarChange">
+  <van-tabbar-item>
+    <image
+      class="icon-home"
+      slot="icon"
+      src="{{ homeIcon.normal }}"
+      mode="aspectFit"
+    />
+    <image
+      class="icon-home"
+      slot="icon-active"
+      src="{{ homeIcon.active }}"
+      mode="aspectFit"
+    />
+    首页
+  </van-tabbar-item>
+  <van-tabbar-item>
+    <image
+      class="icon-wl"
+      slot="icon"
+      src="{{ wl.normal }}"
+      mode="aspectFit"
+    />
+    <image
+      class="icon-wl"
+      slot="icon-active"
+      src="{{ wl.active }}"
+      mode="aspectFit"
+    />
+    微聊
+  </van-tabbar-item>
+  <van-tabbar-item>
+    <image
+      class="icon-news"
+      slot="icon"
+      src="{{ news.normal }}"
+      mode="aspectFit"
+    />
+    <image
+      class="icon-news"
+      slot="icon-active"
+      src="{{ news.active }}"
+      mode="aspectFit"
+    />
+    资讯
+  </van-tabbar-item>
+  <van-tabbar-item>
+    <image
+      class="icon-user"
+      slot="icon"
+      src="{{ user.normal }}"
+      mode="aspectFit"
+    />
+    <image
+      class="icon-user"
+      slot="icon-active"
+      src="{{ user.active }}"
+      mode="aspectFit"
+    />
+    我的
+  </van-tabbar-item>
+</van-tabbar>

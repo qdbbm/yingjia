@@ -2,7 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/common/common"
+    "pages/common/common",
+    "pages/weiliao/weiliao",
+    "pages/news/news",
+    "pages/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",

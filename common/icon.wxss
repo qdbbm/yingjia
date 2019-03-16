@@ -87,3 +87,23 @@
   width: 30rpx;
   height: 26rpx;
 }
+
+.icon-home {
+  width: 32rpx !important;
+  height: 34rpx !important;
+}
+
+.icon-wl {
+  width: 31rpx !important;
+  height: 31rpx !important;
+}
+
+.icon-news {
+  width: 39rpx !important;
+  height: 33rpx !important;
+}
+
+.icon-user {
+  width: 31rpx !important;
+  height: 33rpx !important;
+}

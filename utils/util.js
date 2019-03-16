@@ -14,6 +14,34 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const onTabbarChange = event => {
+  switch (event.detail) {
+    case 0:
+      wx.navigateTo({
+        url: '/pages/index/index'
+      })
+      break;
+
+    case 1:
+      wx.navigateTo({
+        url: '/pages/weiliao/weiliao'
+      })
+      break;
+
+    case 2:
+      wx.navigateTo({
+        url: '/pages/news/news'
+      })
+      break;
+    case 3:
+      wx.navigateTo({
+        url: '/pages/user/user'
+      })
+      break;
+  }
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  onTabbarChange: onTabbarChange
 }

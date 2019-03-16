@@ -1,4 +1,7 @@
 // pages/common/common.js
+
+var utils = require("../../utils/util.js")
+
 Page({
 
   /**
@@ -26,7 +29,31 @@ Page({
         status: '新盘',
         imageUrl: 'http://images.zhengzw.com/yingjia/list-img.jpg'
       }
-    ]
+    ],
+    active: 0,
+    homeIcon: {
+      normal: '../../images/icon-home.png',
+      active: '../../images/icon-home-active.png'
+    },
+    wl: {
+      normal: '../../images/icon-wl.png',
+      active: '../../images/icon-wl-active.png'
+    },
+    news: {
+      normal: '../../images/icon-news.png',
+      active: '../../images/icon-news-active.png'
+    },
+    user: {
+      normal: '../../images/icon-user.png',
+      active: '../../images/icon-user-active.png'
+    }
+  },
+
+  /**
+   * tabbar跳转
+   */
+  onTabbarChange: function (e) {
+    utils.onTabbarChange(e);
   },
 
   /**
