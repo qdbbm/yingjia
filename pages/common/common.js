@@ -2,12 +2,15 @@
 
 var utils = require("../../utils/util.js")
 
+var interval = null; //倒计时函数
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    // 房产列表
     houseList: [
       {
         tle: '松北世纪花园小区',
@@ -30,23 +33,30 @@ Page({
         imageUrl: 'http://images.zhengzw.com/yingjia/list-img.jpg'
       }
     ],
+
+    // tabbar
     active: 0,
     homeIcon: {
       normal: '../../images/icon-home.png',
       active: '../../images/icon-home-active.png'
     },
-    wl: {
+    wlIcon: {
       normal: '../../images/icon-wl.png',
       active: '../../images/icon-wl-active.png'
     },
-    news: {
+    newsIcon: {
       normal: '../../images/icon-news.png',
       active: '../../images/icon-news-active.png'
     },
-    user: {
+    userIcon: {
       normal: '../../images/icon-user.png',
       active: '../../images/icon-user-active.png'
-    }
+    },
+
+    // 
+    time: '获取验证码',
+    currentTime: 60,
+    disabled: false
   },
 
   /**
@@ -54,6 +64,36 @@ Page({
    */
   onTabbarChange: function (e) {
     utils.onTabbarChange(e);
+  },
+
+  /**
+   * 验证码倒计时
+   */
+  getCode: function (options) {
+    var that = this;
+    var currentTime = that.data.currentTime
+    interval = setInterval(function () {
+      currentTime--;
+      that.setData({
+        time: currentTime + '秒'
+      })
+      if (currentTime <= 0) {
+        clearInterval(interval)
+        that.setData({
+          time: '重新发送',
+          currentTime: 60,
+          disabled: false
+        })
+      }
+    }, 1000)
+  },
+
+  getVerificationCode() {
+    this.getCode();
+    var that = this
+    that.setData({
+      disabled: true
+    })
   },
 
   /**

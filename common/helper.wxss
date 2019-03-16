@@ -816,7 +816,7 @@
 
 /** 文本颜色 **/
 .color-primary {
-  color: #ff7b04 !important;
+  color: #c5172c !important;
 }
 
 .color-warning {

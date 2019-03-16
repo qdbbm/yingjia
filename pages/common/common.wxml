@@ -116,6 +116,14 @@
 
 <van-button round plain custom-class="btn-brown">报备</van-button>
 
+<view class="pd-20">获取验证码</view>
+
+<view class="color-primary tdul {{ disabled ? 'disabled' : '' }}" bindtap="getVerificationCode">{{ time }}</view>
+
+<view class="pd-20">Logo</view>
+
+<image class="mod-logo" src="../../images/logo.png"></image>
+
 <van-tabbar active="{{ active }}" bind:change="onTabbarChange">
   <van-tabbar-item>
     <image

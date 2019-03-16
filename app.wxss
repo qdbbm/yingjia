@@ -256,3 +256,9 @@ page {
 .mod-star--50 {
   background-position: 0 -315rpx;
 }
+
+/* logo */
+.mod-logo {
+  width: 227rpx;
+  height: 82rpx;
+}
