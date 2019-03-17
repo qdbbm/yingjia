@@ -1,2 +1,28 @@
 <!--pages/news/news.wxml-->
-<text>pages/news/news.wxml</text>
+<view class="page">
+  <view class="pd-25">
+    <view class="news-hd">
+      <image class="news-hd__img" src="http://images.zhengzw.com/yingjia/news-img.jpg"></image>
+    </view>
+
+    <view class="news-list br-10 ovh mt-20">
+      <navigator class="news-item" url="{{ item.url }}" wx:for="{{ newsList }}" wx:key="index">
+        <view class="news-item__bd">
+          <view class="news-item__bd-tle">{{ item.tle }}</view>
+          <view class="news-item__bd-txt">{{ item.txt }}</view>
+          <view class="new-item__bd-group">
+            <text>发布时间：{{ item.date }}</text>
+            <view>
+              <image class="icon-eye vam mr-10" src="../../images/icon-eye.png"></image>
+              <text class="vam">{{ item.read }}</text>
+            </view>
+          </view>
+        </view>
+
+        <view class="news-item__img">
+          <image src="{{ item.imgUrl }}"></image>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

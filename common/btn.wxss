@@ -1,0 +1,12 @@
+.btn {
+    display: inline-block;
+    background: none;
+    font-size: 28rpx;
+    padding: 0;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.btn:after {
+    border: 0;
+}

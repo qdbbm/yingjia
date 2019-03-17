@@ -144,13 +144,13 @@
     <image
       class="icon-wl"
       slot="icon"
-      src="{{ wl.normal }}"
+      src="{{ wlIcon.normal }}"
       mode="aspectFit"
     />
     <image
       class="icon-wl"
       slot="icon-active"
-      src="{{ wl.active }}"
+      src="{{ wlIcon.active }}"
       mode="aspectFit"
     />
     微聊
@@ -159,13 +159,13 @@
     <image
       class="icon-news"
       slot="icon"
-      src="{{ news.normal }}"
+      src="{{ newsIcon.normal }}"
       mode="aspectFit"
     />
     <image
       class="icon-news"
       slot="icon-active"
-      src="{{ news.active }}"
+      src="{{ newsIcon.active }}"
       mode="aspectFit"
     />
     资讯
@@ -174,13 +174,13 @@
     <image
       class="icon-user"
       slot="icon"
-      src="{{ user.normal }}"
+      src="{{ userIcon.normal }}"
       mode="aspectFit"
     />
     <image
       class="icon-user"
       slot="icon-active"
-      src="{{ user.active }}"
+      src="{{ userIcon.active }}"
       mode="aspectFit"
     />
     我的

@@ -1,0 +1,48 @@
+/* pages/zhuanjiaDetail/zhuanjiaDetail.wxss */
+.user-hd {
+  position: relative;
+  height: 516rpx;
+}
+
+.user-hd__img {
+  width: 750rpx;
+  height: 516rpx;
+}
+
+.user-hd__total {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, .42);
+}
+
+.user-hd__total-item:not(:first-child) {
+  border-left: 2rpx solid rgba(255, 255, 255, .66);
+}
+
+.go-item {
+  position: relative;
+  padding: 0 0 0 30rpx;
+}
+
+.go-item:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 6rpx;
+  height: 6rpx;
+  background: #c5172c;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+  content: "";
+}
+
+.go-item:not(:first-child) {
+  margin-top: 10rpx;
+}
+
+.go-item__address {
+  display: inline-block;
+  min-width: 210rpx;
+}

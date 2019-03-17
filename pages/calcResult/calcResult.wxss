@@ -1,0 +1,43 @@
+/* pages/calcResult/calcResult.wxss */
+@import '../calc/calc';
+
+.result-hd,
+.result-hd image {
+  width: 750rpx;
+  height: 330rpx
+}
+
+.result-hd {
+  position: relative;
+}
+
+.result-hd__info {
+  position: absolute;
+  top: 30rpx;
+  left: 0;
+  right: 0;
+}
+
+.result-hd__info-num {
+  font-size: 57rpx;
+}
+
+.result-hd__info-num text {
+  font-size: 72rpx;
+  font-weight: 700;
+}
+
+.result-total__item {
+  position: relative;
+}
+
+.result-total__item:not(:first-of-type):after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2rpx;
+  height: 52rpx;
+  background: #e5e5e5;
+  content: "";
+  transform: translate(0, -50%);
+}

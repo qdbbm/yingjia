@@ -1,0 +1,25 @@
+/* pages/search/search.wxss */
+
+.search-block {
+  border-bottom: 2rpx solid #e9e9e9;
+}
+
+.search-block__tle {
+  font-size: 26rpx;
+  color: #bebebe;
+}
+
+.hot-tags {
+  margin: -15rpx 0 0;
+}
+
+.hot-tags__item {
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 15rpx 20rpx 0 0;
+  padding: 0 13rpx;
+  font-size: 26rpx;
+  border-radius: 6rpx;
+  background: #e6e6e6;
+}

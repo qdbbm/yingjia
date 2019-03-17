@@ -1,0 +1,91 @@
+<!--pages/zhuanjiaDetail/zhuanjiaDetail.wxml-->
+<view class="page page--has-footer">
+  <view class="user-hd">
+    <image class="user-hd__img" src="{{ detail.userImg }}"></image>
+    <view class="user-hd__total color-white flex ptb-20 tac">
+      <view class="user-hd__total-item flex1">
+        <view class="fs-15 fw-700">{{ detail.hfl }}</view>
+        <view class="fs-11">微聊回复率</view>
+      </view>
+      <view class="user-hd__total-item flex1">
+        <view class="fs-15 fw-700">{{ detail.years }}</view>
+        <view class="fs-11">服务年限</view>
+      </view>
+      <view class="user-hd__total-item flex1">
+        <view class="fs-15 fw-700">{{ detail.persons }}</view>
+        <view class="fs-11">服务人数</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="plr-20 ptb-40 bg-white">
+    <view class="flex-s-b">
+      <text class="fs-32 fw-700">{{ detail.userName }}</text>
+      <view class="fs-12">
+        <text class="color-gray-light">主营范围：</text>{{ detail.know }}
+      </view>
+    </view>
+    <view class="mt-20 fs-12 color-gray-light">
+      {{ detail.company }} | {{ detail.job }}
+    </view>
+    <view class="go-list bt pt-30 mt-30">
+      <view class="go-item fs-12" wx:for="{{ detail.go }}" wx:key="index">
+        <text class="go-item__address">{{ item.address }}</text>
+        <text class="color-gray-light">{{ item.count }}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="bg-white mt-20">
+    <view class="fs-16 fw-700 pt-30 pl-25 pb-10">他的在售房</view>
+    <view class="mod-house-list">
+      <navigator class="mod-house-item" url="{{ item.url }}" wx:for="{{ houseList }}" wx:key="index">
+        <view class="mod-house-item__hd">
+          <image class="mhih-img" src="{{ item.imageUrl }}"></image>
+          <view class="mhih-tle">
+            <image class="icon icon-lou" src="../../images/icon-lou.png"></image>
+            {{ item.tle }}
+          </view>
+        </view>
+        <view class="mod-house-item__bd">
+          <view class="toe">
+            <text class="mhib-status">{{ item.status }}</text>
+            <text>{{ item.txt }}</text>
+          </view>
+          <view class="mhib-labels">
+            <text class="mhib-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
+          </view>
+          <view class="mhib-group">
+            <view class="mhib-types">
+              <text class="mhib-type" wx:for-item="typeItem" wx:for="{{ item.types}}" wx:key="index">{{ typeItem }}</text>
+            </view>
+            <view class="mhib-price">
+              <text class="mhib-price__num">{{ item.price }}</text>
+              <text class="mhib-price__unit">元</text>
+              <text class="mhib-price__txt">㎡起</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<view class="fixed-bottom">
+  <view class="contact-action">
+    <view class="contact-action__item">
+      <button class="btn">
+        <image class="icon-share vam mr-15" src="../../images/icon-share.png"></image>
+        <text class="vam">转发</text>
+      </button>
+    </view>
+
+    <view class="contact-action__item">
+      <van-button round type="primary" block custom-class="btn-primary">微聊</van-button>
+    </view>
+
+    <view class="contact-action__item">
+      <van-button round block custom-class="btn-brown" bindtap="call" data-phone="{{ detail.phoneNumber }}">电话</van-button>
+    </view>    
+  </view>
+</view>

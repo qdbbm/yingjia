@@ -1,0 +1,4 @@
+/* pages/newHouse/newHouse.wxss */
+.mod-search {
+  background: #f9f9fa;
+}

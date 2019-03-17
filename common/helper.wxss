@@ -19,11 +19,11 @@
 }
 
 .flex1 {
-  flex: 1;
+  flex: 1 !important;
 }
 
 .flex2 {
-  flex: 2;
+  flex: 2 !important;
 }
 
 /** 栅格系统 **/
@@ -537,6 +537,10 @@
   margin-top: 30rpx !important;
 }
 
+.mt-35 {
+  margin-top: 35rpx !important;
+}
+
 .mt-40 {
   margin-top: 40rpx !important;
 }
@@ -881,6 +885,10 @@
   font-size: 20rpx !important;
 }
 
+.fs-11 {
+  font-size: 22rpx !important;
+}
+
 .fs-12 {
   font-size: 24rpx !important;
 }
@@ -1128,28 +1136,28 @@
 
 /** 边框 **/
 .btb {
-  border-top: 1rpx solid #d5d5d5 !important;
-  border-bottom: 1rpx solid #d5d5d5 !important;
+  border-top: 1rpx solid #e5e5e5 !important;
+  border-bottom: 1rpx solid #e5e5e5 !important;
 }
 
 .bt {
-  border-top: 1rpx solid #d5d5d5 !important;
+  border-top: 1rpx solid #e5e5e5 !important;
 }
 
 .br {
-  border-right: 1rpx solid #d5d5d5 !important;
+  border-right: 1rpx solid #e5e5e5 !important;
 }
 
 .bb {
-  border-bottom: 1rpx solid #d5d5d5 !important;
+  border-bottom: 1rpx solid #e5e5e5 !important;
 }
 
 .bl {
-  border-left: 1rpx solid #d5d5d5 !important;
+  border-left: 1rpx solid #e5e5e5 !important;
 }
 
 .b-all {
-  border: 1rpx solid #d5d5d5 !important;
+  border: 1rpx solid #e5e5e5 !important;
 }
 
 /* 背景设置 */

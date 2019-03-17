@@ -36,3 +36,12 @@
   border-top-right-radius: 45rpx;
   content: "";
 }
+
+.custom-button {
+  width: 23rpx;
+  height: 23rpx;
+  background: #c5172c;
+  border-radius: 50%;
+  border: 8rpx solid #fff;
+  box-shadow: 0 2rpx 9rpx rgba(197, 23, 44, .17);
+}

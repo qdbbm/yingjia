@@ -33,7 +33,58 @@ App({
       }
     })
   },
+  
   globalData: {
-    userInfo: null
+    userInfo: null,
+    // tabbarIcons
+    tabbarIcons: [
+      {
+        className: 'icon-home',
+        txt: '首页',
+        normal: '../../images/icon-home.png',
+        active: '../../images/icon-home-active.png'
+      },
+      {
+        txt: '微聊',
+        className: 'icon-wl',
+        normal: '../../images/icon-wl.png',
+        active: '../../images/icon-wl-active.png'
+      },
+      {
+        txt: '资讯',
+        className: 'icon-news',
+        normal: '../../images/icon-news.png',
+        active: '../../images/icon-news-active.png'
+      },
+      {
+        txt: '我的',
+        className: 'icon-user',
+        normal: '../../images/icon-user.png',
+        active: '../../images/icon-user-active.png'
+      }
+    ],
+    // 房产列表
+    houseList: [
+      {
+        tle: '松北世纪花园小区',
+        txt: '墅公馆当文字多文字多时文字多时',
+        labels: ['在售', '今年交房', '低单价', '在售', '今年交房', '低单价'],
+        types: ['四室', '建面54-350m²'],
+        price: 3000,
+        url: '',
+        status: '新盘',
+        imageUrl: 'http://images.zhengzw.com/yingjia/list-img.jpg'
+      },
+      {
+        tle: '松北世纪花园小区',
+        txt: '墅公馆当文字多文字多时文字多时',
+        labels: ['在售', '今年交房', '低单价', '在售', '今年交房', '低单价'],
+        types: ['四室', '建面54-350m²'],
+        price: 3000,
+        url: '',
+        status: '新盘',
+        imageUrl: 'http://images.zhengzw.com/yingjia/list-img.jpg'
+      }
+    ]
   }
 })

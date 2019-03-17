@@ -1,0 +1,42 @@
+<!--pages/search/search.wxml-->
+<view class="page">
+  <view class="mod-search ptb-15 pl-25">
+    <view class="mod-search__field">
+      <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
+      <input class="mod-search__field-input" type="text" placeholder="输入楼盘名称"></input>
+    </view>
+    <view class="mod-search__btn">取消</view>
+  </view>
+
+  <view class="search-block plr-25 ptb-30 bg-white">
+    <view class="search-block__tle">热门楼盘</view>
+    <view class="hot-tags pt-30">
+      <navigator class="hot-tags__item" url="{{ item.url }}" wx:for="{{ hotTags }}" wx:key="index">
+        {{ item.txt }}
+      </navigator>
+    </view>
+  </view>
+
+  <view class="search-block ptb-30 bg-white mt-30">
+    <view class="search-block__tle pl-25">条件筛选</view>
+    <view class="mt-10">
+      <van-cell
+        title="区域"
+        value="珠海市-香洲区-唐家湾镇"
+        is-link
+      />
+      <van-cell
+        title="售价"
+        is-link
+      />
+      <view class="plr-25 mt-30">
+        <view>房源类型</view>
+        <view class="tag-list mt-30">
+          <view class="tag-item {{ currentIndex == index ? 'tag-item--active' : '' }}" wx:for="{{ tagList }}" wx:key="index" bindtap="tagChange" data-current="{{ index }}">
+            {{ item.txt }}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

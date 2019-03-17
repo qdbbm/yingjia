@@ -1,4 +1,9 @@
 /**index.wxss**/
+
+page {
+  background: #fff;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -18,4 +23,18 @@
 
 .usermotto {
   margin-top: 200px;
+}
+
+.mod-search {
+  margin: -41rpx 40rpx 0;
+}
+
+.block-item:not(:first-child) {
+  margin: 20rpx 0 0 ;
+}
+
+.block-item,
+.block-item image {
+  width: 700rpx;
+  height: 268rpx;
 }

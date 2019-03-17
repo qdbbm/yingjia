@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp()
 
+const utils = require("../../utils/util.js")
+
 Page({
   data: {
     motto: 'Hello World',
@@ -23,6 +25,40 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1000,
+    blockList: [
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/list1.jpg',
+        url: ''
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/list2.jpg',
+        url: ''
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/list3.jpg',
+        url: ''
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/list4.jpg',
+        url: ''
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/list5.jpg',
+        url: ''
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/list6.jpg',
+        url: ''
+      }
+    ],
+    tabbarActive: 0,
+    tabbarIcons: app.globalData.tabbarIcons
+  },
+  /**
+   * tabbar跳转
+   */
+  onTabbarChange: function (e) {
+    utils.onTabbarChange(e);
   },
   //事件处理函数
   bindViewTap: function() {

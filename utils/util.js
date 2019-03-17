@@ -41,7 +41,14 @@ const onTabbarChange = event => {
   }
 }
 
+const call = phoneNumber => {
+  wx.makePhoneCall({
+    phoneNumber: phoneNumber
+  })
+}
+
 module.exports = {
   formatTime: formatTime,
-  onTabbarChange: onTabbarChange
+  onTabbarChange: onTabbarChange,
+  call: call
 }

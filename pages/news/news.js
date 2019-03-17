@@ -5,7 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    newsList: [
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/news.jpg',
+        tle: '团圆，最大的幸福莫过于此',
+        txt: '时间就像橡皮，将我脑海中的记忆地擦去然而，我童年在院',
+        date: '2019-02-23',
+        read: 5203
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/news.jpg',
+        tle: '团圆，最大的幸福莫过于此',
+        txt: '时间就像橡皮，将我脑海中的记忆地擦去然而，我童年在院',
+        date: '2019-02-23',
+        read: 5203
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/news.jpg',
+        tle: '团圆，最大的幸福莫过于此',
+        txt: '时间就像橡皮，将我脑海中的记忆地擦去然而，我童年在院',
+        date: '2019-02-23',
+        read: 5203
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/news.jpg',
+        tle: '团圆，最大的幸福莫过于此',
+        txt: '时间就像橡皮，将我脑海中的记忆地擦去然而，我童年在院',
+        date: '2019-02-23',
+        read: 5203
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/news.jpg',
+        tle: '团圆，最大的幸福莫过于此',
+        txt: '时间就像橡皮，将我脑海中的记忆地擦去然而，我童年在院',
+        date: '2019-02-23',
+        read: 5203
+      }
+    ]
   },
 
   /**

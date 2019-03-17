@@ -1,0 +1,170 @@
+<!--pages/calc/calc.wxml-->
+<view class="page">
+  <view class="calc-bg">
+    <image src="../../images/ban-js.jpg"></image>
+  </view>
+
+  <view class="calc-wrap plr-25">
+    <view class="calc-item calc-item--transparent">
+      <view class="calc-total">
+        <view>房屋总价</view>
+        <input class="calc-total__input" type="digit" placeholder="00.00"></input>
+      </view>
+
+      <view class="calc-cell-group">
+        <view class="calc-cell">
+          <view class="calc-cell__tle">首付比例</view>
+          <view class="calc-cell__bd">
+            请选择
+            <view class="calc-cell__bd-field tar">
+              <picker bindchange="bindPickerChange" value="{{sfblIndex}}" range="{{sfblArray}}">
+                <view class="picker">
+                  {{sfblArray[sfblIndex]}}
+                </view>
+              </picker>
+            </view>
+            <van-icon name="arrow" color="#aeaeae" />
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+
+        <view class="calc-cell">
+          <view class="calc-cell__tle">首付金额</view>
+          <view class="calc-cell__bd">
+            <view class="calc-cell__bd-field">
+              <input type="number" placeholder="点击输入"></input>
+            </view>
+            <text class="calc-cell__bd-txt">万元</text>
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+      </view>
+      <!-- end .calc-cell-group -->
+    </view>
+    <!-- end .calc-item -->
+
+    <view class="calc-item">
+      <view class="calc-cell-group">
+        <view class="calc-cell">
+          <view class="calc-cell__bd ptb-10">
+            <text class="calc-cell__bd-tle">商业贷款</text>
+            <view class="calc-cell__bd-field tar">
+              <input type="number" placeholder="50"></input>
+            </view>
+            <text class="calc-cell__bd-txt">万元</text>
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+
+        <view class="calc-cell">
+          <view class="calc-cell__bd ptb-10">
+            <text class="calc-cell__bd-tle">商业贷款利率</text>
+            <view class="calc-cell__bd-field tar">
+              <picker bindchange="bindPickerChange2" value="{{sydkIndex}}" range="{{sydkArray}}">
+                <view class="picker">
+                  {{sydkArray[sydkIndex]}}
+                </view>
+              </picker>
+            </view>
+            <van-icon name="arrow" color="#aeaeae" />
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+      </view>
+      <!-- end .calc-cell-group -->
+      
+      <view class="calc-cell-group calc-cell-group--has-bt">
+        <view class="calc-cell">
+          <view class="calc-cell__tle">
+            商业贷款年限<text class="color-dark fr">{{ year }}年</text> 
+          </view>
+          <view class="calc-cell__bd ptb-10">
+            <van-slider style="width: 100%"
+              value="{{ year }}"
+              use-button-slot
+              bar-height="4px"
+              step="5"
+              active-color="#c4172c"
+              bind:change="onChange"
+            >
+              <view class="custom-button" slot="button">
+              </view>
+            </van-slider>
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+      </view>
+      <!-- end .calc-cell-group -->
+    </view>
+    <!-- end .calc-item -->
+
+    <view class="calc-item">
+      <view class="flex-s-b flex-v-c pd-20">
+        <text>使用公积金</text>
+        <van-switch class="mt-10"
+          checked="{{ checked }}"
+          active-color="#c5172c"
+          size="24px"
+          bind:change="onSwitchChange"
+        />
+      </view>
+
+      <view class="calc-cell-group calc-cell-group--has-bt">
+        <view class="calc-cell">
+          <view class="calc-cell__bd ptb-10">
+            <text class="calc-cell__bd-tle">公积金贷款</text>
+            <view class="calc-cell__bd-field tar">
+              <input type="number" placeholder="50"></input>
+            </view>
+            <text class="calc-cell__bd-txt">万元</text>
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+
+        <view class="calc-cell">
+          <view class="calc-cell__bd ptb-10">
+            <text class="calc-cell__bd-tle">公积金贷款利率</text>
+            <view class="calc-cell__bd-field tar">
+              <picker bindchange="bindPickerChange3" value="{{gjjdkIndex}}" range="{{gjjdkArray}}">
+                <view class="picker">
+                  {{gjjdkArray[gjjdkIndex]}}
+                </view>
+              </picker>
+            </view>
+            <van-icon name="arrow" color="#aeaeae" />
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+      </view>
+      <!-- end .calc-cell-group -->
+
+      <view class="calc-cell-group calc-cell-group--has-bt">
+        <view class="calc-cell">
+          <view class="calc-cell__tle">
+            公积金贷款年限<text class="color-dark fr">{{ year2 }}年</text> 
+          </view>
+          <view class="calc-cell__bd ptb-10">
+            <van-slider style="width: 100%"
+              value="{{ year2 }}"
+              use-button-slot
+              bar-height="4px"
+              step="5"
+              active-color="#c4172c"
+              bind:change="onChange2"
+            >
+              <view class="custom-button" slot="button">
+              </view>
+            </van-slider>
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+      </view>
+      <!-- end .calc-cell-group -->
+    </view>
+    <!-- end .calc-item -->
+
+    <view class="ptb-50">
+      <van-button round block type="primary" custom-class="btn-primary">开始计算</van-button>
+    </view>
+  </view>
+</view>

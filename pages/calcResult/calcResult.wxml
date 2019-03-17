@@ -1,0 +1,124 @@
+<!--pages/calcResult/calcResult.wxml-->
+<view class="page page--has-footer">
+  <view class="result-hd">
+    <image src="../../images/result-bg.jpg"></image>
+    <view class="result-hd__info tac color-white">
+      <view>月供</view>
+      <view class="result-hd__info-num mt-10">￥<text>3450</text></view>
+      <view class="mt-10 fs-12">共支付利息10.35万元</view>
+    </view>
+  </view>
+
+  <view class="calc-wrap plr-25">
+    <view class="calc-item pt-20 pb-40" style="margin-top: -85rpx;">
+      <view class="mod-tab">
+        <view class="mod-tab__tle">
+          <view class="mod-tab__tle-item {{ current == index ? 'active' : '' }}" wx:for="{{ tabTle }}" wx:key="index" data-current="{{ index }}" bindtap="tabChange">{{ item }}</view>
+        </view>
+
+        <view class="mod-tab__content">
+          <view class="mod-tab__pane" hidden="{{ current == 0 ? false : true}}">
+            <view class="result-total flex mt-40">
+              <view class="result-total__item tac flex1">
+                <view class="fs-12 color-gray-light">房贷总额</view>
+                <view class="fs-15 fw-700 mt-20">50万元</view>
+              </view>
+              <view class="result-total__item tac flex1">
+                <view class="fs-12 color-gray-light">首付（30%）</view>
+                <view class="fs-15 fw-700 mt-20">15万元</view>
+              </view>
+              <view class="result-total__item tac flex1">
+                <view class="fs-12 color-gray-light">贷款总额</view>
+                <view class="fs-15 fw-700 mt-20">35万元</view>
+              </view>
+            </view>
+            <view class="tac fs-12 color-gray-light mt-40">
+              <image class="icon-info vam mr-10" src="../../images/icon-info.png"></image>
+              <text>每月还款相同</text>
+            </view>
+          </view>
+          <!-- end 等额本息 -->
+
+          <view class="mod-tab__pane" hidden="{{ current == 1 ? false : true}}">
+            <view class="result-total flex mt-40">
+              <view class="result-total__item tac flex1">
+                <view class="fs-12 color-gray-light">房贷总额</view>
+                <view class="fs-15 fw-700 mt-20">50万元</view>
+              </view>
+              <view class="result-total__item tac flex1">
+                <view class="fs-12 color-gray-light">首付（30%）</view>
+                <view class="fs-15 fw-700 mt-20">15万元</view>
+              </view>
+              <view class="result-total__item tac flex1">
+                <view class="fs-12 color-gray-light">贷款总额</view>
+                <view class="fs-15 fw-700 mt-20">35万元</view>
+              </view>
+            </view>
+            <view class="tac fs-12 color-gray-light mt-40">
+              <image class="icon-info vam mr-10" src="../../images/icon-info.png"></image>
+              <text>每月还款不同</text>
+            </view>
+          </view>
+          <!-- end 等额本金 -->
+        </view>
+      </view>
+    </view>
+
+    <view class="calc-item">
+      <view class="calc-cell-group">
+        <view class="calc-cell">
+          <view class="calc-cell__bd ptb-10">
+            <text class="calc-cell__bd-tle">商业贷款</text>
+            <view class="calc-cell__bd-field tar">
+              11年
+            </view>
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+
+        <view class="calc-cell">
+          <view class="calc-cell__bd ptb-10">
+            <text class="calc-cell__bd-tle">贷款利率</text>
+            <view class="calc-cell__bd-field tar">
+              <picker bindchange="bindPickerChange4" value="{{dklvIndex}}" range="{{dklvArray}}">
+                <view class="picker">
+                  {{dklvArray[dklvIndex]}}
+                </view>
+              </picker>
+            </view>
+            <van-icon name="arrow" color="#aeaeae" />
+          </view>
+        </view>
+        <!-- end .calc-cell -->
+      </view>
+      <!-- end .calc-cell-group -->
+
+      <view class="calc-cell-group calc-cell-group--has-bt">
+        <navigator class="calc-cell" url="">
+          <view class="calc-cell__bd ptb-10">
+            <text class="calc-cell__bd-tle">查看该价位的房子</text>
+            <view class="calc-cell__bd-field tar">
+            </view>
+            <van-icon name="arrow" color="#aeaeae" />
+          </view>
+        </navigator>
+        <!-- end .calc-cell -->
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="fixed-bottom">
+  <view class="contact-action">
+    <view class="contact-action__item">
+      <button class="btn">
+        <image class="icon-share vam mr-15" src="../../images/icon-share.png"></image>
+        <text class="vam">转发给朋友</text>
+      </button>
+    </view>
+
+    <view class="contact-action__item flex2">
+      <van-button round type="primary" block custom-class="btn-primary">重新计算</van-button>
+    </view>
+  </view>
+</view>

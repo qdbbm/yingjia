@@ -2,6 +2,8 @@
 
 @import 'common/helper';
 @import 'common/icon';
+@import 'common/layout';
+@import 'common/btn';
 @import 'common/vant';
 
 .container {
@@ -16,6 +18,7 @@
 
 page {
   font-size: 28rpx;
+  background: #f9f9fa;
 }
 
 /* banner */
@@ -27,6 +30,8 @@ page {
 
 /* 搜索 */
 .mod-search {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
 }
@@ -81,7 +86,7 @@ page {
 
 /* 房产列表 */
 .mod-house-list {
-  padding: 25rpx;
+  padding: 15rpx 25rpx 30rpx;
 }
 
 .mod-house-item {
@@ -145,7 +150,7 @@ page {
 }
 
 .mod-house-item__bd .mhib-labels {
-  margin: 20rpx 0 0 ;
+  margin: 15rpx 0 0 ;
 }
 
 .mod-house-item__bd .mhib-labels .mhib-label {
@@ -172,7 +177,7 @@ page {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20rpx 0 0;
+  margin: 15rpx 0 0;
 }
 
 .mod-house-item__bd .mhib-types {
@@ -261,4 +266,74 @@ page {
 .mod-logo {
   width: 227rpx;
   height: 82rpx;
+}
+
+/* 标签 */
+.tag-list {
+  margin: 0 0 -15rpx 0;
+}
+
+.tag-item {
+  display: inline-block;
+  width: 184rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  margin: 0 15rpx 15rpx 0;
+  font-size: 26rpx;
+  text-align: center;
+  background: #e5e5e5;
+  border-radius: 6rpx;
+  border: 2rpx solid transparent;
+}
+
+.tag-item--active {
+  background: #fff;
+  color: #c5172c;
+  border-color: #c5172c;
+}
+
+/* 尾部联系悬浮 */
+.contact-action {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 15rpx;
+  background: #fff;
+  border-top: 2rpx solid #d2d2d2;
+}
+
+.contact-action__item {
+  flex: 1;
+  padding: 0 15rpx;
+  text-align: center;
+}
+
+/* tab */
+.mod-tab__tle {
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+}
+
+.mod-tab__tle-item {
+  position: relative;
+  display: inline-block;
+  padding: 0 55rpx;
+  font-size: 26rpx;
+  color: #9c9c9c;
+}
+
+.mod-tab__tle-item.active {
+  color: #000;
+}
+
+.mod-tab__tle-item.active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 64rpx;
+  height: 6rpx;
+  background: #c5172c;
+  border-radius: 20rpx;
+  transform: translate(-50%, 0);
+  content: "";
 }

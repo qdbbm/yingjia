@@ -1,0 +1,75 @@
+/* pages/calc/calc.wxss */
+.calc-bg,
+.calc-bg image {
+  width: 785rpx;
+  height: 285rpx;
+}
+
+.calc-item {
+  position: relative;
+  background: #fff;
+  border-radius: 6rpx;
+}
+
+.calc-item:not(:first-of-type) {
+  margin-top: 20rpx;
+}
+
+.calc-item--transparent {
+  margin: -134rpx 0 0;
+  background: rgba(255, 255, 255, .95);
+}
+
+.calc-total {
+  padding: 45rpx 0 50rpx;
+  text-align: center;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.calc-total__input {
+  margin: 20rpx 0 0;
+  font-size: 78rpx;
+  height: 80rpx;
+}
+
+.calc-cell-group {
+  display: flex;
+  padding: 20rpx 0;
+  background: #fff;
+}
+
+.calc-cell-group--has-bt {
+  border-top: 2rpx solid #e5e5e5;
+}
+
+.calc-cell {
+  flex: 1;
+  overflow: hidden;
+  padding: 0 20rpx;
+}
+
+.calc-cell:not(:first-of-type) {
+  border-left: 2rpx solid #e5e5e5;
+}
+
+.calc-cell__tle,
+.calc-cell__bd-tle {
+  color: #6e6e6e;
+}
+
+.calc-cell__bd {
+  display: flex;
+  align-items: center;
+  height: 65rpx;
+  line-height: 65rpx;
+}
+
+.calc-cell__bd-field {
+  flex: 1;
+  overflow: hidden;
+  padding-right: 10rpx;
+}
+
+.calc-cell__bd-txt {
+  color: #bebebe;
+}

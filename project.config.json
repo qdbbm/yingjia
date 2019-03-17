@@ -37,12 +37,68 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
 					"name": "公用",
 					"pathName": "pages/common/common",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "新房列表",
+					"pathName": "pages/newHouse/newHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房源搜索",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "二手房列表",
+					"pathName": "pages/oldHouse/oldHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房产专家列表",
+					"pathName": "pages/zhuanjia/zhuanjia",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房产专家主页",
+					"pathName": "pages/zhuanjiaDetail/zhuanjiaDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "资讯列表",
+					"pathName": "pages/news/news",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "房贷计算器",
+					"pathName": "pages/calc/calc",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "计算结果",
+					"pathName": "pages/calcResult/calcResult",
 					"scene": null
 				}
 			]
