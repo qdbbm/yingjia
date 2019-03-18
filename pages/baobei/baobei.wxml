@@ -1,0 +1,67 @@
+<!--pages/baobei/baobei.wxml-->
+<view class="page">
+  <view class="hd-bg">
+    <image src="../../images/bg2.jpg"></image>
+  </view>
+
+  <view class="pt-50 plr-25">
+    <view class="bb-info tac br-10 bg-white ptb-50 plr-25">
+      <view class="bb-info__tag">赚</view>
+      <view>成交任意住宅1套，佣金为15000元</view>
+      <navigator class="tar fs-12 color-primary tdul mt-10" url="">奖励详情</navigator>
+    </view>
+
+    <view class="pt-30 plr-30 br-10 bg-white mt-30">
+      <view class="mod-tab">
+        <view class="mod-tab__tle bg-white">
+          <view class="mod-tab__tle-item {{ current == index ? 'active' : '' }}" wx:for="{{ tabTle }}" wx:key="index" data-current="{{ index }}" bindtap="tabChange">{{ item }}</view>
+        </view>
+
+        <view class="mod-tab__content">
+          <view class="mod-tab__pane" hidden="{{ current == 0 ? false : true}}">
+            <view class="form-content mt-50">
+              <view class="form-item">
+                <view class="form-item__label">姓名：</view>
+                <view class="form-item__field">
+                  <input type="text" placeholder="请输入客户姓名"></input>
+                </view>
+              </view>
+              <!-- end .form-item -->
+
+              <view class="form-item">
+                <view class="form-item__label">电话：</view>
+                <view class="form-item__field">
+                  <input type="number" placeholder="请输入客户电话"></input>
+                </view>
+              </view>
+              <!-- end .form-item -->
+
+              <view class="form-item">
+                <view class="form-item__label">备注：</view>
+                <view class="form-item__field">
+                  <input type="text" placeholder="录入跟进要求"></input>
+                </view>
+              </view>
+              <!-- end .form-item -->
+            </view>
+
+            <view class="tar fs-12 mt-30" style="color: #445061;">
+              上门后7天成交有效
+              <navigator class="dib" url="">查看详情</navigator>
+            </view>
+
+            <view class="plr-70 mtb-80">
+              <van-button round block size="large" type="primary" custom-class="btn-primary">马上推荐</van-button>
+            </view>
+          </view>
+
+          <view class="mod-tab__pane" hidden="{{ current == 1 ? false : true}}">
+            <view class="mod-empty">
+              暂无相关数据！
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

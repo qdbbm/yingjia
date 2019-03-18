@@ -1,4 +1,8 @@
-// pages/calcResult/calcResult.js
+// pages/fav/fav.js
+
+//获取应用实例
+const app = getApp()
+
 Page({
 
   /**
@@ -6,21 +10,14 @@ Page({
    */
   data: {
     current: 0,
-    tabTle: ['等额本息', '等额本金'],
-    dklvIndex: 0,
-    dklvArray: ['4.9%', '5.1%']
+    tabTle: ['新房', '二手房'],
+    houseList: app.globalData.houseList
   },
 
   tabChange: function (e) {
     let curr = e.currentTarget.dataset.current;
     this.setData({
       current: curr
-    })
-  },
-
-  bindPickerChange4(e) {
-    this.setData({
-      dklvIndex: e.detail.value
     })
   },
 

@@ -12,7 +12,11 @@
     "pages/zhuanjia/zhuanjia",
     "pages/zhuanjiaDetail/zhuanjiaDetail",
     "pages/calc/calc",
-    "pages/calcResult/calcResult"
+    "pages/calcResult/calcResult",
+    "pages/fav/fav",
+    "pages/reg/reg",
+    "pages/baobei/baobei",
+    "pages/baobeiList/baobeiList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,6 +32,7 @@
     "van-cell-group": "../../components/vant/cell-group/index",
     "van-icon": "../../components/vant/icon/index",
     "van-slider": "../../components/vant/slider/index",
-    "van-switch": "../../components/vant/switch/index"
+    "van-switch": "../../components/vant/switch/index",
+    "van-steps": "../../components/vant/steps/index"
   }
 }

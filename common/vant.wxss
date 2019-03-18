@@ -49,3 +49,54 @@
 .my-cell-group .van-cell {
   padding: 12px 0;
 }
+
+.my-steps {
+  overflow: visible !important;
+  padding: 0 !important;
+}
+
+.my-steps .van-step--horizontal .van-step__circle-container {
+  top: 1px;
+  bottom: auto;
+  padding: 0;
+  background: none;
+}
+
+.my-steps .van-step--horizontal:first-child {
+  left: 1px;
+}
+
+.my-steps .van-step--horizontal:last-child {
+  right: 1px;
+}
+
+.my-steps .van-step--horizontal .van-step__line {
+  top: 12px;
+  bottom: auto;
+}
+
+.my-steps .van-step__circle,
+.my-steps .van-step__active {
+  margin: -1px 0 0;
+  width: 8px;
+  height: 8px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 1px #d2d2d2;
+}
+
+.my-steps .van-step__active {
+  border-radius: 50%;
+  background: #c5172c;
+}
+
+.my-steps .van-step--horizontal {
+  padding: 28px 0 0;
+}
+
+.my-steps .van-step--horizontal .van-step__line {
+  background-color: #d2d2d2;
+}
+
+.my-steps .van-step--horizontal .van-step__title {
+  text-align: center;
+}

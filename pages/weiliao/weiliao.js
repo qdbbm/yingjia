@@ -5,7 +5,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    mediaList: [
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/zj-img.jpg',
+        url: '../../pages/weiliaoDetail/weiliaoDetail',
+        name: '何勇君',
+        company: '正顺地产',
+        date: '01-20',
+        txt: '今天就是小年，我在这里祝福身体健康2019',
+        hasMsg: true
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/zj-img.jpg',
+        url: '../../pages/weiliaoDetail/weiliaoDetail',
+        name: '何勇君',
+        company: '正顺地产',
+        date: '01-20',
+        txt: '今天就是小年，我在这里祝福身体健康2019',
+        hasMsg: false
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/zj-img.jpg',
+        url: '../../pages/weiliaoDetail/weiliaoDetail',
+        name: '何勇君',
+        company: '正顺地产',
+        date: '01-20',
+        txt: '今天就是小年，我在这里祝福身体健康2019',
+        hasMsg: false
+      },
+      {
+        imgUrl: 'http://images.zhengzw.com/yingjia/zj-img.jpg',
+        url: '../../pages/weiliaoDetail/weiliaoDetail',
+        name: '何勇君',
+        company: '正顺地产',
+        date: '01-20',
+        txt: '今天就是小年，我在这里祝福身体健康2019',
+        hasMsg: false
+      }
+    ]
   },
 
   /**

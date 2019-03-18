@@ -112,3 +112,8 @@
   width: 26rpx;
   height: 26rpx;
 }
+
+.icon-checkbox {
+  width: 28rpx;
+  height: 28rpx;
+}

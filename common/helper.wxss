@@ -561,6 +561,10 @@
   margin-top: 80rpx !important;
 }
 
+.mt-90 {
+  margin-top: 90rpx !important;
+}
+
 .mt-100 {
   margin-top: 100rpx !important;
 }
@@ -930,7 +934,7 @@
 }
 
 /** 文本修饰 **/
-.tdlh {
+.tdlt {
   text-decoration: line-through !important;
 }
 

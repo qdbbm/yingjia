@@ -1,0 +1,17 @@
+<!--pages/baobeiList/baobeiList.wxml-->
+<view class="page">
+  <view class="bb-list">
+    <view class="bb-item plr-20 ptb-30 bg-white" wx:for="{{ bbList }}" wx:key="index">
+      <view class="flex-s-b">
+        <view>{{ item.name }}<text class="ml-25">{{ item.mobile }}</text></view>
+        <text>{{ item.company }}</text>
+      </view>
+      <van-steps
+        custom-class="my-steps mt-40"
+        steps="{{ item.steps }}"
+        active="{{ item.active }}"
+        active-color="#c5172c"
+      />
+    </view>
+  </view>
+</view>

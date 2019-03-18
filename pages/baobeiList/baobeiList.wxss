@@ -1,0 +1,4 @@
+/* pages/baobeiList/baobeiList.wxss */
+.bb-item:not(:first-of-type) {
+  margin: 25rpx 0 0;
+}

@@ -1,26 +1,46 @@
-// pages/calcResult/calcResult.js
+// pages/reg/reg.js
+
+var interval = null; //倒计时函数
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    current: 0,
-    tabTle: ['等额本息', '等额本金'],
-    dklvIndex: 0,
-    dklvArray: ['4.9%', '5.1%']
+    // 获取验证码
+    time: '获取验证码',
+    currentTime: 60,
+    disabled: false
   },
 
-  tabChange: function (e) {
-    let curr = e.currentTarget.dataset.current;
-    this.setData({
-      current: curr
-    })
+  /**
+   * 验证码倒计时
+   */
+  getCode: function (options) {
+    var that = this;
+    var currentTime = that.data.currentTime
+    interval = setInterval(function () {
+      currentTime--;
+      that.setData({
+        time: currentTime + '秒'
+      })
+      if (currentTime <= 0) {
+        clearInterval(interval)
+        that.setData({
+          time: '重新发送',
+          currentTime: 60,
+          disabled: false
+        })
+      }
+    }, 1000)
   },
 
-  bindPickerChange4(e) {
-    this.setData({
-      dklvIndex: e.detail.value
+  getVerificationCode() {
+    this.getCode();
+    var that = this
+    that.setData({
+      disabled: true
     })
   },
 

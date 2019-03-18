@@ -1,0 +1,50 @@
+/* pages/baobei/baobei.wxss */
+page {
+  background: #fff;
+}
+
+.hd-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 300rpx;
+}
+
+.hd-bg image {
+  width: 750rpx;
+  height: 300rpx;
+}
+
+.bb-info {
+  position: relative;
+}
+
+.bb-info__tag {
+  position: absolute;
+  top: -10rpx;
+  left: 20rpx;
+  padding: 15rpx 10rpx 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background: #c5172c;
+  border-radius: 10rpx;
+}
+
+.bb-info__tag:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-left: 14rpx solid transparent;
+  border-right: 14rpx solid transparent;
+  border-bottom: 14rpx solid #fff;
+  content: "";
+  transform: translate(-50%, 0);
+}
+
+.form-item:not(:first-of-type) {
+  margin: 70rpx 0 0;
+}

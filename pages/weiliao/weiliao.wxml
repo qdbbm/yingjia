@@ -1,2 +1,22 @@
 <!--pages/weiliao/weiliao.wxml-->
-<text>pages/weiliao/weiliao.wxml</text>
+<view class="page">
+  <view class="media-list plr-25 bg-white">
+    <navigator class="media-item ptb-30" url="{{ item.url }}" hover-class="none" wx:for="{{ mediaList }}" wx:key="index">
+      <view class="media-item__img">
+        <image src="{{ item.imgUrl }}"></image>
+        <view class="mod-dot" wx:if="{{ item.hasMsg }}"></view>
+      </view>
+
+      <view class="media-item__bd">
+        <view class="media-item__bd-tle">
+          {{ item.name }}
+          <text class="mibt-txt">{{ item.company }}</text>
+          <text class="mibt-date">01-20</text>
+        </view>
+        <view class="media-item__bd-txt">
+          {{ item.txt }}
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

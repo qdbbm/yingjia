@@ -1,1 +1,67 @@
 /* pages/weiliao/weiliao.wxss */
+.media-list {
+  border-bottom: 1rpx solid #dcdcdc;
+}
+
+.media-item {
+  display: flex;
+  align-items: center;
+}
+
+.media-item:not(:first-of-type) {
+  border-top: 1rpx solid #dcdcdc;
+}
+
+.media-item__img {
+  position: relative;
+  width: 106rpx;
+  height: 106rpx;
+  margin: 0 35rpx 0 0;
+}
+
+.media-item__img image {
+  width: 106rpx;
+  height: 106rpx;
+  border-radius: 50%;
+}
+
+.media-item__img .mod-dot {
+  right: 10rpx;
+  top: 0;
+  z-index: 1;
+}
+
+
+.media-item__bd {
+  flex: 1;
+}
+
+.media-item__bd-tle {
+  font-size: 30rpx;
+  color: #454545;
+  font-weight: 700;
+}
+
+.media-item__bd-tle .mibt-txt,
+.media-item__bd-tle .mibt-date {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #999;
+}
+
+.media-item__bd-tle .mibt-txt {
+  margin: 0 0 0 10rpx;
+}
+
+.media-item__bd-tle .mibt-date {
+  float: right;
+}
+
+.media-item__bd-txt {
+  margin: 15rpx 0 0;
+  font-size: 26rpx;
+  color: #646464;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

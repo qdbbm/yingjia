@@ -53,7 +53,7 @@ Page({
       active: '../../images/icon-user-active.png'
     },
 
-    // 
+    // 获取验证码
     time: '获取验证码',
     currentTime: 60,
     disabled: false

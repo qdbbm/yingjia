@@ -1,0 +1,22 @@
+/* pages/reg/reg.wxss */
+page:after {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: url("http://images.zhengzw.com/yingjia/bg.jpg") no-repeat center top;
+  background-size: cover;
+  content: "";
+}
+
+.other-btn {
+  display: inline-block;
+  width: 74rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  text-align: center;
+  border: 2rpx solid #fff;
+  border-radius: 50%;
+}

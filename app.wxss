@@ -68,7 +68,7 @@ page {
   right: 14rpx;
 }
 
-/* 小红点 */
+/* 数字微标 */
 .mod-remind-num {
   position: absolute;
   display: inline-block;
@@ -82,6 +82,15 @@ page {
   background-color: #c5172c;
   border-radius: 20rpx;
   box-sizing: border-box;
+}
+
+/* 小点 */
+.mod-dot {
+  position: absolute;
+  width: 14rpx;
+  height: 14rpx;
+  background: #c5172c;
+  border-radius: 50%;
 }
 
 /* 房产列表 */
@@ -333,7 +342,57 @@ page {
   width: 64rpx;
   height: 6rpx;
   background: #c5172c;
-  border-radius: 20rpx;
+  border-radius: 30rpx;
   transform: translate(-50%, 0);
   content: "";
+}
+
+.mod-tab--lg .mod-tab__tle {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+/* 空数据 */
+.mod-empty {
+  padding: 50rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 表单 */
+.form-wrap {
+  padding: 0 60rpx 30rpx;
+}
+
+.form-box {
+  padding: 60rpx 50rpx 50rpx;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+.form-item {
+  display: flex;
+  align-items: center;
+  padding: 25rpx 0 25rpx 10rpx;
+  border-bottom: 1rpx solid #dfdfdf;
+}
+
+.form-item:not(:first-of-type) {
+  margin: 100rpx 0 0;
+}
+
+.form-item__label {
+  width: 100rpx;
+}
+
+.form-item__icon {
+  margin: 0 30rpx 0 0;
+}
+
+.form-item__field {
+  flex: 1;
+  overflow: hidden;
 }
