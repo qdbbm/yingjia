@@ -1,11 +1,24 @@
 // pages/user/user.js
+
+//获取应用实例
+const app = getApp()
+
+const utils = require("../../utils/util.js")
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    user: {
+      sign: 'Hello！',
+      name: '张晓秦',
+      mobile: '15904601770',
+      avatar: 'http://images.zhengzw.com/yingjia/user.jpg'
+    },
+    tabbarActive: 3,
+    tabbarIcons: app.globalData.tabbarIcons
   },
 
   /**

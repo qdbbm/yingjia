@@ -107,3 +107,8 @@
   width: 31rpx !important;
   height: 33rpx !important;
 }
+
+.icon-guide {
+  width: 26rpx;
+  height: 26rpx;
+}

@@ -45,3 +45,7 @@
   border: 8rpx solid #fff;
   box-shadow: 0 2rpx 9rpx rgba(197, 23, 44, .17);
 }
+
+.my-cell-group .van-cell {
+  padding: 12px 0;
+}

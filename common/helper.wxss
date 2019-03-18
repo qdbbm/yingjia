@@ -1181,6 +1181,14 @@
   border-radius: 10rpx;
 }
 
+.br-15 {
+  border-radius: 15rpx;
+}
+
+.br-20 {
+  border-radius: 20rpx;
+}
+
 /* 文字占位 */
 .tp {
   padding-left: 1em;

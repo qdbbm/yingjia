@@ -1,2 +1,78 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="page page--has-footer">
+  <image class="user-bg" src="../../images/my-bg.png"></image>
+  <view class="pd-25">
+    <view class="user-info br-20">
+      <view class="flex-s-b">
+        <view>
+          <view class="fs-20 fw-700">{{ user.sign }}</view>
+          <view class="mt-40 fs-16">{{ user.name }}</view>
+          <view class="fs-13 mt-10 color-gray-light">{{ user.mobile }}</view>
+        </view>
+        <view class="user-avatar">
+          <image src="{{ user.avatar }}"></image>
+        </view>
+      </view>
+    </view>
+
+    <navigator class="user-apply mt-20" url="">
+      <image src="../../images/ad-img.png"></image>
+    </navigator>
+    
+    <view class="user-menu bg-white br-20 mt-20 plr-20">
+      <navigator class="user-menu__item flex-v-c" url="" hover-class="none">
+        <view class="user-menu__icon mr-30" slot="icon">
+          <image class="icon-fav" src="../../images/icon-fav.png"></image> 
+        </view> 
+        <view class="flex1">我的收藏</view>
+        <van-icon name="arrow" color="#bebebe" />
+      </navigator>
+      <navigator class="user-menu__item flex-v-c" url="" hover-class="none">
+        <view class="user-menu__icon mr-30" style="background-color: #ffab96;" slot="icon">
+          <image class="icon-house" src="../../images/icon-house.png"></image> 
+        </view> 
+        <view class="flex1">看过的房源</view>
+        <van-icon name="arrow" color="#bebebe" />
+      </navigator>
+      <navigator class="user-menu__item flex-v-c" url="" hover-class="none">
+        <view class="user-menu__icon mr-30" style="background-color: #c5172c;" slot="icon">
+          <image class="icon-edit" src="../../images/icon-edit.png"></image> 
+        </view> 
+        <view class="flex1">我的报备</view>
+        <van-icon name="arrow" color="#bebebe" />
+      </navigator>
+      <navigator class="user-menu__item flex-v-c" url="" hover-class="none">
+        <view class="user-menu__icon mr-30" style="background-color: #d6dbae;" slot="icon">
+          <image class="icon-shop" src="../../images/icon-shop.png"></image> 
+        </view> 
+        <view class="flex1">我的微店</view>
+        <van-icon name="arrow" color="#bebebe" />
+      </navigator>
+      <navigator class="user-menu__item flex-v-c" url="" hover-class="none">
+        <view class="user-menu__icon mr-30" style="background-color: #d2bfc3;" slot="icon">
+          <image class="icon-guide" src="../../images/icon-guide.png"></image> 
+        </view> 
+        <view class="flex1">新手指南</view>
+        <van-icon name="arrow" color="#bebebe" />
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<van-tabbar active="{{ tabbarActive }}" bind:change="onTabbarChange">
+  <van-tabbar-item wx:for="{{ tabbarIcons }}" wx:key="index">
+    <image
+      class="{{ item.className }}"
+      slot="icon"
+      src="{{ item.normal }}"
+      mode="aspectFit"
+    />
+    <image
+      class="{{ item.className }}"
+      slot="icon-active"
+      src="{{ item.active }}"
+      mode="aspectFit"
+    />
+    {{ item.txt }}
+  </van-tabbar-item>
+</van-tabbar>

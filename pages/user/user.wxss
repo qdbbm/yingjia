@@ -1,1 +1,51 @@
 /* pages/user/user.wxss */
+.user-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 316rpx;
+  height: 311rpx;
+}
+
+.user-info {
+  padding: 67rpx 55rpx 83rpx;
+  background: rgba(255, 255, 255, .9);
+}
+
+.user-avatar,
+.user-avatar image {
+  width: 156rpx;
+  height: 156rpx;
+}
+
+.user-avatar {
+  overflow: hidden;
+  border-radius: 50%;
+  border: 10rpx solid #fff;
+  box-shadow: 0 5rpx 18rpx rgba(0, 0, 0, .09);
+}
+
+.user-apply,
+.user-apply image {
+  width: 700rpx;
+  height: 120rpx;
+}
+
+.user-menu__icon {
+  width: 52rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  text-align: center;
+  background: #e6e2e1;
+  border-radius: 50%;
+}
+
+.user-menu__item {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.user-menu__item:not(:first-of-type) {
+  border-top: 1rpx solid #dcdcdc;
+}
