@@ -1,0 +1,16 @@
+<!--pages/myHouse/myHouse.wxml-->
+<view class="page">
+  <view class="mod-media-list mod-media-list--has-bd bg-white plr-25 bb">
+    <navigator class="mod-media-item" url="{{ item.url }}" hover-class="none" wx:for="{{ houseList }}" wx:key="index">
+      <view class="mod-media-item__img">
+        <image src="{{ item.imgUrl }}"></image>
+      </view>
+      <view class="mod-media-item__bd">
+        <view class="mmib-tle">{{ item.tle }}</view>
+        <view class="mmib-txt mt-15">{{ item.address }}</view>
+        <view class="mmib-txt">{{ item.txt }}</view>
+        <view class="mmib-price mt-10"><text class="color-danger">{{ item.price }}</text><text class="color-danger">元</text>/㎡起</view>
+      </view>
+    </navigator>
+  </view>
+</view>

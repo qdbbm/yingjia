@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 18,
 			"list": [
 				{
 					"id": -1,
@@ -141,6 +141,34 @@
 					"id": -1,
 					"name": "我的报备列表",
 					"pathName": "pages/baobeiList/baobeiList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "微聊详情",
+					"pathName": "pages/weiliaoDetail/weiliaoDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的经纪人信息",
+					"pathName": "pages/jingjiren/jingjiren",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的房源列表",
+					"pathName": "pages/myHouse/myHouse",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "大图列表",
+					"pathName": "pages/imgList/imgList",
 					"scene": null
 				}
 			]

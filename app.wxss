@@ -4,6 +4,7 @@
 @import 'common/icon';
 @import 'common/layout';
 @import 'common/btn';
+@import 'common/gallery';
 @import 'common/vant';
 
 .container {
@@ -361,11 +362,11 @@ page {
 }
 
 /* 表单 */
-.form-wrap {
+.mod-form-wrap {
   padding: 0 60rpx 30rpx;
 }
 
-.form-box {
+.mod-form-box {
   padding: 60rpx 50rpx 50rpx;
   margin: 0 auto;
   box-sizing: border-box;
@@ -373,26 +374,225 @@ page {
   border-radius: 20rpx;
 }
 
-.form-item {
+.mod-form-item {
   display: flex;
   align-items: center;
   padding: 25rpx 0 25rpx 10rpx;
   border-bottom: 1rpx solid #dfdfdf;
 }
 
-.form-item:not(:first-of-type) {
+.mod-form-item:not(:first-of-type) {
   margin: 100rpx 0 0;
 }
 
-.form-item__label {
+.mod-form-item--no-bd {
+  border-bottom: 0;
+}
+
+.mod-form-item__label {
   width: 100rpx;
 }
 
-.form-item__icon {
+.mod-form-item__icon {
   margin: 0 30rpx 0 0;
 }
 
-.form-item__field {
+.mod-form-item__field {
   flex: 1;
   overflow: hidden;
+}
+
+.mod-form--label-auto .mod-form-item__label {
+  width: auto;
+}
+
+/* 媒体对象 */
+.mod-media-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.mod-media-item__img,
+.mod-media-item__img image {
+  width: 191rpx;
+  height: 148rpx;
+}
+
+.mod-media-item__img {
+  overflow: hidden;
+  margin: 0 35rpx 0 0;
+  border-radius: 10rpx;
+}
+
+.mod-media-item__bd {
+  flex: 1;
+  overflow: hidden;
+}
+
+.mod-media-item__bd .mmib-tle,
+.mod-media-item__bd .mmib-txt,
+.mod-media-item__bd .mmib-price {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mod-media-item__bd .mmib-tle {
+  font-size: 30rpx;
+}
+
+.mod-media-item__bd .mmib-txt {
+  font-size: 24rpx;
+  color: #5f5f5f;
+}
+
+.mod-media-item__bd .mmib-price text {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.mod-media-list--has-bd .mod-media-item {
+  padding: 30rpx 0;
+}
+
+.mod-media-list--has-bd .mod-media-item:not(:first-of-type) {
+  border-top: 1rpx solid #e5e5e5;
+}
+
+/* 聊天 */
+.mod-chat__time {
+  margin: 20rpx 0;
+  text-align: center;
+}
+
+.mod-chat__time text {
+  display: inline-block;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding: 0 15rpx;
+  border-radius: 20rpx;
+  font-size: 20rpx;
+  color: #989898;
+  background: #eee;
+}
+
+.mod-chat-list {
+  padding: 0 25rpx 80rpx;
+}
+
+.mod-chat-item {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 32rpx;
+}
+
+.mod-chat-item:not(:first-of-type) {
+  margin: 40rpx 0 0;
+}
+
+.mod-chat-item__info {
+  position: relative;
+  margin: 0 10rpx 0 0;
+}
+
+.mod-chat-item__info .mcii-img {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.mod-chat-item__info .mcii-txt {
+  position: absolute;
+  bottom: -35rpx;
+  left: 50%;
+  width: 100rpx;
+  font-size: 24rpx;
+  margin: 14rpx 0 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translate(-50%, 0);
+}
+
+.mod-chat-item__bd {
+  flex: 1;
+}
+
+.mod-chat-item__bd .mcib-txt {
+  display: inline-block;
+  max-width: 538rpx;
+  padding: 20rpx 30rpx;
+  min-height: 84rpx;
+  line-height: 1.6;
+  color: #4d4d4d;
+  border-radius: 42rpx;
+  background: #fff;
+  box-shadow: 0 1rpx 13rpx rgba(210, 210, 210, .13);
+  box-sizing: border-box;
+}
+
+.mod-chat-item--reverse {
+  flex-direction: row-reverse;
+}
+
+.mod-chat-item--reverse .mod-chat-item__info {
+  margin: 0 0 0 10rpx;
+}
+
+.mod-chat-item--reverse .mod-chat-item__bd {
+  text-align: right;
+}
+
+.mod-chat-item--reverse .mod-chat-item__bd .mcib-txt {
+  text-align: left;
+}
+
+.mod-chat-item--high .mod-chat-item__bd .mcib-txt {
+  background: #c5172c;
+  color: #fff;
+  box-shadow: none;
+}
+
+.mod-chat-action {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  border-top: 1rpx solid #e5e5e5;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.mod-chat-action__field {
+  flex: 1;
+  overflow: hidden;
+}
+
+.mod-chat-action__field .mcaf-input {
+  width: 100%;
+  padding: 0 25rpx 0 40rpx;
+  box-sizing: border-box;
+}
+
+/* 上传图片 */
+.mod-upload-field {
+  position: relative;
+  width: 368rpx;
+  height: 368rpx;
+  text-align: center;
+  border: 1rpx dashed #dcdcdc;
+}
+
+.mod-upload-field__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mod-upload-field__inner .mufi-tle {
+  margin: 30rpx 0 0;
+  font-size: 26rpx;
+  color: #787878;
 }

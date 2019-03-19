@@ -1,0 +1,4 @@
+/* pages/jingjiren/jingjiren.wxss */
+.mod-form-item:not(:first-of-type) {
+  margin: 50rpx 0 0;
+}

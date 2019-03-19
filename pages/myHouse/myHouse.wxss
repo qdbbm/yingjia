@@ -1,0 +1,10 @@
+/* pages/myHouse/myHouse.wxss */
+.mod-media-item__img,
+.mod-media-item__img image {
+  width: 172rpx;
+  height: 172rpx;
+}
+
+.mod-media-item__img {
+  border-radius: 0;
+}

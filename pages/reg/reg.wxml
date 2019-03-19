@@ -4,34 +4,34 @@
     <image class="mod-logo" src="../../images/logo.png"></image>
   </view>
 
-  <view class="form-wrap">
-    <view class="form-box">
+  <view class="mod-form-wrap">
+    <view class="mod-form-box">
       <view class="fs-18">完善信息</view>
-      <view class="form-content mt-80">
-        <view class="form-item">
-          <image class="form-item__icon icon-mobile" src="../../images/icon-mobile.png"></image>
-          <view class="form-item__field">
+      <view class="mod-form-content mt-80">
+        <view class="mod-form-item">
+          <image class="mod-form-item__icon icon-mobile" src="../../images/icon-mobile.png"></image>
+          <view class="mod-form-item__field">
             <input type="number" placeholder="请输入手机号"></input>
           </view>
         </view>
-        <!-- end .form-item -->
+        <!-- end .mod-form-item -->
 
-        <view class="form-item">
-          <image class="form-item__icon icon-safe" src="../../images/icon-safe.png"></image>
-          <view class="form-item__field">
+        <view class="mod-form-item">
+          <image class="mod-form-item__icon icon-safe" src="../../images/icon-safe.png"></image>
+          <view class="mod-form-item__field">
             <input type="number" placeholder="请输入验证码"></input>
           </view>
           <view class="color-primary tdul {{ disabled ? 'disabled' : '' }}" bindtap="getVerificationCode">{{ time }}</view>
         </view>
-        <!-- end .form-item -->
+        <!-- end .mod-form-item -->
 
-        <view class="form-item">
-          <image class="form-item__icon icon-yq" src="../../images/icon-yq.png"></image>
-          <view class="form-item__field">
+        <view class="mod-form-item">
+          <image class="mod-form-item__icon icon-yq" src="../../images/icon-yq.png"></image>
+          <view class="mod-form-item__field">
             <input type="number" placeholder="请输入邀请码"></input>
           </view>
         </view>
-        <!-- end .form-item -->
+        <!-- end .mod-form-item -->
       </view>
     </view>
 

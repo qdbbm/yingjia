@@ -1,0 +1,10 @@
+<!--pages/imgList/imgList.wxml-->
+<view class="page">
+  <view class="pd-25">
+    <view class="img-list">
+      <navigator class="img-item" url="{{ item.url }}" wx:for="{{ imgList }}" wx:key="index">
+        <image class="img-item__thumb" src="{{ item.imgUrl }}"></image>
+      </navigator>
+    </view>
+  </view>
+</view>

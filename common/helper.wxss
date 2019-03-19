@@ -355,6 +355,11 @@
   padding-left: 100rpx !important;
 }
 
+.plr-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .plr-5 {
   padding-left: 5rpx !important;
   padding-right: 5rpx !important;
@@ -448,6 +453,11 @@
 .ptb-40 {
   padding-top: 40rpx !important;
   padding-bottom: 40rpx !important;
+}
+
+.ptb-45 {
+  padding-top: 45rpx !important;
+  padding-bottom: 45rpx !important;
 }
 
 .ptb-50 {
@@ -832,7 +842,7 @@
 }
 
 .color-danger {
-  color: #ff4d40 !important;
+  color: #c5172c !important;
 }
 
 .color-success {
@@ -1181,6 +1191,10 @@
 }
 
 /* 圆角 */
+.br-0 {
+  border-radius: 0 !important;
+}
+
 .br-10 {
   border-radius: 10rpx;
 }

@@ -16,7 +16,11 @@
     "pages/fav/fav",
     "pages/reg/reg",
     "pages/baobei/baobei",
-    "pages/baobeiList/baobeiList"
+    "pages/baobeiList/baobeiList",
+    "pages/weiliaoDetail/weiliaoDetail",
+    "pages/jingjiren/jingjiren",
+    "pages/myHouse/myHouse",
+    "pages/imgList/imgList"
   ],
   "window": {
     "backgroundTextStyle": "light",

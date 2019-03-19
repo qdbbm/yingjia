@@ -1,0 +1,91 @@
+<!--pages/jingjiren/jingjiren.wxml-->
+<view class="page">
+  <view class="plr-25 bb">
+    <view class="pt-30">
+      <view>形象照片</view>
+      <view class="gallery mt-25 clearfix">
+        <block wx:for="{{pictures}}" wx:for-item="picturesItem" wx:for-index="picturesIndex" wx:key="pictures">
+          <view class="gallery-item">
+            <image class="gallery-item-cover" src="{{picturesItem}}" mode="aspectFill" data-index="{{picturesIndex}}" bindtap="previewImage"></image>
+            <view class="gallery-item-del" bindtap="tapDelImage" data-index="{{ picturesIndex }}">
+              <image class="icon-close" src="../../images/icon-close.png" mode="aspectFit"></image>
+            </view>
+          </view>
+        </block>
+        <view class="mod-upload-field" bindtap="uploadImg">
+          <view class="mod-upload-field__inner">
+            <image class="icon-plus" src="../../images/icon-plus.png"></image>
+            <view class="mufi-tle">添加照片</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- end 形象照片 -->
+    
+    <view class="mod-form mod-form--label-auto mt-20">
+      <view class="mod-form-item">
+        <view class="mod-form-item__label">姓名：</view>
+        <view class="mod-form-item__field tar">
+          <input type="text" placeholder="点击输入"></input>
+        </view>
+      </view>
+      <!-- end .mod-form-item -->
+
+      <view class="mod-form-item">
+        <view class="mod-form-item__label">地产公司：</view>
+        <view class="mod-form-item__field tar">
+          <picker bindchange="bindPickerChange" value="{{dcgsIndex}}" range="{{dcgsArray}}">
+            <view class="picker">
+              {{dcgsArray[dcgsIndex]}}
+            </view>
+          </picker>
+        </view>
+        <van-icon custom-class="ml-15" name="arrow" color="#bebebe" />
+      </view>
+      <!-- end .mod-form-item -->
+
+      <view class="mod-form-item">
+        <view class="mod-form-item__label">职位：</view>
+        <view class="mod-form-item__field tar">
+          <picker bindchange="bindPickerChange2" value="{{zwIndex}}" range="{{zwArray}}">
+            <view class="picker">
+              {{zwArray[zwIndex]}}
+            </view>
+          </picker>
+        </view>
+        <van-icon custom-class="ml-15" name="arrow" color="#bebebe" />
+      </view>
+      <!-- end .mod-form-item -->
+
+      <view class="mod-form-item">
+        <view class="mod-form-item__label">主营地区1：</view>
+        <view class="mod-form-item__field tar">
+          <picker bindchange="bindPickerChange3" value="{{zydqIndex1}}" range="{{zydqArray1}}">
+            <view class="picker">
+              {{zydqArray1[zydqIndex1]}}
+            </view>
+          </picker>
+        </view>
+        <van-icon custom-class="ml-15" name="arrow" color="#bebebe" />
+      </view>
+      <!-- end .mod-form-item -->
+
+      <view class="mod-form-item mod-form-item--no-bd">
+        <view class="mod-form-item__label">主营地区2：</view>
+        <view class="mod-form-item__field tar">
+          <picker bindchange="bindPickerChange4" value="{{zydqIndex2}}" range="{{zydqArray2}}">
+            <view class="picker">
+              {{zydqArray2[zydqIndex2]}}
+            </view>
+          </picker>
+        </view>
+        <van-icon custom-class="ml-15" name="arrow" color="#bebebe" />
+      </view>
+      <!-- end .mod-form-item -->
+    </view>
+  </view>
+
+  <view class="ptb-45 plr-100">
+    <van-button round block type="primary" custom-class="btn-primary">提交信息</van-button>
+  </view>
+</view>

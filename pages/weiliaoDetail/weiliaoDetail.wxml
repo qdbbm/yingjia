@@ -1,0 +1,99 @@
+<!--pages/weiliaoDetail/weiliaoDetail.wxml-->
+<view class="page page--has-footer">
+  <view class="mod-media-item ptb-20 plr-25 mt-25">
+    <view class="mod-media-item__img">
+      <image src="../../images/media.jpg"></image>
+    </view>
+    <view class="mod-media-item__bd">
+      <view class="mmib-tle">华南城·紫荆名都</view>
+      <view class="mmib-txt mt-15">金湾-保利城</view>
+      <view class="mmib-price mt-15"><text>3000</text>元/㎡起</view>
+    </view>
+    <van-button round plain type="primary" size="small" custom-class="btn-primary">发送链接</van-button>
+  </view>
+
+  <view class="mod-chat mt-40">
+    <view class="mod-chat__time"><text>11:20</text></view>
+
+    <view class="mod-chat-list">
+      <view class="mod-chat-item">
+        <view class="mod-chat-item__info">
+          <image class="mcii-img" src="http://images.zhengzw.com/yingjia/zj-img.jpg"></image>
+          <view class="mcii-txt">周玲</view>
+        </view>
+        <view class="mod-chat-item__bd">
+          <view class="mcib-txt">关注我的微信，谢谢！</view>
+        </view>
+      </view>
+      <!-- end 对方 -->
+
+      <view class="mod-chat-item mod-chat-item--reverse mod-chat-item--high">
+        <view class="mod-chat-item__info">
+          <image class="mcii-img" src="http://images.zhengzw.com/yingjia/user.jpg"></image>
+          <view class="mcii-txt">绅士哥</view>
+        </view>
+        <view class="mod-chat-item__bd">
+          <view class="mcib-txt">我已关注，很高兴认识你美丫丫！</view>
+        </view>
+      </view>
+      <!-- end 我 -->
+
+      <view class="mod-chat-item">
+        <view class="mod-chat-item__info">
+          <image class="mcii-img" src="http://images.zhengzw.com/yingjia/zj-img.jpg"></image>
+          <view class="mcii-txt">周玲</view>
+        </view>
+        <view class="mod-chat-item__bd">
+          <view class="mcib-txt">关注我的微信，谢谢！</view>
+        </view>
+      </view>
+      <!-- end 对方 -->
+
+      <view class="mod-chat-item">
+        <view class="mod-chat-item__info">
+          <image class="mcii-img" src="http://images.zhengzw.com/yingjia/zj-img.jpg"></image>
+          <view class="mcii-txt">周玲</view>
+        </view>
+        <view class="mod-chat-item__bd">
+          <view class="mcib-txt">
+            健康是一种动态平衡。这是一种平衡的状态：均衡地输入和输出能量和物质（甚至允许生长）。健康也意味着有继续生存的
+期望。 对有情感的动物！
+          </view>
+        </view>
+      </view>
+      <!-- end 对方 -->
+
+      <view class="mod-chat-item mod-chat-item--reverse">
+        <view class="mod-chat-item__info">
+          <image class="mcii-img" src="http://images.zhengzw.com/yingjia/user.jpg"></image>
+          <view class="mcii-txt">绅士哥</view>
+        </view>
+        <view class="mod-chat-item__bd">
+          <view class="mcib-txt">
+            <view class="mod-media-item">
+              <view class="mod-media-item__img">
+                <image src="../../images/media.jpg"></image>
+              </view>
+              <view class="mod-media-item__bd">
+                <view class="mmib-tle">华南城·紫荆名都</view>
+                <view class="mmib-txt mt-15">金湾-保利城</view>
+                <view class="mmib-price mt-15"><text>3000</text>元/㎡起</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- end 我 -->
+    </view>
+  </view>
+</view>
+
+<view class="fixed-bottom">
+  <view class="mod-chat-action">
+    <van-button custom-class="btn-brown plr-20 br-0" size="large">报备</van-button>
+    <view class="mod-chat-action__field">
+      <input class="mcaf-input" placeholder="点击输入内容..."></input>
+    </view>
+    <van-button type="primary" round custom-class="btn-primary mr-25" size="small">发送</van-button>
+  </view>
+</view>
