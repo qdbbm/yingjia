@@ -11,6 +11,53 @@
     </view>
   </view>
 
+  <view class="mod-filter-bar">
+    <view class="mod-filter-bar__item {{ currentIndex == index ? 'active' : '' }}" wx:for="{{ filterBarNav }}" wx:key="index" data-index="{{ index }}" bindtap="filterChange">
+      <text>{{ item.txt }}</text>
+      <icon class="icon-caret icon-caret--down"></icon>
+    </view>
+    <view class="mod-filter-bar__sort">
+      <image class="icon-sort" src="../../images/icon-sort.png"></image>
+    </view>
+    <view class="mod-filter-bar__content" hidden="{{ showFilterContent ? false : true }}">
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 0 ? false : true }}">
+        <view class="flex">
+          <view class="mod-filter-col flex1 ovh pl-20">
+            <view class="mod-line-list mod-line-list--center">
+              <view class="mod-line-item {{ colLeftCurrentIndex == index ? 'active' : '' }}" wx:for="{{ colLeft }}" wx:key="index" bindtap="colLeftChange" data-index="{{ index }}">
+                {{ item.txt }}
+              </view>
+            </view>
+          </view>
+          <view class="mod-filter-col flex1 ovh bg-gray pl-20">
+            <!-- 附近 -->
+            <view class="mod-line-list mod-line-list--center" hidden="{{ colLeftCurrentIndex == 0 ? false : true }}">
+              <view class="mod-line-item {{ colSelectedCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ colLeftByNear }}" wx:key="index" bindtap="colSelectedChange">
+                {{ item.txt }}
+              </view>
+            </view>
+
+            <!-- 区域 -->
+            <view class="mod-line-list mod-line-list--center" hidden="{{ colLeftCurrentIndex == 1 ? false : true }}">
+              <view class="mod-line-item {{ colSelectedCurrentIndex2 == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ colLeftByArea }}" wx:key="index" bindtap="colSelectedChange2">
+                {{ item.txt }}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 1 ? false : true }}">
+        价格
+      </view>
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 2 ? false : true }}">
+        房型
+      </view>
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 3 ? false : true }}">
+        排序
+      </view>
+    </view>
+  </view>
+
   <view class="mod-house-list">
     <navigator class="mod-house-item" url="{{ item.url }}" wx:for="{{ houseList }}" wx:key="index">
       <view class="mod-house-item__hd">

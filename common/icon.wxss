@@ -127,3 +127,15 @@
   width: 24rpx;
   height: 24rpx;
 }
+
+.icon-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+
+.icon-caret--down {
+  border-left: 8rpx solid transparent;
+  border-right: 8rpx solid transparent;
+  border-top: 8rpx solid currentColor;
+}

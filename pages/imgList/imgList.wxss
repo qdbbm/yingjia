@@ -1,1 +1,36 @@
 /* pages/imgList/imgList.wxss */
+.img-item:not(:first-of-type) {
+  margin: 30rpx 0 0;
+}
+
+.img-item,
+.img-item__thumb {
+  width: 700rpx;
+  height: 268rpx;
+}
+
+.img-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20rpx;
+}
+
+.img-item__bd {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 310rpx;
+  padding: 25rpx 10rpx;
+  text-align: center;
+  border: 1rpx solid #3b3b3b;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, .83);
+  box-shadow: 0 0 0 15rpx rgba(255, 255, 255, .83);
+  box-sizing: border-box;
+}
+
+.img-item__bd-price text {
+  font-size: 32rpx;
+  color: #c5172c;
+}

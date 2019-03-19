@@ -6,12 +6,14 @@
         <view>{{ item.name }}<text class="ml-25">{{ item.mobile }}</text></view>
         <text>{{ item.company }}</text>
       </view>
-      <van-steps
-        custom-class="my-steps mt-40"
-        steps="{{ item.steps }}"
-        active="{{ item.active }}"
-        active-color="#c5172c"
-      />
+      <view class="plr-10 mt-40">
+        <van-steps
+          custom-class="my-steps"
+          steps="{{ item.steps }}"
+          active="{{ item.active }}"
+          active-color="#c5172c"
+        />
+      </view>
     </view>
   </view>
 </view>

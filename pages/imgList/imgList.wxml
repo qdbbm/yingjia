@@ -4,6 +4,10 @@
     <view class="img-list">
       <navigator class="img-item" url="{{ item.url }}" wx:for="{{ imgList }}" wx:key="index">
         <image class="img-item__thumb" src="{{ item.imgUrl }}"></image>
+        <view class="img-item__bd">
+          <view class="img-item__bd-txt">{{ item.mianji }}㎡</view>
+          <view class="img-item__bd-price"><text>{{ item.price }}</text>万起</view>
+        </view>
       </navigator>
     </view>
   </view>

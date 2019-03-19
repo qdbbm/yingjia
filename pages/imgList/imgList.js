@@ -8,7 +8,27 @@ Page({
     imgList: [
       {
         url: '',
-        imgUrl: 'http://images.zhengzw.com/yingjia/list7.jpg'
+        imgUrl: 'http://images.zhengzw.com/yingjia/list7.jpg',
+        mianji: '80',
+        price: '300'
+      },
+      {
+        url: '',
+        imgUrl: 'http://images.zhengzw.com/yingjia/list7.jpg',
+        mianji: '80',
+        price: '300'
+      },
+      {
+        url: '',
+        imgUrl: 'http://images.zhengzw.com/yingjia/list7.jpg',
+        mianji: '80',
+        price: '300'
+      },
+      {
+        url: '',
+        imgUrl: 'http://images.zhengzw.com/yingjia/list7.jpg',
+        mianji: '80',
+        price: '300'
       }
     ]
   },

@@ -5,6 +5,7 @@
 @import 'common/layout';
 @import 'common/btn';
 @import 'common/gallery';
+@import 'common/line';
 @import 'common/vant';
 
 .container {
@@ -595,4 +596,53 @@ page {
   margin: 30rpx 0 0;
   font-size: 26rpx;
   color: #787878;
+}
+
+/* 筛选栏 */
+.mod-filter-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+}
+
+.mod-filter-bar__item {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  color: #575757;
+}
+
+.mod-filter-bar__item .icon-caret {
+  margin: 0 0 0 18rpx;
+}
+
+.mod-filter-bar__item.active {
+  color: #c5172c;
+}
+
+.mod-filter-bar__sort {
+  padding: 0 25rpx;
+}
+
+.mod-filter-bar__content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #fff;
+  border-top: 1rpx solid #e5e5e5;
+  box-shadow: 0 10rpx 20rpx rgba(0, 0, 0, .2);
+}
+
+.mod-filter-col .mod-line-list {
+  max-height: 440rpx;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }

@@ -1,0 +1,16 @@
+.mod-line-item {
+  height: 88rpx;
+  line-height: 88rpx;
+}
+
+.mod-line-item:not(:first-of-type) {
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.mod-line-item.active {
+  color: #c5172c;
+}
+
+.mod-line-list--center .mod-line-item {
+  text-align: center;
+}
