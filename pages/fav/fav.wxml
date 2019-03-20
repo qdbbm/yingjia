@@ -21,8 +21,8 @@
                 <text class="mhib-status">{{ item.status }}</text>
                 <text>{{ item.txt }}</text>
               </view>
-              <view class="mhib-labels">
-                <text class="mhib-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
+              <view class="mod-labels">
+                <text class="mod-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
               </view>
               <view class="mhib-group">
                 <view class="mhib-types">

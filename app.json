@@ -20,7 +20,8 @@
     "pages/weiliaoDetail/weiliaoDetail",
     "pages/jingjiren/jingjiren",
     "pages/myHouse/myHouse",
-    "pages/imgList/imgList"
+    "pages/imgList/imgList",
+    "pages/houseDetail/houseDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

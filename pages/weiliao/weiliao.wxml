@@ -20,3 +20,21 @@
     </navigator>
   </view>
 </view>
+
+<van-tabbar active="{{ tabbarActive }}" bind:change="onTabbarChange">
+  <van-tabbar-item wx:for="{{ tabbarIcons }}" wx:key="index">
+    <image
+      class="{{ item.className }}"
+      slot="icon"
+      src="{{ item.normal }}"
+      mode="aspectFit"
+    />
+    <image
+      class="{{ item.className }}"
+      slot="icon-active"
+      src="{{ item.active }}"
+      mode="aspectFit"
+    />
+    {{ item.txt }}
+  </van-tabbar-item>
+</van-tabbar>

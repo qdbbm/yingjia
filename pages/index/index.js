@@ -32,11 +32,11 @@ Page({
       },
       {
         imgUrl: 'http://images.zhengzw.com/yingjia/list2.jpg',
-        url: ''
+        url: '../../pages/newHouse/newHouse'
       },
       {
         imgUrl: 'http://images.zhengzw.com/yingjia/list3.jpg',
-        url: ''
+        url: '../../pages/oldHouse/oldHouse'
       },
       {
         imgUrl: 'http://images.zhengzw.com/yingjia/list4.jpg',
@@ -44,11 +44,11 @@ Page({
       },
       {
         imgUrl: 'http://images.zhengzw.com/yingjia/list5.jpg',
-        url: ''
+        url: '../../pages/news/news'
       },
       {
         imgUrl: 'http://images.zhengzw.com/yingjia/list6.jpg',
-        url: ''
+        url: '../../pages/calc/calc'
       }
     ],
     tabbarActive: 0,

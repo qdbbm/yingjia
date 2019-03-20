@@ -163,8 +163,8 @@
     </view>
     <!-- end .calc-item -->
 
-    <view class="ptb-50">
+    <navigator class="ptb-50" url="../../pages/calcResult/calcResult" hover-class="none">
       <van-button round block type="primary" custom-class="btn-primary">开始计算</van-button>
-    </view>
+    </navigator>
   </view>
 </view>

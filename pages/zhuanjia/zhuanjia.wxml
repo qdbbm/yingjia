@@ -5,17 +5,59 @@
       <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
       <input class="mod-search__field-input" type="text" placeholder="输入你要搜索的内容"></input>
     </view>
-    <view class="mod-search__btn">
+    <navigator class="mod-search__btn" url="../../pages/weiliaoDetail/weiliaoDetail" hover-class="none">
       <image class="icon-msg" src="../../images/icon-msg.png"></image>
       <text class="mod-remind-num">2</text>
+    </navigator>
+  </view>
+
+  <view class="mod-filter-bar">
+    <view class="mod-filter-bar__item {{ currentIndex == index ? 'active' : '' }}" wx:for="{{ filterBarNav }}" wx:key="index" data-index="{{ index }}" bindtap="filterChange">
+      <text>{{ item.txt }}</text>
+      <icon class="icon-caret icon-caret--down"></icon>
+    </view>
+    <view class="mod-filter-bar__content" hidden="{{ showFilterContent ? false : true }}">
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 0 ? false : true }}">
+        <view class="flex">
+          <view class="mod-filter-col flex1 ovh pl-20">
+            <view class="mod-line-list mod-line-list--center">
+              <view class="mod-line-item {{ colLeftCurrentIndex == index ? 'active' : '' }}" wx:for="{{ colLeft }}" wx:key="index" bindtap="colLeftChange" data-index="{{ index }}">
+                {{ item.txt }}
+              </view>
+            </view>
+          </view>
+          <view class="mod-filter-col flex1 ovh bg-gray pl-20">
+            <!-- 附近 -->
+            <view class="mod-line-list mod-line-list--center" hidden="{{ colLeftCurrentIndex == 0 ? false : true }}">
+              <view class="mod-line-item {{ colSelectedCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ colLeftByNear }}" wx:key="index" bindtap="colSelectedChange">
+                {{ item.txt }}
+              </view>
+            </view>
+
+            <!-- 区域 -->
+            <view class="mod-line-list mod-line-list--center" hidden="{{ colLeftCurrentIndex == 1 ? false : true }}">
+              <view class="mod-line-item {{ colSelectedCurrentIndex2 == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ colLeftByArea }}" wx:key="index" bindtap="colSelectedChange2">
+                {{ item.txt }}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 1 ? false : true }}">
+        <view class="mod-line-list mod-line-list--center">
+          <view class="mod-line-item {{ xingjiCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ xingjiList }}" wx:key="index" bindtap="xingjiChange">
+            {{ item.txt }}
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 
   <view class="user-list plr-25 pb-30">
-    <view class="user-item" wx:for="{{ userList }}" wx:key="index">
-      <navigator class="user-item__img" url="{{ item.url }}">
+    <navigator class="user-item" url="{{ item.url }}" wx:for="{{ userList }}" wx:key="index">
+      <view class="user-item__img">
         <image src="{{ item.imgUrl }}"></image>
-      </navigator>
+      </view>
       <view class="user-item__bd">
         <view class="flex-s-b">
           <text class="user-item__bd-tle">{{ item.name }}</text>
@@ -29,6 +71,6 @@
         <view class="user-item__bd-txt">熟悉板块{{ item.know }}</view>
       </view>
       <view class="mod-star mod-star--sm mod-star--{{ item.star }}"></view>
-    </view>
+    </navigator>
   </view>
 </view>

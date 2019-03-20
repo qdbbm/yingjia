@@ -144,8 +144,7 @@ page {
   padding: 35rpx 30rpx;
 }
 
-.mod-house-item__bd .mhib-status,
-.mod-house-item__bd .mhib-labels .mhib-label {
+.mod-house-item__bd .mhib-status {
   display: inline-block;
   height: 32rpx;
   line-height: 32rpx;
@@ -160,28 +159,8 @@ page {
   background-color: #b4a078;
 }
 
-.mod-house-item__bd .mhib-labels {
+.mod-house-item__bd .mod-labels {
   margin: 15rpx 0 0 ;
-}
-
-.mod-house-item__bd .mhib-labels .mhib-label {
-  background-color: #f2cace;
-  color: #c30d22;
-}
-
-.mod-house-item__bd .mhib-labels .mhib-label:nth-of-type(4n+2) {
-  background-color: #f8f4e8;
-  color: #b5a26f;
-}
-
-.mod-house-item__bd .mhib-labels .mhib-label:nth-of-type(4n+3) {
-  background-color: #f5f5f5;
-  color: #a0a0a0;
-}
-
-.mod-house-item__bd .mhib-labels .mhib-label:nth-of-type(4n+4) {
-  background-color: #f9ead1;
-  color: #ff7800;
 }
 
 .mod-house-item__bd .mhib-group {
@@ -645,4 +624,36 @@ page {
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+/* 房源标签 */
+.mod-label {
+  display: inline-block;
+  height: 32rpx;
+  line-height: 32rpx;
+  padding: 0 6rpx;
+  margin: 0 13rpx 0 0;
+  font-size: 24rpx;
+  color: #fff;
+  border-radius: 6rpx;  
+}
+
+.mod-label {
+  background-color: #f2cace;
+  color: #c30d22;
+}
+
+.mod-label:nth-of-type(4n+2) {
+  background-color: #f8f4e8;
+  color: #b5a26f;
+}
+
+.mod-label:nth-of-type(4n+3) {
+  background-color: #f5f5f5;
+  color: #a0a0a0;
+}
+
+.mod-label:nth-of-type(4n+4) {
+  background-color: #f9ead1;
+  color: #ff7800;
 }

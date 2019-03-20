@@ -15,26 +15,26 @@
       </view>
     </view>
 
-    <navigator class="user-apply mt-20" url="">
+    <navigator class="user-apply mt-20" url="../../pages/jingjiren/jingjiren">
       <image src="../../images/ad-img.png"></image>
     </navigator>
     
     <view class="user-menu bg-white br-20 mt-20 plr-20">
-      <navigator class="user-menu__item flex-v-c" url="" hover-class="none">
+      <navigator class="user-menu__item flex-v-c" url="../../pages/fav/fav" hover-class="none">
         <view class="user-menu__icon mr-30" slot="icon">
           <image class="icon-fav" src="../../images/icon-fav.png"></image> 
         </view> 
         <view class="flex1">我的收藏</view>
         <van-icon name="arrow" color="#bebebe" />
       </navigator>
-      <navigator class="user-menu__item flex-v-c" url="" hover-class="none">
+      <navigator class="user-menu__item flex-v-c" url="../../pages/myHouse/myHouse" hover-class="none">
         <view class="user-menu__icon mr-30" style="background-color: #ffab96;" slot="icon">
           <image class="icon-house" src="../../images/icon-house.png"></image> 
         </view> 
         <view class="flex1">看过的房源</view>
         <van-icon name="arrow" color="#bebebe" />
       </navigator>
-      <navigator class="user-menu__item flex-v-c" url="" hover-class="none">
+      <navigator class="user-menu__item flex-v-c" url="../../pages/baobeiList/baobeiList" hover-class="none">
         <view class="user-menu__icon mr-30" style="background-color: #c5172c;" slot="icon">
           <image class="icon-edit" src="../../images/icon-edit.png"></image> 
         </view> 

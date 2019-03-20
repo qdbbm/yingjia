@@ -1,31 +1,27 @@
-// pages/user/user.js
-
-//获取应用实例
-const app = getApp()
-
-const utils = require("../../utils/util.js")
-
+// pages/houseDetail/houseDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    user: {
-      sign: 'Hello！',
-      name: '张晓秦',
-      mobile: '15904601770',
-      avatar: 'http://images.zhengzw.com/yingjia/user.jpg'
-    },
-    tabbarActive: 3,
-    tabbarIcons: app.globalData.tabbarIcons
+    currentHdTabIndex: 0,
+    hdTabTleList: ['视频','全景','户型图','沙盘图'],
+    detailInfo: {
+      tle: '横琴百家达星际广场酒楼精装修',
+      labels: ['在售','今年交房','低单价','在售','今年交房','低单价'],
+      date: '2018-07-09',
+      address: '中源大道',
+      price: 3000,
+      jingjin: 3000
+    }
   },
 
-  /**
-   * tabbar跳转
-   */
-  onTabbarChange: function (e) {
-    utils.onTabbarChange(e);
+  hdTabChange: function (e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      currentHdTabIndex: index
+    })
   },
 
   /**

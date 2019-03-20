@@ -1,4 +1,10 @@
 // pages/news/news.js
+
+//获取应用实例
+const app = getApp()
+
+const utils = require("../../utils/util.js")
+
 Page({
 
   /**
@@ -41,7 +47,16 @@ Page({
         date: '2019-02-23',
         read: 5203
       }
-    ]
+    ],
+    tabbarActive: 2,
+    tabbarIcons: app.globalData.tabbarIcons
+  },
+
+  /**
+   * tabbar跳转
+   */
+  onTabbarChange: function (e) {
+    utils.onTabbarChange(e);
   },
 
   /**

@@ -1,0 +1,78 @@
+<!--pages/houseDetail/houseDetail.wxml-->
+<view class="page">
+  <view class="detail-hd">
+    <view hidden="{{ currentHdTabIndex == 0 ? false : true }}">
+      <video
+        class="houseVideo"
+        id="myVideo"
+        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+        enable-danmu
+        danmu-btn
+        controls
+      ></video>
+    </view>
+    <!-- end 视频 -->
+
+    <view hidden="{{ currentHdTabIndex == 1 ? false : true }}">
+      全景
+    </view>
+    <!-- end 全景 -->
+
+    <view hidden="{{ currentHdTabIndex == 2 ? false : true }}">
+      户型图
+    </view>
+    <!-- end 全景 -->
+
+    <view hidden="{{ currentHdTabIndex == 3 ? false : true }}">
+      沙盘图
+    </view>
+    <!-- end 全景 -->
+
+    <view class="detail-hd__tab tac">
+      <view class="detail-hd__tab-tle {{ currentHdTabIndex == index ? 'active' : '' }}" wx:for="{{ hdTabTleList }}" wx:key="index" data-index="{{ index }}" bindtap="hdTabChange">{{ item }}</view>
+    </view>
+    <!-- end 标签切换 -->
+
+    <button class="btn detail-share">
+      <image class="icon-share icon-share--white" src="../../images/icon-share--white.png"></image>
+      <view class="fs-12 color-white">分享</view>
+    </button>
+    <!-- end 分享 -->
+  </view>
+  <!-- end .detail-hd -->
+
+  <view class="detail-info plr-25 ptb-40 bg-white">
+    <view class="fs-20 fw-700">{{ detailInfo.tle }}</view>
+    <!-- end 标题 -->
+    <view class="mod-labels mt-15">
+      <text class="mod-label" wx:for="{{ detailInfo.labels}}" wx:key="index">{{ item }}</text>
+    </view>
+    <!-- end 标签 -->
+    <view class="flex mt-20">
+      <view class="flex1">
+        <view><text class="color-gray-light">开盘</text><text class="ml-15">{{ detailInfo.date }}</text></view>
+        <view class="mt-10"><text class="color-gray-light">地址</text><text class="ml-15">{{ detailInfo.address }}</text></view>
+      </view>
+      <view class="tar">
+        <navigator url="../../pages/baobei/baobei"><van-button round custom-class="btn-brown" size="small">报备</van-button></navigator>
+        <view class="mt-10 fs-12"><text class="color-danger fs-16">{{ detailInfo.price }}</text><text class="color-danger">元</text>/㎡起</view>
+      </view>
+    </view>
+    <!-- end 开盘信息、报备 -->
+
+    <view class="mt-15">
+      <view class="jiangjin">奖金<text>3000元</text></view>
+    </view>
+    <!-- end 奖金 -->
+
+    <view class="flex-v-c mt-30 pt-30 bt">
+      <view class="flex1">
+        <view>盈嘉服务</view>
+        <view class="fs-12 color-gray mt-10">花园洋房即将开盘</view>
+      </view>
+      <van-button round plain type="primary" size="small" custom-class="btn-primary plr-20">获取优惠</van-button>
+    </view>
+    <!-- end 服务 -->
+  </view>
+  <!-- end .detail-info -->
+</view>

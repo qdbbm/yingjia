@@ -5,10 +5,10 @@
       <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
       <input class="mod-search__field-input" type="text" placeholder="输入楼盘名称"></input>
     </view>
-    <view class="mod-search__btn">
+    <navigator class="mod-search__btn" url="../../pages/weiliaoDetail/weiliaoDetail" hover-class="none">
       <image class="icon-msg" src="../../images/icon-msg.png"></image>
       <text class="mod-remind-num">2</text>
-    </view>
+    </navigator>
   </view>
 
   <view class="mod-filter-bar">
@@ -47,13 +47,25 @@
         </view>
       </view>
       <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 1 ? false : true }}">
-        价格
+        <view class="mod-line-list mod-line-list--center">
+          <view class="mod-line-item {{ priceCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ priceList }}" wx:key="index" bindtap="priceChange">
+            {{ item.txt }}
+          </view>
+        </view>
       </view>
       <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 2 ? false : true }}">
-        房型
+        <view class="mod-line-list mod-line-list--center">
+          <view class="mod-line-item {{ houseTypeCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ houseTypeList }}" wx:key="index" bindtap="houseTypeChange">
+            {{ item.txt }}
+          </view>
+        </view>
       </view>
       <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 3 ? false : true }}">
-        排序
+        <view class="mod-line-list mod-line-list--center">
+          <view class="mod-line-item {{ sortCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ sortList }}" wx:key="index" bindtap="sortChange">
+            {{ item.txt }}
+          </view>
+        </view>
       </view>
     </view>
   </view>
@@ -72,8 +84,8 @@
           <text class="mhib-status">{{ item.status }}</text>
           <text>{{ item.txt }}</text>
         </view>
-        <view class="mhib-labels">
-          <text class="mhib-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
+        <view class="mod-labels">
+          <text class="mod-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
         </view>
         <view class="mhib-group">
           <view class="mhib-types">

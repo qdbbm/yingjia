@@ -1,4 +1,10 @@
 // pages/weiliao/weiliao.js
+
+//获取应用实例
+const app = getApp()
+
+const utils = require("../../utils/util.js")
+
 Page({
 
   /**
@@ -42,7 +48,16 @@ Page({
         txt: '今天就是小年，我在这里祝福身体健康2019',
         hasMsg: false
       }
-    ]
+    ],
+    tabbarActive: 1,
+    tabbarIcons: app.globalData.tabbarIcons
+  },
+
+  /**
+   * tabbar跳转
+   */
+  onTabbarChange: function (e) {
+    utils.onTabbarChange(e);
   },
 
   /**

@@ -5,9 +5,68 @@
       <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
       <input class="mod-search__field-input" type="text" placeholder="输入楼盘名称"></input>
     </view>
-    <view class="mod-search__btn">
+    <navigator class="mod-search__btn" url="../../pages/weiliaoDetail/weiliaoDetail" hover-class="none">
       <image class="icon-msg" src="../../images/icon-msg.png"></image>
       <text class="mod-remind-num">2</text>
+    </navigator>
+  </view>
+  
+  <view class="mod-filter-bar">
+    <view class="mod-filter-bar__item {{ currentIndex == index ? 'active' : '' }}" wx:for="{{ filterBarNav }}" wx:key="index" data-index="{{ index }}" bindtap="filterChange">
+      <text>{{ item.txt }}</text>
+      <icon class="icon-caret icon-caret--down"></icon>
+    </view>
+    <view class="mod-filter-bar__sort">
+      <image class="icon-sort" src="../../images/icon-sort.png"></image>
+    </view>
+    <view class="mod-filter-bar__content" hidden="{{ showFilterContent ? false : true }}">
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 0 ? false : true }}">
+        <view class="flex">
+          <view class="mod-filter-col flex1 ovh pl-20">
+            <view class="mod-line-list mod-line-list--center">
+              <view class="mod-line-item {{ colLeftCurrentIndex == index ? 'active' : '' }}" wx:for="{{ colLeft }}" wx:key="index" bindtap="colLeftChange" data-index="{{ index }}">
+                {{ item.txt }}
+              </view>
+            </view>
+          </view>
+          <view class="mod-filter-col flex1 ovh bg-gray pl-20">
+            <!-- 附近 -->
+            <view class="mod-line-list mod-line-list--center" hidden="{{ colLeftCurrentIndex == 0 ? false : true }}">
+              <view class="mod-line-item {{ colSelectedCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ colLeftByNear }}" wx:key="index" bindtap="colSelectedChange">
+                {{ item.txt }}
+              </view>
+            </view>
+
+            <!-- 区域 -->
+            <view class="mod-line-list mod-line-list--center" hidden="{{ colLeftCurrentIndex == 1 ? false : true }}">
+              <view class="mod-line-item {{ colSelectedCurrentIndex2 == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ colLeftByArea }}" wx:key="index" bindtap="colSelectedChange2">
+                {{ item.txt }}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 1 ? false : true }}">
+        <view class="mod-line-list mod-line-list--center">
+          <view class="mod-line-item {{ priceCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ priceList }}" wx:key="index" bindtap="priceChange">
+            {{ item.txt }}
+          </view>
+        </view>
+      </view>
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 2 ? false : true }}">
+        <view class="mod-line-list mod-line-list--center">
+          <view class="mod-line-item {{ houseTypeCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ houseTypeList }}" wx:key="index" bindtap="houseTypeChange">
+            {{ item.txt }}
+          </view>
+        </view>
+      </view>
+      <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 3 ? false : true }}">
+        <view class="mod-line-list mod-line-list--center">
+          <view class="mod-line-item {{ sortCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ sortList }}" wx:key="index" bindtap="sortChange">
+            {{ item.txt }}
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 
@@ -25,8 +84,8 @@
           <text class="mhib-status">{{ item.status }}</text>
           <text>{{ item.txt }}</text>
         </view>
-        <view class="mhib-labels">
-          <text class="mhib-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
+        <view class="mod-labels">
+          <text class="mod-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
         </view>
         <view class="mhib-group">
           <view class="mhib-types">

@@ -117,8 +117,8 @@
       </button>
     </view>
 
-    <view class="contact-action__item flex2">
+    <navigator class="contact-action__item flex2" url="../../pages/calc/calc" hover-class="none">
       <van-button round type="primary" block custom-class="btn-primary">重新计算</van-button>
-    </view>
+    </navigator>
   </view>
 </view>

@@ -3,6 +3,8 @@
 //获取应用实例
 const app = getApp()
 
+var colSelectedIndex = -1
+
 Page({
 
   /**
@@ -76,7 +78,34 @@ Page({
       }
     ],
     colSelectedCurrentIndex: -1,
-    colSelectedCurrentIndex2: -1
+    colSelectedCurrentIndex2: -1,
+    priceCurrentIndex: 0,
+    priceList: [
+      {
+        txt: '价格从高到低'
+      },
+      {
+        txt: '价格从低到高'
+      }
+    ],
+    houseTypeCurrentIndex: 0,
+    houseTypeList: [
+      {
+        txt: '房型1'
+      },
+      {
+        txt: '房型2'
+      }
+    ],
+    sortCurrentIndex: 0,
+    sortList: [
+      {
+        txt: '排序1'
+      },
+      {
+        txt: '排序2'
+      }
+    ]
   },
 
   filterChange: function (e) {
@@ -97,9 +126,18 @@ Page({
 
   colLeftChange: function (e) {
     let index = e.currentTarget.dataset.index;
-    this.setData({
-      colLeftCurrentIndex: index
-    })
+
+    console.log(index, colSelectedIndex);
+    
+    if (index != colSelectedIndex) {
+      this.setData({
+        colSelectedCurrentIndex: -1,
+        colSelectedCurrentIndex2: -1,
+        colLeftCurrentIndex: index
+      })
+
+      colSelectedIndex = index;
+    }
   },
 
   colSelectedChange: function (e) {
@@ -113,6 +151,27 @@ Page({
     let index = e.currentTarget.dataset.index;
     this.setData({
       colSelectedCurrentIndex2: index
+    })
+  },
+
+  priceChange: function (e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      priceCurrentIndex: index
+    })
+  },
+
+  houseTypeChange: function (e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      houseTypeCurrentIndex: index
+    })
+  },
+
+  sortChange: function (e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      sortCurrentIndex: index
     })
   },
 

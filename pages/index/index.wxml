@@ -9,12 +9,12 @@
     </block>
   </swiper>
 
-  <view class="mod-search">
+  <navigator class="mod-search" url="../../pages/search/search" hover-class="none">
     <view class="mod-search__field">
       <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
       <input class="mod-search__field-input" type="text" placeholder="输入你要搜索的内容"></input>
     </view>
-  </view>
+  </navigator>
 
   <view class="plr-25 ptb-30">
     <navigator class="block-item" url="{{ item.url }}" wx:for="{{ blockList }}" wx:key="index">

@@ -1,4 +1,7 @@
 // pages/zhuanjia/zhuanjia.js
+
+var colSelectedIndex = -1
+
 Page({
 
   /**
@@ -42,7 +45,132 @@ Page({
         know: '香港-横琴',
         star: 50
       }
-    ]
+    ],
+    currentIndex: -1,
+    showFilterContent: false,
+    filterBarNav: [
+      {
+        txt: '区域'
+      },
+      {
+        txt: '星级'
+      }
+    ],
+    colLeftCurrentIndex: 0,
+    colLeft: [
+      {
+        txt: '附近'
+      },
+      {
+        txt: '区域'
+      }
+    ],
+    colLeftByNear: [
+      {
+        txt: '附近1'
+      },
+      {
+        txt: '附近2'
+      },
+      {
+        txt: '附近3'
+      },
+      {
+        txt: '附近4'
+      },
+      {
+        txt: '附近5'
+      },
+      {
+        txt: '附近6'
+      }
+    ],
+    colLeftByArea: [
+      {
+        txt: '不限'
+      },
+      {
+        txt: '东区'
+      },
+      {
+        txt: '南区'
+      },
+      {
+        txt: '西区'
+      },
+      {
+        txt: '北区'
+      },
+      {
+        txt: '中区'
+      }
+    ],
+    colSelectedCurrentIndex: -1,
+    colSelectedCurrentIndex2: -1,
+    xingjiCurrentIndex: 0,
+    xingjiList: [
+      {
+        txt: '一星'
+      },
+      {
+        txt: '二星'
+      },
+      {
+        txt: '三星'
+      },
+      {
+        txt: '四星'
+      },
+      {
+        txt: '五星'
+      }
+    ],
+  },
+
+  filterChange: function (e) {
+    let index = e.currentTarget.dataset.index;
+
+    if (index == this.data.currentIndex) {
+      this.setData({
+        currentIndex: -1,
+        showFilterContent: false
+      })
+    } else {
+      this.setData({
+        currentIndex: index,
+        showFilterContent: true
+      })
+    }
+  },
+
+  colLeftChange: function (e) {
+    let index = e.currentTarget.dataset.index;
+
+    console.log(index, colSelectedIndex);
+
+    if (index != colSelectedIndex) {
+      this.setData({
+        colSelectedCurrentIndex: -1,
+        colSelectedCurrentIndex2: -1,
+        colLeftCurrentIndex: index
+      })
+
+      colSelectedIndex = index;
+    }
+  },
+
+  colSelectedChange: function (e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      colSelectedCurrentIndex: index
+    })
+  },
+
+  colSelectedChange2: function (e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      colSelectedCurrentIndex2: index
+    })
   },
 
   /**

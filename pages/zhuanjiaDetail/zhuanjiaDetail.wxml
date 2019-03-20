@@ -52,8 +52,8 @@
             <text class="mhib-status">{{ item.status }}</text>
             <text>{{ item.txt }}</text>
           </view>
-          <view class="mhib-labels">
-            <text class="mhib-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
+          <view class="mod-labels">
+            <text class="mod-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
           </view>
           <view class="mhib-group">
             <view class="mhib-types">
@@ -80,9 +80,9 @@
       </button>
     </view>
 
-    <view class="contact-action__item">
+    <navigator class="contact-action__item" url="../../pages/weiliaoDetail/weiliaoDetail" hover-class="none">
       <van-button round type="primary" block custom-class="btn-primary">微聊</van-button>
-    </view>
+    </navigator>
 
     <view class="contact-action__item">
       <van-button round block custom-class="btn-brown" bindtap="call" data-phone="{{ detail.phoneNumber }}">电话</van-button>
