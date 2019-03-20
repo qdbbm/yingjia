@@ -84,7 +84,8 @@
   height: 27rpx;
 }
 
-.icon-lou {
+.icon-lou,
+.icon-lou-gray {
   width: 30rpx;
   height: 26rpx;
 }

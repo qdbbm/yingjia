@@ -5,8 +5,17 @@
 }
 
 .detail-hd,
-.houseVideo {
+.houseVideo,
+.banner,
+.banner-item {
   width: 750rpx;
+  height: 480rpx;
+}
+
+.detail-hd__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 480rpx;
 }
 

@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 19,
+			"current": 20,
 			"list": [
 				{
 					"id": -1,
@@ -176,6 +176,13 @@
 					"id": -1,
 					"name": "新房源详情页",
 					"pathName": "pages/houseDetail/houseDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "二手房详情",
+					"pathName": "pages/oldHouseDetail/oldHouseDetail",
 					"scene": null
 				}
 			]

@@ -1,4 +1,4 @@
-<!--pages/houseDetail/houseDetail.wxml-->
+<!--pages/oldHouseDetail/oldHouseDetail.wxml-->
 <view class="page page--has-footer">
   <view class="detail-hd">
     <view hidden="{{ currentHdTabIndex == 0 ? false : true }}">
@@ -58,24 +58,42 @@
   <view class="detail-info plr-25 ptb-40 bg-white">
     <view class="fs-20 fw-700">{{ detailInfo.tle }}</view>
     <!-- end 标题 -->
-    <view class="mod-labels mt-15">
-      <text class="mod-label" wx:for="{{ detailInfo.labels}}" wx:key="index">{{ item }}</text>
-    </view>
-    <!-- end 标签 -->
-    <view class="flex mt-20">
+    <view class="flex-s-b flex-v-c mt-20">
       <view class="flex1">
-        <view><text class="color-gray-light">开盘</text><text class="ml-15">{{ detailInfo.date }}</text></view>
-        <view class="mt-10"><text class="color-gray-light">地址</text><text class="ml-15">{{ detailInfo.address }}</text></view>
+        <view>
+          <image class="icon-lou-gray" src="../../images/icon-lou-gray.png"></image>
+          <text class="ml-15">{{ detailInfo.address }}</text>
+        </view>
       </view>
       <view class="tar">
-        <navigator url="../../pages/baobei/baobei"><van-button round custom-class="btn-brown" size="small">报备</van-button></navigator>
-        <view class="mt-10 fs-12"><text class="color-danger fs-16">{{ detailInfo.price }}</text><text class="color-danger">元</text>/㎡起</view>
+        <navigator url=""><van-button round custom-class="btn-brown" size="small">同行合作</van-button></navigator>
       </view>
     </view>
-    <!-- end 开盘信息、报备 -->
+    <!-- end 地址、同行合作 -->
 
-    <view class="mt-15">
-      <view class="jiangjin">奖金<text>3000元</text></view>
+    <view class="mt-30 flex">
+      <view class="flex1 pl-20">
+        <view class="color-primary">
+          <text class="fs-20 fw-700">{{ detailInfo.price }}</text>
+          元/平米
+        </view>
+        <view class="fs-12 color-gray-light">单价</view>
+      </view>
+      <view class="flex1 pl-20 bl">
+        <view class="color-primary">
+          <text class="fs-20 fw-700">{{ detailInfo.shi }}</text>室
+          <text class="fs-20 fw-700">{{ detailInfo.ting }}</text>厅
+          <text class="fs-20 fw-700">{{ detailInfo.wei }}</text>卫
+        </view>
+        <view class="fs-12 color-gray-light">户型</view>
+      </view>
+      <view class="flex1 pl-20 bl">
+        <view class="color-primary">
+          <text class="fs-20 fw-700">{{ detailInfo.area }}</text>
+          平米
+        </view>
+        <view class="fs-12 color-gray-light">建筑面积</view>
+      </view>
     </view>
     <!-- end 奖金 -->
 

@@ -1,10 +1,4 @@
-// pages/houseDetail/houseDetail.js
-
-//获取应用实例
-const app = getApp()
-
-const utils = require("../../utils/util.js")
-
+// pages/oldHouseDetail/oldHouseDetail.js
 Page({
 
   /**
@@ -27,14 +21,16 @@ Page({
     interval: 3000,
     duration: 1000,
     currentHdTabIndex: 0,
-    hdTabTleList: ['视频','全景','户型图','沙盘图'],
+    hdTabTleList: ['视频', '全景', '户型图', '沙盘图'],
     detailInfo: {
       tle: '横琴百家达星际广场酒楼精装修',
-      labels: ['在售','今年交房','低单价','在售','今年交房','低单价'],
       date: '2018-07-09',
-      address: '中源大道',
+      address: '香港丨湾仔',
       price: 3000,
-      jingjin: 3000
+      shi: 2,
+      ting: 2,
+      wei: 1,
+      area: 93
     },
     tabTle: [
       '基础信息',

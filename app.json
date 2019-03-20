@@ -21,7 +21,8 @@
     "pages/jingjiren/jingjiren",
     "pages/myHouse/myHouse",
     "pages/imgList/imgList",
-    "pages/houseDetail/houseDetail"
+    "pages/houseDetail/houseDetail",
+    "pages/oldHouseDetail/oldHouseDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

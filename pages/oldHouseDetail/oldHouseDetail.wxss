@@ -1,0 +1,2 @@
+/* pages/oldHouseDetail/oldHouseDetail.wxss */
+@import '../houseDetail/houseDetail';
