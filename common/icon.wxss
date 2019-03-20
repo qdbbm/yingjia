@@ -140,3 +140,19 @@
   border-right: 8rpx solid transparent;
   border-top: 8rpx solid currentColor;
 }
+
+.icon-money {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.icon-notice {
+  width: 33rpx;
+  height: 30rpx;
+}
+
+.icon-love,
+.icon-love-active {
+  width: 31rpx;
+  height: 29rpx;
+}

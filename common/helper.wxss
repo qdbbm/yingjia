@@ -390,6 +390,11 @@
   padding-right: 30rpx !important;
 }
 
+.plr-35 {
+  padding-left: 35rpx !important;
+  padding-right: 35rpx !important;
+}
+
 .plr-40 {
   padding-left: 40rpx !important;
   padding-right: 40rpx !important;
@@ -553,6 +558,10 @@
 
 .mt-40 {
   margin-top: 40rpx !important;
+}
+
+.mt-45 {
+  margin-top: 45rpx !important;
 }
 
 .mt-50 {

@@ -20,6 +20,11 @@
   background-color: #fff !important;
 }
 
+.van-button--plain.btn-default {
+  color: #787878 !important;
+  border-color: #787878 !important;
+}
+
 /* tabbar */
 .van-tabbar-item--active {
   color: #fff !important;

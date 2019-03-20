@@ -333,6 +333,25 @@ page {
   line-height: 100rpx;
 }
 
+.mod-tab--style-2 .mod-tab__tle {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 45rpx;
+  border-bottom: 1rpx solid #e9e9e9;
+}
+
+.mod-tab--style-2 .mod-tab__tle-item {
+  color: #707070;
+}
+
+.mod-tab--style-2 .mod-tab__tle-item.active {
+  color: #000;
+}
+
+.mod-tab--style-2 .mod-tab__tle-item.active:after {
+  background: #707070;
+}
+
 /* 空数据 */
 .mod-empty {
   padding: 50rpx;
@@ -656,4 +675,82 @@ page {
 .mod-label:nth-of-type(4n+4) {
   background-color: #f9ead1;
   color: #ff7800;
+}
+
+/* 小提示 */
+.mod-tips {
+  height: 55rpx;
+  line-height: 55rpx;
+  padding: 0 20rpx;
+  font-size: 19rpx;
+  color: #787878;
+  text-align: center;
+  border-radius: 30rpx;
+  background: #eee;
+}
+
+/* 用户媒体对象 */
+.mod-user-media__item {
+  display: flex;
+  padding: 30rpx 0;
+}
+
+.mod-user-media__item:not(:first-child) {
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.mod-user-media__item .mumi-img,
+.mod-user-media__item .mumi-img image {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.mod-user-media__item .mumi-img {
+  margin: 0 30rpx 0 0;
+  overflow: hidden;
+  border: 1rpx solid #e7e7e7;
+  border-radius: 50%;
+}
+
+.mod-user-media__item .mumi-bd {
+  flex: 1;
+  overflow: hidden;
+}
+
+.mod-user-media__item .mumi-bd-name {
+  padding: 10rpx 0 0;
+  font-size: 30rpx;
+}
+
+.mod-user-media__item .mumi-bd-tag {
+  height: 34rpx;
+  line-height: 34rpx;
+  padding: 0 10rpx;
+  margin: 0 0 0 15rpx;
+  font-size: 24rpx;
+  color: #b5a26f;
+  border-radius: 6rpx;
+  background: #f8f4e8;
+}
+
+.mod-user-media__item .mumi-bd-job {
+  margin: 15rpx 0 0;
+  font-size: 26rpx;
+  color: #9a9a9a;
+}
+
+.mod-user-media__item .mumi-bd-txt {
+  margin: 30rpx 0 0;
+  font-size: 26rpx;
+  color: #5a5a5a;
+}
+
+.mod-user-media__item .mumi-bd-more {
+  display: inline-block;
+  color: #c5172c;
+}
+
+/* 收藏 */
+.mod-btn-fav.active {
+  color: #c5172c;
 }

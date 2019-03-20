@@ -1,5 +1,5 @@
 <!--pages/houseDetail/houseDetail.wxml-->
-<view class="page">
+<view class="page page--has-footer">
   <view class="detail-hd">
     <view hidden="{{ currentHdTabIndex == 0 ? false : true }}">
       <video
@@ -75,4 +75,101 @@
     <!-- end 服务 -->
   </view>
   <!-- end .detail-info -->
+
+  <view class="mod-tab mod-tab--lg mod-tab--style-2 mt-25">
+    <view class="mod-tab__tle bg-white">
+      <view class="mod-tab__tle-item {{ current == 'jcxx' ? 'active' : '' }}" data-current="jcxx" bindtap="tabChange">基础信息</view>
+      <view class="mod-tab__tle-item {{ current == 'jygz' ? 'active' : '' }}" data-current="jygz" bindtap="tabChange">结佣规则</view>
+      <view class="mod-tab__tle-item">专家解读</view>  
+    </view>
+    <!-- end .mod-tab__tle -->
+    
+    <view class="mod-tab__content">
+      <view class="mod-tab__pane" hidden="{{ current == 'jcxx' ? false : true }}">
+        <view class="plr-25 pt-40 pb-30">
+          <view>
+            <view class="fs-16 fw-700">楼盘详情</view>
+            <view class="mt-20" style="line-height: 10px;">
+              <text class="fs-12 color-gray-light">
+                占地面积：51333平方米\n
+                建筑面积：125543平方米\n
+                容积率：1.80\n
+                绿化率：35%\n
+                停车位：924个\n
+                楼栋总数：9栋\n
+                总户数：705户\n
+                物业公司：珠海裕和物业管理有限公司\n
+                物业费：3.00元/㎡·月\n
+                物业费描述：住宅3元/㎡·月
+              </text>
+            </view>
+          </view>
+          <!-- end 楼盘详情 -->
+
+          <view class="mt-50">
+            <view class="fs-16 fw-700">房贷参考</view>
+            <view>图表</view>
+            <view class="mod-tips mt-45">
+              签订购房合同前切勿提前支付任何费用！要求先汇款或者不见面交易，均属诈骗！
+            </view>
+            <view class="mt-35 tac">
+              <van-button round plain type="primary" custom-class="btn-primary plr-40" size="small"><image class="icon-money mr-10" style="vertical-align: -4px;" src="../../images/icon-money.png"></image><text>关注报价</text></van-button>
+
+              <van-button round plain custom-class="btn-brown plr-40 ml-20" size="small"><image class="icon-notice mr-10" style="vertical-align: -4px;" src="../../images/icon-notice.png"></image><text>关注开盘</text></van-button>
+            </view>
+          </view>
+          <!-- end 房贷参考 -->
+        </view>
+      </view>
+      <!-- end 基础信息 -->
+
+      <view class="mod-tab__pane" hidden="{{ current == 'jygz' ? false : true }}">      <view class="pd-25">
+          结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容...
+        </view>
+      </view>
+      <!-- end 结佣规则 -->
+    </view>
+    <!-- end .mod-tab__content -->
+  </view>
+  <!-- end .mod-tab -->
+
+  <view class="plr-25 pt-30 pb-50">
+    <view class="fs-16 fw-700">专家解读</view>
+    <view class="mod-user-media mt-20">
+      <view class="mod-user-media__item" wx:for="{{ zjList }}" wx:key="index">
+        <view class="mumi-img">
+          <image src="{{ item.imgUrl }}"></image>
+        </view>
+        <view class="mumi-bd">
+          <view class="mumi-bd-name">{{ item.name }}<text class="mumi-bd-tag">{{ item.tag }}</text></view>
+          <view class="mumi-bd-job">{{ item.job }}</view>
+          <view class="mumi-bd-txt">{{ item.txt }}<view class="mumi-bd-more">【查看更多】</view></view>
+        </view>
+      </view>  
+    </view>
+    <view class="tac mt-40">
+      <van-button plain round size="small" custom-class="btn-default plr-35">更多>></van-button>
+    </view>
+  </view>
+  <!-- end 专家解读 -->
+</view>
+
+<view class="fixed-bottom">
+  <view class="contact-action">
+    <view class="contact-action__item">
+      <view class="mod-btn-fav" bindtap="tapLove">
+        <image class="icon-love vam mr-15" src="../../images/icon-love.png" hidden="{{ love ? true : false }}"></image>
+        <image class="icon-love-active vam mr-15" src="../../images/icon-love-active.png" hidden="{{ love ? false : true }}"></image>
+        <text class="vam">收藏</text>
+      </view>
+    </view>
+
+    <navigator class="contact-action__item" url="../../pages/weiliaoDetail/weiliaoDetail" hover-class="none">
+      <van-button round type="primary" block custom-class="btn-primary">微聊</van-button>
+    </navigator>
+
+    <view class="contact-action__item">
+      <van-button round block custom-class="btn-brown" bindtap="call" data-phone="{{ phoneNumber }}">电话</van-button>
+    </view>    
+  </view>
 </view>
