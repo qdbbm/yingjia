@@ -48,6 +48,7 @@ function initChart(canvas, width, height) { // 使用 F2 绘制图表
   chart.tooltip(false);
   chart.legend({
     position: 'right',
+    verticalAlign: 'bottom',
     itemFormatter: function itemFormatter(val) {
       return val + '  ' + map[val];
     }
@@ -120,7 +121,14 @@ Page({
       }
     ],
     phoneNumber: '13888889999',
-    love: false
+    love: false,
+    showMore: false
+  },
+
+  toggleMore: function () {
+    this.setData({
+      showMore: !this.data.showMore
+    })
   },
 
   hdTabChange: function (e) {

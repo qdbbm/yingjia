@@ -202,9 +202,9 @@
         </view>
       </view>  
     </view>
-    <view class="tac mt-40">
+    <navigator class="tac mt-40" url="../../pages/zhuanjia/zhuanjia" hover-class="none">
       <van-button plain round size="small" custom-class="btn-default plr-35">更多>></van-button>
-    </view>
+    </navigator>
   </view>
   <!-- end 专家解读 -->
 
@@ -250,19 +250,16 @@
 
 <view class="fixed-bottom">
   <view class="contact-action">
-    <view>
-      <button class="btn tac">
-        <image class="icon-share" src="../../images/icon-share.png"></image>
-        <view>转发</view>
-      </button>
+    <view class="mod-btn-fav tac plr-20" bindtap="tapLove">
+      <image class="icon-love" src="../../images/icon-love.png" hidden="{{ love ? true : false }}"></image>
+      <image class="icon-love-active" src="../../images/icon-love-active.png" hidden="{{ love ? false : true }}"></image>
+      <view class="fs-13" style="margin-top: 3rpx;">收藏</view>
     </view>
-    <view>
-      <view class="mod-btn-fav tac" bindtap="tapLove">
-        <image class="icon-love" src="../../images/icon-love.png" hidden="{{ love ? true : false }}"></image>
-        <image class="icon-love-active" src="../../images/icon-love-active.png" hidden="{{ love ? false : true }}"></image>
-        <view>收藏</view>
-      </view>
-    </view>
+
+    <button class="btn tac plr-20">
+      <image class="icon-share" src="../../images/icon-share.png"></image>
+      <view class="fs-13">转发</view>
+    </button>
 
     <navigator class="contact-action__item" url="../../pages/weiliaoDetail/weiliaoDetail" hover-class="none">
       <van-button round type="primary" block custom-class="btn-primary">微聊</van-button>

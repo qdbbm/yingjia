@@ -165,9 +165,9 @@
         </view>
       </view>  
     </view>
-    <view class="tac mt-40">
+    <navigator class="tac mt-40" url="../../pages/zhuanjia/zhuanjia" hover-class="none">
       <van-button plain round size="small" custom-class="btn-default plr-35">更多>></van-button>
-    </view>
+    </navigator>
   </view>
   <!-- end 专家解读 -->
 </view>

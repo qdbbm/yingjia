@@ -745,10 +745,16 @@ page {
 }
 
 .mod-user-media__item .mumi-bd-txt {
+  position: relative;
   margin: 30rpx 0 0;
-  font-size: 26rpx;
+  height: 95px;
+  font-size: 13px;
   line-height: 1.5;
   color: #5a5a5a;
+}
+
+.mod-user-media__item .mumi-bd-txt.more {
+  height: auto;
 }
 
 .mod-user-media__item .mumi-bd-more {
@@ -867,12 +873,12 @@ page {
 .pie-chart {
   position: relative;
   width: 650rpx;
-  height: 500rpx;
-  margin: -50rpx 0 -50rpx;
+  height: 380rpx;
+  margin: -20rpx 0 -20rpx;
 }
 
 .chart-total {
   position: absolute;
-  top: 115rpx;
+  top: 70rpx;
   right: -15rpx;
 }

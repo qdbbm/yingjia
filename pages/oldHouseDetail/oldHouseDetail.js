@@ -46,6 +46,7 @@ function initChart(canvas, width, height) { // 使用 F2 绘制图表
   chart.tooltip(false);
   chart.legend({
     position: 'right',
+    verticalAlign: 'bottom',
     itemFormatter: function itemFormatter(val) {
       return val + '  ' + map[val];
     }
@@ -144,7 +145,14 @@ Page({
       tag: '金牌分析师',
       job: '房产顾问丨哈尔滨房产分析师'
     },
-    houseList: app.globalData.oldHouseList
+    houseList: app.globalData.oldHouseList,
+    showMore: false
+  },
+
+  toggleMore: function () {
+    this.setData({
+      showMore: !this.data.showMore
+    })
   },
 
   hdTabChange: function (e) {
