@@ -5,7 +5,7 @@
       <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
       <input class="mod-search__field-input" type="text" placeholder="输入楼盘名称"></input>
     </view>
-    <view class="mod-search__btn">取消</view>
+    <view class="mod-search__btn">搜索</view>
   </view>
 
   <view class="search-block plr-25 ptb-30 bg-white">
@@ -67,33 +67,16 @@
         <!-- end 一级 -->
 
         <view class="mod-col-item">
-          <view class="mod-col-item__list" hidden="{{ currentOneIndex == 0 ? false : true }}">
-            <view class="mcil-item {{ currentTwoIndex == index ? 'active' : '' }}" wx:for="{{ oneAllList }}" wx:key="index" data-index="{{ index }}" bindtap="tapTwo">{{ item.name }}</view>
+          <view class="mod-col-item__list">
+            <view class="mcil-item {{ currentTwoIndex == index ? 'active' : '' }}" wx:for="{{ twoList }}" wx:key="index" data-index="{{ index }}" bindtap="tapTwo">{{ item.name }}</view>
           </view>
-          <!-- end 不限 -->
-
-          <view class="mod-col-item__list" hidden="{{ currentOneIndex == 1 ? false : true }}">
-            <view class="mcil-item {{ currentTwoIndex == index ? 'active' : '' }}" wx:for="{{ oneZhList }}" wx:key="index" data-index="{{ index }}" bindtap="tapTwo">{{ item.name }}</view>
-          </view>
-          <!-- end 珠海市 -->
-
-          <view class="mod-col-item__list" hidden="{{ currentOneIndex == 2 ? false : true }}">
-            <view class="mcil-item {{ currentTwoIndex == index ? 'active' : '' }}" wx:for="{{ oneZsList }}" wx:key="index" data-index="{{ index }}" bindtap="tapTwo">{{ item.name }}</view>
-          </view>
-          <!-- end 中山市 -->
         </view>
         <!-- end 二级 -->
 
         <view class="mod-col-item">
-          <view class="mod-col-item__list" hidden="{{ currentTwoIndex == 0 ? false : true }}">
-            <view class="mcil-item {{ currentThreeIndex == index ? 'active' : '' }}" wx:for="{{ twoAllList }}" wx:key="index" data-index="{{ index }}" bindtap="tapThree">{{ item.name }}</view>
+          <view class="mod-col-item__list">
+            <view class="mcil-item {{ currentThreeIndex == index ? 'active' : '' }}" wx:for="{{ threeList }}" wx:key="index" data-index="{{ index }}" bindtap="tapThree">{{ item.name }}</view>
           </view>
-          <!-- end 不限 -->
-
-          <view class="mod-col-item__list" hidden="{{ currentTwoIndex == 1 ? false : true }}">
-            <view class="mcil-item {{ currentThreeIndex == index ? 'active' : '' }}" wx:for="{{ twoXzList }}" wx:key="index" data-index="{{ index }}" bindtap="tapThree">{{ item.name }}</view>
-          </view>
-          <!-- end 香洲区 -->
         </view>
         <!-- end 三级 -->
       </view>

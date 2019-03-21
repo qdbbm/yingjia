@@ -45,9 +45,9 @@
     </view>
 
     <view class="tac mt-15">
-      <view class="other-btn">
+      <button class="btn other-btn">
         <image class="icon-wx" src="../../images/icon-wx.png"></image>
-      </view>
+      </button>
     </view>
   </view>
 </view>

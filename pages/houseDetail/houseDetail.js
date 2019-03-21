@@ -152,7 +152,7 @@ Page({
     wx.createSelectorQuery().select('#zjjdView').boundingClientRect(function (rect) {
       // 使页面滚动到底部
       wx.pageScrollTo({
-        scrollTop: rect.top
+        scrollTop: rect.bottom
       })
     }).exec()
   },

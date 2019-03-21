@@ -108,6 +108,12 @@ Page({
     ]
   },
 
+  focus: function () {
+    wx.navigateTo({
+      url: '../../pages/search/search'
+    })
+  },
+
   filterChange: function (e) {
     let index = e.currentTarget.dataset.index;
     

@@ -71,7 +71,7 @@ App({
         labels: ['在售', '今年交房', '低单价', '在售', '今年交房', '低单价'],
         types: ['四室', '建面54-350m²'],
         price: 3000,
-        url: '',
+        url: '../../pages/houseDetail/houseDetail',
         status: '新盘',
         imageUrl: 'http://images.zhengzw.com/yingjia/list-img.jpg'
       },
@@ -81,7 +81,30 @@ App({
         labels: ['在售', '今年交房', '低单价', '在售', '今年交房', '低单价'],
         types: ['四室', '建面54-350m²'],
         price: 3000,
-        url: '',
+        url: '../../pages/houseDetail/houseDetail',
+        status: '新盘',
+        imageUrl: 'http://images.zhengzw.com/yingjia/list-img.jpg'
+      }
+    ],
+    // 房产列表
+    oldHouseList: [
+      {
+        tle: '松北世纪花园小区',
+        txt: '墅公馆当文字多文字多时文字多时',
+        labels: ['在售', '今年交房', '低单价', '在售', '今年交房', '低单价'],
+        types: ['四室', '建面54-350m²'],
+        price: 3000,
+        url: '../../pages/oldHouseDetail/oldHouseDetail',
+        status: '新盘',
+        imageUrl: 'http://images.zhengzw.com/yingjia/list-img.jpg'
+      },
+      {
+        tle: '松北世纪花园小区',
+        txt: '墅公馆当文字多文字多时文字多时',
+        labels: ['在售', '今年交房', '低单价', '在售', '今年交房', '低单价'],
+        types: ['四室', '建面54-350m²'],
+        price: 3000,
+        url: '../../pages/oldHouseDetail/oldHouseDetail',
         status: '新盘',
         imageUrl: 'http://images.zhengzw.com/yingjia/list-img.jpg'
       }

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "ff-canvas": "../../components/f2-canvas/f2-canvas"
+  },
   "navigationBarTitleText": "二手房详情"
 }

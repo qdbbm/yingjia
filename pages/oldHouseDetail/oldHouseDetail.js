@@ -3,12 +3,73 @@
 //获取应用实例
 const app = getApp()
 
+import F2 from '../../components/f2-canvas/lib/f2';
+
+let chart = null;
+
+function initChart(canvas, width, height) { // 使用 F2 绘制图表
+  const data = [{
+    name: '首付：',
+    num: '30万',
+    percent: 29,
+    a: '1'
+  }, {
+    name: '贷款：',
+    num: '72万',
+    percent: 51,
+    a: '1'
+  }, {
+    name: '利息：',
+    num: '67万',
+    percent: 20,
+    a: '1'
+  }];
+
+  var map = {};
+  data.map(function (obj) {
+    map[obj.name] = obj.num + '  ' + obj.percent + '%';
+  });
+
+  chart = new F2.Chart({
+    el: canvas,
+    width,
+    height
+  });
+
+  chart.source(data, {
+    percent: {
+      formatter: function formatter(val) {
+        return val + '%';
+      }
+    }
+  });
+  chart.tooltip(false);
+  chart.legend({
+    position: 'right',
+    itemFormatter: function itemFormatter(val) {
+      return val + '  ' + map[val];
+    }
+  });
+  chart.coord('polar', {
+    transposed: true,
+    innerRadius: 0.8,
+    radius: 0.85
+  });
+  chart.axis(false);
+  chart.interval().position('a*percent').color('name', ['#c5172c', '#b4a078', '#78b4b0']).adjust('stack');
+  chart.render();
+  return chart;
+}
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    opts: {
+      onInit: initChart
+    },
     bannerList: [
       {
         imageUrl: 'http://images.zhengzw.com/yingjia/fy-ban.jpg'
@@ -83,7 +144,7 @@ Page({
       tag: '金牌分析师',
       job: '房产顾问丨哈尔滨房产分析师'
     },
-    houseList: app.globalData.houseList
+    houseList: app.globalData.oldHouseList
   },
 
   hdTabChange: function (e) {
@@ -115,7 +176,7 @@ Page({
     wx.createSelectorQuery().select('#cnxhView').boundingClientRect(function (rect) {
       // 使页面滚动到底部
       wx.pageScrollTo({
-        scrollTop: rect.top
+        scrollTop: rect.bottom
       })
     }).exec()
   },

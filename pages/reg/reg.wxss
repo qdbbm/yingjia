@@ -15,7 +15,7 @@ page:after {
   display: inline-block;
   width: 74rpx;
   height: 74rpx;
-  line-height: 74rpx;
+  line-height: 78rpx;
   text-align: center;
   border: 2rpx solid #fff;
   border-radius: 50%;

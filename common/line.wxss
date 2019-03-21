@@ -1,6 +1,7 @@
 .mod-line-item {
   height: 88rpx;
   line-height: 88rpx;
+  padding: 0 30rpx;
 }
 
 .mod-line-item:not(:first-of-type) {

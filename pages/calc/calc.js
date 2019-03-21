@@ -13,7 +13,7 @@ Page({
     gjjdkArray: ['3.1%', '3.5%'],
     year: 11,
     year2: 12,
-    checked: true
+    checked: false
   },
 
   bindPickerChange(e) {

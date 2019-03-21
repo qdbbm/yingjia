@@ -1,8 +1,4 @@
 // pages/search/search.js
-var oneSelectedIndex = -1,
-    twoSelectedIndex = -1;
-
-
 Page({
 
   /**
@@ -56,33 +52,7 @@ Page({
         name: '中山市'
       }
     ],
-    oneAllList: [
-      {
-        name: '不限'
-      },
-      {
-        name: '香洲区'
-      },
-      {
-        name: '金湾区'
-      },
-      {
-        name: '斗门区'
-      },
-      {
-        name: '石岐区'
-      },
-      {
-        name: '东区'
-      },
-      {
-        name: '西区'
-      },
-      {
-        name: '南区'
-      }
-    ],
-    oneZhList: [
+    twoList: [
       {
         name: '不限'
       },
@@ -96,49 +66,18 @@ Page({
         name: '斗门区'
       }
     ],
-    oneZsList: [
+    threeList: [
       {
         name: '不限'
       },
       {
-        name: '石岐区'
+        name: '唐家湾镇'
       },
       {
-        name: '东区'
+        name: '新香洲'
       },
       {
-        name: '西区'
-      },
-      {
-        name: '南区'
-      }
-    ],
-    twoAllList: [
-      {
-        name: '不限',
-      },
-      {
-        name: '区域1',
-      },
-      {
-        name: '区域2',
-      },
-      {
-        name: '区域3',
-      }
-    ],
-    twoXzList: [
-      {
-        name: '不限',
-      },
-      {
-        name: '唐家湾镇',
-      },
-      {
-        name: '新香洲',
-      },
-      {
-        name: '吉大',
+        name: '吉大'
       }
     ],
     currentOneIndex: 0,
@@ -156,16 +95,9 @@ Page({
 
   tapOne: function (e) {
     let index = e.currentTarget.dataset.index;
-    if (index != oneSelectedIndex) {
-      this.setData({
-        currentOneIndex: -1,
-        currentTwoIndex: -1,
-        currentThreeIndex: -1,
-        currentOneIndex: index
-      })
-
-      oneSelectedIndex = index;
-    }
+    this.setData({
+      currentOneIndex: index
+    })
   },
 
   tapTwo: function (e) {

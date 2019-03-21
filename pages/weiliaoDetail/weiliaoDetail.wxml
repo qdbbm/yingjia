@@ -90,10 +90,31 @@
 
 <view class="fixed-bottom">
   <view class="mod-chat-action">
-    <van-button custom-class="btn-brown plr-20 br-0" size="large">报备</van-button>
+    <van-button custom-class="btn-brown plr-20 br-0" size="large" bind:click="showHouse">我的房源</van-button>
     <view class="mod-chat-action__field">
       <input class="mcaf-input" placeholder="点击输入内容..."></input>
     </view>
     <van-button type="primary" round custom-class="btn-primary mr-25" size="small">发送</van-button>
   </view>
 </view>
+
+<!-- 房源侧滑弹窗 -->
+<van-popup custom-class="popup-right" z-index="2000" position="right" show="{{ show }}" bind:close="onClose">
+  <view class="mod-media-list mod-media-list--has-bd bg-white plr-25 bb">
+    <view class="mod-media-item" wx:for="{{ houseList }}" wx:key="index"  bindtap="onClose">
+      <view class="mod-media-item__img">
+        <image src="{{ item.imgUrl }}"></image>
+      </view>
+      <view class="mod-media-item__bd">
+        <view class="mmib-tle">{{ item.tle }}</view>
+        <view class="mmib-txt mt-15">{{ item.address }}</view>
+        <view class="mmib-txt">{{ item.txt }}</view>
+        <view class="mmib-price mt-10"><text class="color-danger">{{ item.price }}</text><text class="color-danger">元</text>/㎡起</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="pd-50">
+    <van-button round plain block custom-class="btn-brown" bindtap="onClose">取消</van-button>
+  </view>
+</van-popup>

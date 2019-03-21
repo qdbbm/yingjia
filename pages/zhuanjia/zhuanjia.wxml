@@ -44,7 +44,7 @@
         </view>
       </view>
       <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 1 ? false : true }}">
-        <view class="mod-line-list mod-line-list--center">
+        <view class="mod-line-list">
           <view class="mod-line-item {{ xingjiCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ xingjiList }}" wx:key="index" bindtap="xingjiChange">
             {{ item.txt }}
           </view>

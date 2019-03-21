@@ -3,7 +3,7 @@
   <view class="mod-search ptb-15 pl-25">
     <view class="mod-search__field">
       <image class="icon-search mod-search__field-icon" src="../../images/icon-search.png"></image>
-      <input class="mod-search__field-input" type="text" placeholder="输入楼盘名称"></input>
+      <input class="mod-search__field-input" type="text" placeholder="输入楼盘名称" onfocus="focus"></input>
     </view>
     <navigator class="mod-search__btn" url="../../pages/weiliaoDetail/weiliaoDetail" hover-class="none">
       <image class="icon-msg" src="../../images/icon-msg.png"></image>
@@ -47,21 +47,31 @@
         </view>
       </view>
       <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 1 ? false : true }}">
-        <view class="mod-line-list mod-line-list--center">
+        <view class="mod-line-list">
           <view class="mod-line-item {{ priceCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ priceList }}" wx:key="index" bindtap="priceChange">
             {{ item.txt }}
+          </view>
+          <view class="mod-line-item flex-s-b flex-v-c">
+            <view>
+              <text class="fs-12 mr-20">自定义</text>
+              <input class="dib vam price-input" type="number" placeholder="最低价"></input>
+              <text class="plr-10">-</text>
+              <input class="dib vam price-input" type="number" placeholder="最高价"></input>
+              <text class="fs-12 ml-20">万</text>
+            </view>
+            <van-button type="primary" size="small" custom-class="btn-primary">确定</van-button>
           </view>
         </view>
       </view>
       <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 2 ? false : true }}">
-        <view class="mod-line-list mod-line-list--center">
+        <view class="mod-line-list">
           <view class="mod-line-item {{ houseTypeCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ houseTypeList }}" wx:key="index" bindtap="houseTypeChange">
             {{ item.txt }}
           </view>
         </view>
       </view>
       <view class="mod-filter-bar__pane" hidden="{{ currentIndex == 3 ? false : true }}">
-        <view class="mod-line-list mod-line-list--center">
+        <view class="mod-line-list">
           <view class="mod-line-item {{ sortCurrentIndex == index ? 'active' : '' }}" data-index="{{ index }}" wx:for="{{ sortList }}" wx:key="index" bindtap="sortChange">
             {{ item.txt }}
           </view>

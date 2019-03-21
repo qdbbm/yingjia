@@ -11,7 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    houseList: app.globalData.houseList,
+    houseList: app.globalData.oldHouseList,
     currentIndex: -1,
     showFilterContent: false,
     filterBarNav: [
@@ -106,6 +106,12 @@ Page({
         txt: '排序2'
       }
     ]
+  },
+
+  focus: function () {
+    wx.navigateTo({
+      url: '../../pages/search/search'
+    })
   },
 
   filterChange: function (e) {

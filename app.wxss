@@ -377,7 +377,7 @@ page {
 }
 
 .mod-form-item:not(:first-of-type) {
-  margin: 100rpx 0 0;
+  margin: 50rpx 0 0;
 }
 
 .mod-form-item--no-bd {
@@ -641,6 +641,14 @@ page {
   -webkit-overflow-scrolling: touch;
 }
 
+.price-input {
+  width: 100rpx;
+  font-size: 24rpx;
+  text-align: center;
+  background: #f1f1f1;
+  border-radius: 8rpx;
+}
+
 /* 房源标签 */
 .mod-label {
   display: inline-block;
@@ -815,6 +823,7 @@ page {
 }
 
 .mod-col-item__list .mcil-item {
+  position: relative;
   height: 70rpx;
   line-height: 70rpx;
   padding: 0 30rpx 0;
@@ -827,6 +836,31 @@ page {
 
 .mod-col-item__list .mcil-item.active {
   color: #c5172c;
+}
+
+.mod-col-item:last-of-type .mod-col-item__list .mcil-item.active:before {
+  position: absolute;
+  top: 50%;
+  right: 20rpx;
+  width: 24rpx;
+  height: 24rpx;
+  border: 1rpx solid #dcdcdc;
+  border-radius: 6rpx;
+  background: #fff;
+  content: "";
+  transform: translate(0, -50%);
+}
+
+.mod-col-item:last-of-type .mod-col-item__list .mcil-item.active:after {
+  position: absolute;
+  top: 50%;
+  right: 26rpx;
+  width: 15rpx;
+  height: 8rpx;
+  border-bottom: 1rpx solid #c5172c;
+  border-left: 1rpx solid #c5172c;
+  content: "";
+  transform: translate(0, -60%) rotate(-45deg);
 }
 
 /* 图表 */

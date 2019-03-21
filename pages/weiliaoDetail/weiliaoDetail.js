@@ -5,7 +5,53 @@ Page({
    * 页面的初始数据
    */
   data: {
+    show: false,
+    houseList: [
+      {
+        url: '',
+        imgUrl: 'http://images.zhengzw.com/yingjia/fy-img.jpg',
+        tle: '横琴百家达星际广场',
+        address: '香洲-唐家',
+        txt: '四室 建面54-350㎡',
+        price: '3000'
+      },
+      {
+        url: '',
+        imgUrl: 'http://images.zhengzw.com/yingjia/fy-img.jpg',
+        tle: '横琴百家达星际广场',
+        address: '香洲-唐家',
+        txt: '四室 建面54-350㎡',
+        price: '3000'
+      },
+      {
+        url: '',
+        imgUrl: 'http://images.zhengzw.com/yingjia/fy-img.jpg',
+        tle: '横琴百家达星际广场',
+        address: '香洲-唐家',
+        txt: '四室 建面54-350㎡',
+        price: '3000'
+      },
+      {
+        url: '',
+        imgUrl: 'http://images.zhengzw.com/yingjia/fy-img.jpg',
+        tle: '横琴百家达星际广场',
+        address: '香洲-唐家',
+        txt: '四室 建面54-350㎡',
+        price: '3000'
+      }
+    ]
+  },
 
+  showHouse: function () {
+    this.setData({
+      show: true
+    })
+  },
+
+  onClose: function () {
+    this.setData({
+      show: false
+    })
   },
 
   /**

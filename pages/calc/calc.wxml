@@ -109,7 +109,7 @@
         />
       </view>
 
-      <view class="calc-cell-group calc-cell-group--has-bt">
+      <view class="calc-cell-group calc-cell-group--has-bt" hidden="{{ !checked }}">
         <view class="calc-cell">
           <view class="calc-cell__bd ptb-10">
             <text class="calc-cell__bd-tle">公积金贷款</text>
@@ -138,7 +138,7 @@
       </view>
       <!-- end .calc-cell-group -->
 
-      <view class="calc-cell-group calc-cell-group--has-bt">
+      <view class="calc-cell-group calc-cell-group--has-bt" hidden="{{ !checked }}">
         <view class="calc-cell">
           <view class="calc-cell__tle">
             公积金贷款年限<text class="color-dark fr">{{ year2 }}年</text> 

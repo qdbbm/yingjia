@@ -13,7 +13,10 @@ Page({
     zydqIndex1: 0,
     zydqArray1: ['地区1', '地区2'],
     zydqIndex2: 0,
-    zydqArray2: ['地区1', '地区2']
+    zydqArray2: ['地区1', '地区2'],
+    region: ['广东省', '广州市', '海珠区'],
+    customItem: '全部',
+    region2: ['广东省', '广州市', '海珠区']
   },
 
   bindPickerChange(e) {
@@ -28,15 +31,17 @@ Page({
     })
   },
 
-  bindPickerChange3(e) {
+  bindRegionChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      zydqIndex1: e.detail.value
+      region: e.detail.value
     })
   },
 
-  bindPickerChange4(e) {
+  bindRegionChange2(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      zydqIndex2: e.detail.value
+      region2: e.detail.value
     })
   },
 

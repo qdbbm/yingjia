@@ -54,6 +54,11 @@ Page({
     tabbarActive: 0,
     tabbarIcons: app.globalData.tabbarIcons
   },
+  focus: function () {
+    wx.navigateTo({
+      url: '../../pages/search/search'
+    })
+  },
   /**
    * tabbar跳转
    */
