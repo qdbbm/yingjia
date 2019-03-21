@@ -1,0 +1,4 @@
+<!--pages/pie/index.wxml-->
+<view class="pie-chart">
+  <ff-canvas id="pie-dom" canvas-id="column" opts="{{ opts }}"></ff-canvas>
+</view>

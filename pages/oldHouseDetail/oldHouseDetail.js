@@ -1,4 +1,8 @@
 // pages/oldHouseDetail/oldHouseDetail.js
+
+//获取应用实例
+const app = getApp()
+
 Page({
 
   /**
@@ -51,11 +55,35 @@ Page({
         name: '耿专家',
         tag: '金牌分析师',
         job: '房产顾问丨哈尔滨房产分析师',
-        txt: '富力城楼盘频道，提供哈尔滨富力城 房价，楼盘户型，楼盘产权年限，物业费，开发商，售楼电话，绿化率，周边配套，商场，超市，学校，医院，银行，周边地图交通等全方位楼盘信息，富力城开盘交房时……'
+        txt: '富力城楼盘频道，提供哈尔滨富力城 房价，楼盘户型，楼盘产权年限，物业费，开发商，售楼电话，绿化率，周边配套，商场，超市，学校，医院，银行，周边地图交通等全方位楼盘信息，富力城开盘交房时……',
+        imgs: [
+          {
+            url: 'http://images.zhengzw.com/yingjia/zjjd-img.jpg'
+          },
+          {
+            url: 'http://images.zhengzw.com/yingjia/zjjd-img.jpg'
+          },
+          {
+            url: 'http://images.zhengzw.com/yingjia/zjjd-img.jpg'
+          },
+          {
+            url: 'http://images.zhengzw.com/yingjia/zjjd-img.jpg'
+          },
+          {
+            url: 'http://images.zhengzw.com/yingjia/zjjd-img.jpg'
+          }
+        ]
       }
     ],
     phoneNumber: '13888889999',
-    love: false
+    love: false,
+    jingjiren: {
+      imgUrl: 'http://images.zhengzw.com/yingjia/zj-img.jpg',
+      name: '耿专家',
+      tag: '金牌分析师',
+      job: '房产顾问丨哈尔滨房产分析师'
+    },
+    houseList: app.globalData.houseList
   },
 
   hdTabChange: function (e) {
@@ -81,6 +109,15 @@ Page({
     this.setData({
       love: !this.data.love
     })
+  },
+
+  tapScroll: function (e) {
+    wx.createSelectorQuery().select('#cnxhView').boundingClientRect(function (rect) {
+      // 使页面滚动到底部
+      wx.pageScrollTo({
+        scrollTop: rect.top
+      })
+    }).exec()
   },
 
   /**

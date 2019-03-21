@@ -22,7 +22,9 @@
     "pages/myHouse/myHouse",
     "pages/imgList/imgList",
     "pages/houseDetail/houseDetail",
-    "pages/oldHouseDetail/oldHouseDetail"
+    "pages/oldHouseDetail/oldHouseDetail",
+    "pages/column/index",
+    "pages/pie/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -39,6 +41,9 @@
     "van-icon": "../../components/vant/icon/index",
     "van-slider": "../../components/vant/slider/index",
     "van-switch": "../../components/vant/switch/index",
-    "van-steps": "../../components/vant/steps/index"
+    "van-steps": "../../components/vant/steps/index",
+    "van-transition": "../../components/vant/transition/index",
+    "van-overlay": "../../components/vant/overlay/index",
+    "van-popup": "../../components/vant/popup/index"
   }
 }

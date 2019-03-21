@@ -7,7 +7,7 @@
 
     <view class="mod-tab__content">
       <view class="mod-tab__pane" hidden="{{ current == 0 ? false : true}}">
-        <view class="mod-house-list">
+        <view class="mod-house-list plr-25 pt-15 pb-30">
           <navigator class="mod-house-item" url="{{ item.url }}" wx:for="{{ houseList }}" wx:key="index">
             <view class="mod-house-item__hd">
               <image class="mhih-img" src="{{ item.imageUrl }}"></image>

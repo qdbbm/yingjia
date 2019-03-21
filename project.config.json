@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 20,
+			"current": 22,
 			"list": [
 				{
 					"id": -1,
@@ -183,6 +183,20 @@
 					"id": -1,
 					"name": "二手房详情",
 					"pathName": "pages/oldHouseDetail/oldHouseDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "图表",
+					"pathName": "pages/column/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "环图图表",
+					"pathName": "pages/pie/index",
 					"scene": null
 				}
 			]

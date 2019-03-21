@@ -24,11 +24,18 @@
         title="区域"
         value="珠海市-香洲区-唐家湾镇"
         is-link
+        bind:click="showArea"
       />
       <van-cell
         title="售价"
         is-link
-      />
+      >
+        <picker bindchange="bindPickerChange" value="{{salesIndex}}" range="{{salesArray}}">
+          <view class="picker">
+            {{salesArray[salesIndex]}}
+          </view>
+        </picker>
+      </van-cell>
       <view class="plr-25 mt-30">
         <view>房源类型</view>
         <view class="tag-list mt-30">
@@ -40,3 +47,67 @@
     </view>
   </view>
 </view>
+
+<!-- 区域弹窗 -->
+<van-popup show="{{ show }}" bind:close="onClose" custom-class="my-popup">
+  <view class="modal">
+    <view class="modal-hd">
+      区域选择
+      <van-icon name="cross" color="#aaa" bindtap="onClose" />
+    </view>
+    <!-- end .modal-hd -->
+
+    <view class="modal-bd">
+      <view class="mod-col-list">
+        <view class="mod-col-item">
+          <view class="mod-col-item__list">
+            <view class="mcil-item {{ currentOneIndex == index ? 'active' : '' }}" wx:for="{{ oneList }}" wx:key="index" data-index="{{ index }}" bindtap="tapOne">{{ item.name }}</view>
+          </view>
+        </view>
+        <!-- end 一级 -->
+
+        <view class="mod-col-item">
+          <view class="mod-col-item__list" hidden="{{ currentOneIndex == 0 ? false : true }}">
+            <view class="mcil-item {{ currentTwoIndex == index ? 'active' : '' }}" wx:for="{{ oneAllList }}" wx:key="index" data-index="{{ index }}" bindtap="tapTwo">{{ item.name }}</view>
+          </view>
+          <!-- end 不限 -->
+
+          <view class="mod-col-item__list" hidden="{{ currentOneIndex == 1 ? false : true }}">
+            <view class="mcil-item {{ currentTwoIndex == index ? 'active' : '' }}" wx:for="{{ oneZhList }}" wx:key="index" data-index="{{ index }}" bindtap="tapTwo">{{ item.name }}</view>
+          </view>
+          <!-- end 珠海市 -->
+
+          <view class="mod-col-item__list" hidden="{{ currentOneIndex == 2 ? false : true }}">
+            <view class="mcil-item {{ currentTwoIndex == index ? 'active' : '' }}" wx:for="{{ oneZsList }}" wx:key="index" data-index="{{ index }}" bindtap="tapTwo">{{ item.name }}</view>
+          </view>
+          <!-- end 中山市 -->
+        </view>
+        <!-- end 二级 -->
+
+        <view class="mod-col-item">
+          <view class="mod-col-item__list" hidden="{{ currentTwoIndex == 0 ? false : true }}">
+            <view class="mcil-item {{ currentThreeIndex == index ? 'active' : '' }}" wx:for="{{ twoAllList }}" wx:key="index" data-index="{{ index }}" bindtap="tapThree">{{ item.name }}</view>
+          </view>
+          <!-- end 不限 -->
+
+          <view class="mod-col-item__list" hidden="{{ currentTwoIndex == 1 ? false : true }}">
+            <view class="mcil-item {{ currentThreeIndex == index ? 'active' : '' }}" wx:for="{{ twoXzList }}" wx:key="index" data-index="{{ index }}" bindtap="tapThree">{{ item.name }}</view>
+          </view>
+          <!-- end 香洲区 -->
+        </view>
+        <!-- end 三级 -->
+      </view>
+    </view>
+    <!-- end .modal-bd -->
+
+    <view class="modal-ft">
+      <view class="modal-ft__btn">
+        <van-button type="default" block custom-class="btn-default">重置</van-button>
+      </view>
+      <view class="modal-ft__btn ml-30" bindtap="onClose">
+        <van-button type="primary" block custom-class="btn-primary">确定</van-button>
+      </view>
+    </view>
+    <!-- end .modal-ft -->
+  </view>
+</van-popup>

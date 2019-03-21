@@ -7,8 +7,6 @@
         id="myVideo"
         src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
         enable-danmu
-        danmu-btn
-        controls
       ></video>
     </view>
     <!-- end 视频 -->
@@ -20,7 +18,7 @@
 
     <view hidden="{{ currentHdTabIndex == 2 ? false : true }}">
       <swiper class="banner" indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff" bindchange="swiperChange">
+        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff">
         <block wx:for="{{bannerList}}" wx:key="index">
           <swiper-item>
             <image src="{{item.imageUrl}}" class="banner-item"/>
@@ -32,7 +30,7 @@
 
     <view hidden="{{ currentHdTabIndex == 3 ? false : true }}">
       <swiper class="banner" indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff" bindchange="swiperChange">
+        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff">
         <block wx:for="{{bannerList}}" wx:key="index">
           <swiper-item>
             <image src="{{item.imageUrl}}" class="banner-item"/>
@@ -94,7 +92,7 @@
     <view class="mod-tab__tle bg-white">
       <view class="mod-tab__tle-item {{ current == 'jcxx' ? 'active' : '' }}" data-current="jcxx" bindtap="tabChange">基础信息</view>
       <view class="mod-tab__tle-item {{ current == 'jygz' ? 'active' : '' }}" data-current="jygz" bindtap="tabChange">结佣规则</view>
-      <view class="mod-tab__tle-item">专家解读</view>  
+      <view class="mod-tab__tle-item" bindtap="tapScroll">专家解读</view>  
     </view>
     <!-- end .mod-tab__tle -->
     
@@ -122,7 +120,13 @@
 
           <view class="mt-50">
             <view class="fs-16 fw-700">房贷参考</view>
-            <view>图表</view>
+            <view class="pie-chart">
+              <view class="chart-total">
+                <view>月供：3847（30年）</view>
+                <view>总价：103万元</view>
+              </view>
+              <ff-canvas id="pie-dom" canvas-id="pie" opts="{{ opts }}"></ff-canvas>
+            </view>
             <view class="mod-tips mt-45">
               签订购房合同前切勿提前支付任何费用！要求先汇款或者不见面交易，均属诈骗！
             </view>
@@ -147,7 +151,7 @@
   </view>
   <!-- end .mod-tab -->
 
-  <view class="plr-25 pt-30 pb-50">
+  <view class="plr-25 pt-30 pb-50" id="zjjdView">
     <view class="fs-16 fw-700">专家解读</view>
     <view class="mod-user-media mt-20">
       <view class="mod-user-media__item" wx:for="{{ zjList }}" wx:key="index">

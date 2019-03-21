@@ -1,6 +1,6 @@
 {
+  "navigationBarTitleText": "环图",
   "usingComponents": {
     "ff-canvas": "../../components/f2-canvas/f2-canvas"
-  },
-  "navigationBarTitleText": "新房源详情页"
+  }
 }

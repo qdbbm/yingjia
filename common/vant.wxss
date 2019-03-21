@@ -10,6 +10,11 @@
   border-color: #b4a078 !important;
 }
 
+.btn-default {
+  background-color: #e5e5e5 !important;
+  border-color: #e5e5e5 !important;
+}
+
 .van-button--plain.btn-brown {
   color: #b4a078 !important;
   background-color: #fff !important;
@@ -104,4 +109,9 @@
 
 .my-steps .van-step--horizontal .van-step__title {
   text-align: center;
+}
+
+.my-popup {
+  width: 630rpx;
+  border-radius: 8rpx;
 }

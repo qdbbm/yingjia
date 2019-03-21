@@ -52,9 +52,7 @@
 
 .jiangjin {
   display: inline-block;
-  height: 44rpx;
-  line-height: 44rpx;
-  padding: 0 0 0 8rpx;
+  padding: 2rpx 2rpx 2rpx 8rpx;
   font-size: 24rpx;
   color: #fff;
   border-radius: 6rpx;
@@ -65,9 +63,13 @@
   display: inline-block;
   height: 40rpx;
   line-height: 40rpx;
-  margin: 0 2rpx 0 8rpx;
+  margin: 0 0 0 8rpx;
   padding: 0 16rpx;
   color: #c5172c;
   background: #fff;
   border-radius: 6rpx;
+}
+
+.btn-default {
+  background-color: #fff !important;
 }

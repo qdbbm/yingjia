@@ -1,4 +1,8 @@
 // pages/search/search.js
+var oneSelectedIndex = -1,
+    twoSelectedIndex = -1;
+
+
 Page({
 
   /**
@@ -39,17 +43,165 @@ Page({
         txt: '二手房'
       }
     ],
-    currentIndex: 0
+    currentIndex: 0,
+    show: false,
+    oneList: [
+      {
+        name: '不限'
+      },
+      {
+        name: '珠海市'
+      },
+      {
+        name: '中山市'
+      }
+    ],
+    oneAllList: [
+      {
+        name: '不限'
+      },
+      {
+        name: '香洲区'
+      },
+      {
+        name: '金湾区'
+      },
+      {
+        name: '斗门区'
+      },
+      {
+        name: '石岐区'
+      },
+      {
+        name: '东区'
+      },
+      {
+        name: '西区'
+      },
+      {
+        name: '南区'
+      }
+    ],
+    oneZhList: [
+      {
+        name: '不限'
+      },
+      {
+        name: '香洲区'
+      },
+      {
+        name: '金湾区'
+      },
+      {
+        name: '斗门区'
+      }
+    ],
+    oneZsList: [
+      {
+        name: '不限'
+      },
+      {
+        name: '石岐区'
+      },
+      {
+        name: '东区'
+      },
+      {
+        name: '西区'
+      },
+      {
+        name: '南区'
+      }
+    ],
+    twoAllList: [
+      {
+        name: '不限',
+      },
+      {
+        name: '区域1',
+      },
+      {
+        name: '区域2',
+      },
+      {
+        name: '区域3',
+      }
+    ],
+    twoXzList: [
+      {
+        name: '不限',
+      },
+      {
+        name: '唐家湾镇',
+      },
+      {
+        name: '新香洲',
+      },
+      {
+        name: '吉大',
+      }
+    ],
+    currentOneIndex: 0,
+    currentTwoIndex: 0,
+    currentThreeIndex: 0,
+    salesIndex: 0,
+    salesArray: ['50-100万', '100-200万']
+  },
+
+  bindPickerChange(e) {
+    this.setData({
+      salesIndex: e.detail.value
+    })
+  },
+
+  tapOne: function (e) {
+    let index = e.currentTarget.dataset.index;
+    if (index != oneSelectedIndex) {
+      this.setData({
+        currentOneIndex: -1,
+        currentTwoIndex: -1,
+        currentThreeIndex: -1,
+        currentOneIndex: index
+      })
+
+      oneSelectedIndex = index;
+    }
+  },
+
+  tapTwo: function (e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      currentTwoIndex: index
+    })
+  },
+
+  tapThree: function (e) {
+    let index = e.currentTarget.dataset.index;
+    this.setData({
+      currentThreeIndex: index
+    })
   },
 
   /**
    * 类型切换
    */
   tagChange: function (e) {
-    var index = e.currentTarget.dataset.current;
+    let index = e.currentTarget.dataset.current;
     console.log(index);
     this.setData({
       currentIndex: index
+    })
+  },
+
+  showArea: function () {
+    this.setData({
+      show: true
+    })
+  },
+
+  onClose: function () {
+    this.setData({
+      show: false
     })
   },
 

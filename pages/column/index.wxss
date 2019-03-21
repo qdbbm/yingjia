@@ -1,0 +1,5 @@
+/* pages/column/index.wxss */
+.column-chart {
+  width: 750rpx;
+  height: 500rpx;
+}

@@ -38,7 +38,7 @@
 
   <view class="bg-white mt-20">
     <view class="fs-16 fw-700 pt-30 pl-25 pb-10">他的在售房</view>
-    <view class="mod-house-list">
+    <view class="mod-house-list plr-25 pt-15 pb-30">
       <navigator class="mod-house-item" url="{{ item.url }}" wx:for="{{ houseList }}" wx:key="index">
         <view class="mod-house-item__hd">
           <image class="mhih-img" src="{{ item.imageUrl }}"></image>

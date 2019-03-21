@@ -20,7 +20,7 @@
 
     <view hidden="{{ currentHdTabIndex == 2 ? false : true }}">
       <swiper class="banner" indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff" bindchange="swiperChange">
+        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff">
         <block wx:for="{{bannerList}}" wx:key="index">
           <swiper-item>
             <image src="{{item.imageUrl}}" class="banner-item"/>
@@ -32,7 +32,7 @@
 
     <view hidden="{{ currentHdTabIndex == 3 ? false : true }}">
       <swiper class="banner" indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff" bindchange="swiperChange">
+        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff">
         <block wx:for="{{bannerList}}" wx:key="index">
           <swiper-item>
             <image src="{{item.imageUrl}}" class="banner-item"/>
@@ -62,7 +62,7 @@
       <view class="flex1">
         <view>
           <image class="icon-lou-gray" src="../../images/icon-lou-gray.png"></image>
-          <text class="ml-15">{{ detailInfo.address }}</text>
+          <text class="ml-15 color-gray">{{ detailInfo.address }}</text>
         </view>
       </view>
       <view class="tar">
@@ -73,22 +73,22 @@
 
     <view class="mt-30 flex">
       <view class="flex1 pl-20">
-        <view class="color-primary">
+        <view class="fs-12 color-primary">
           <text class="fs-20 fw-700">{{ detailInfo.price }}</text>
           元/平米
         </view>
         <view class="fs-12 color-gray-light">单价</view>
       </view>
-      <view class="flex1 pl-20 bl">
-        <view class="color-primary">
+      <view class="flex1 pl-30 bl">
+        <view class="fs-12 color-primary">
           <text class="fs-20 fw-700">{{ detailInfo.shi }}</text>室
           <text class="fs-20 fw-700">{{ detailInfo.ting }}</text>厅
           <text class="fs-20 fw-700">{{ detailInfo.wei }}</text>卫
         </view>
         <view class="fs-12 color-gray-light">户型</view>
       </view>
-      <view class="flex1 pl-20 bl">
-        <view class="color-primary">
+      <view class="flex1 pl-30 bl">
+        <view class="fs-12 color-primary">
           <text class="fs-20 fw-700">{{ detailInfo.area }}</text>
           平米
         </view>
@@ -102,7 +102,7 @@
         <view>盈嘉服务</view>
         <view class="fs-12 color-gray mt-10">花园洋房即将开盘</view>
       </view>
-      <van-button round plain type="primary" size="small" custom-class="btn-primary plr-20">获取优惠</van-button>
+      <van-button round plain type="primary" size="small" custom-class="btn-primary plr-20">业主降价</van-button>
     </view>
     <!-- end 服务 -->
   </view>
@@ -111,8 +111,8 @@
   <view class="mod-tab mod-tab--lg mod-tab--style-2 mt-25">
     <view class="mod-tab__tle bg-white">
       <view class="mod-tab__tle-item {{ current == 'jcxx' ? 'active' : '' }}" data-current="jcxx" bindtap="tabChange">基础信息</view>
-      <view class="mod-tab__tle-item {{ current == 'jygz' ? 'active' : '' }}" data-current="jygz" bindtap="tabChange">结佣规则</view>
-      <view class="mod-tab__tle-item">专家解读</view>  
+      <view class="mod-tab__tle-item {{ current == 'jygz' ? 'active' : '' }}" data-current="jygz" bindtap="tabChange">房源概况</view>
+      <view class="mod-tab__tle-item" bindtap="tapScroll">猜你喜欢</view>  
     </view>
     <!-- end .mod-tab__tle -->
     
@@ -155,8 +155,9 @@
       </view>
       <!-- end 基础信息 -->
 
-      <view class="mod-tab__pane" hidden="{{ current == 'jygz' ? false : true }}">      <view class="pd-25">
-          结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容...
+      <view class="mod-tab__pane" hidden="{{ current == 'jygz' ? false : true }}">
+        <view class="pd-25">
+          房源概况房源概况房源概况房源概况房源概况房源概况房源概况房源概况房源概况房源概况房源概况房源概况房源概况房源概况...
         </view>
       </view>
       <!-- end 结佣规则 -->
@@ -164,6 +165,21 @@
     <!-- end .mod-tab__content -->
   </view>
   <!-- end .mod-tab -->
+
+  <view class="plr-25 pt-30 pb-50">
+    <view class="fs-16 fw-700">经纪人</view>
+    <view class="jingjiren pd-30 mt-30">
+      <view class="mod-user-media__item">
+        <view class="mumi-img">
+          <image src="{{ jingjiren.imgUrl }}"></image>
+        </view>
+        <view class="mumi-bd">
+          <view class="mumi-bd-name">{{ jingjiren.name }}<text class="mumi-bd-tag">{{ jingjiren.tag }}</text></view>
+          <view class="mumi-bd-job">{{ jingjiren.job }}</view>
+        </view>
+      </view>  
+    </view>
+  </view>
 
   <view class="plr-25 pt-30 pb-50">
     <view class="fs-16 fw-700">专家解读</view>
@@ -176,6 +192,9 @@
           <view class="mumi-bd-name">{{ item.name }}<text class="mumi-bd-tag">{{ item.tag }}</text></view>
           <view class="mumi-bd-job">{{ item.job }}</view>
           <view class="mumi-bd-txt">{{ item.txt }}<view class="mumi-bd-more">【查看更多】</view></view>
+          <view class="mod-img-list clearfix mt-30">
+            <view class="mod-img-item" style="background-image: url({{ imgItem.url }});" wx:for="{{ item.imgs }}" wx:for-item="imgItem" wx:key="index"></view>
+          </view>
         </view>
       </view>  
     </view>
@@ -184,6 +203,45 @@
     </view>
   </view>
   <!-- end 专家解读 -->
+
+  <view class="plr-25 pb-50" id="cnxhView">
+    <view class="fs-16 fw-700 flex-v-c flex-s-b">
+      猜你喜欢
+      <navigator class="fs-12 color-gray fw-400" url="../../pages/oldHouse/oldHouse">更多>></navigator>
+    </view>
+
+    <view class="mod-house-list mt-40">
+      <navigator class="mod-house-item" url="{{ item.url }}" wx:for="{{ houseList }}" wx:key="index">
+        <view class="mod-house-item__hd">
+          <image class="mhih-img" src="{{ item.imageUrl }}"></image>
+          <view class="mhih-tle">
+            <image class="icon icon-lou" src="../../images/icon-lou.png"></image>
+            {{ item.tle }}
+          </view>
+        </view>
+        <view class="mod-house-item__bd">
+          <view class="toe">
+            <text class="mhib-status">{{ item.status }}</text>
+            <text>{{ item.txt }}</text>
+          </view>
+          <view class="mod-labels">
+            <text class="mod-label" wx:for-item="labelItem" wx:for="{{ item.labels}}" wx:key="index">{{ labelItem }}</text>
+          </view>
+          <view class="mhib-group">
+            <view class="mhib-types">
+              <text class="mhib-type" wx:for-item="typeItem" wx:for="{{ item.types}}" wx:key="index">{{ typeItem }}</text>
+            </view>
+            <view class="mhib-price">
+              <text class="mhib-price__num">{{ item.price }}</text>
+              <text class="mhib-price__unit">元</text>
+              <text class="mhib-price__txt">㎡起</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!-- end 猜你喜欢 -->
 </view>
 
 <view class="fixed-bottom">

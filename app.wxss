@@ -96,10 +96,6 @@ page {
 }
 
 /* 房产列表 */
-.mod-house-list {
-  padding: 15rpx 25rpx 30rpx;
-}
-
 .mod-house-item {
   background: #fff;
   border: 2rpx solid #e7e7e7;
@@ -679,9 +675,7 @@ page {
 
 /* 小提示 */
 .mod-tips {
-  height: 55rpx;
-  line-height: 55rpx;
-  padding: 0 20rpx;
+  padding: 14rpx 20rpx;
   font-size: 19rpx;
   color: #787878;
   text-align: center;
@@ -690,9 +684,12 @@ page {
 }
 
 /* 用户媒体对象 */
+.mod-user-media .mod-user-media__item {
+  padding: 30rpx 0;
+}
+
 .mod-user-media__item {
   display: flex;
-  padding: 30rpx 0;
 }
 
 .mod-user-media__item:not(:first-child) {
@@ -742,6 +739,7 @@ page {
 .mod-user-media__item .mumi-bd-txt {
   margin: 30rpx 0 0;
   font-size: 26rpx;
+  line-height: 1.5;
   color: #5a5a5a;
 }
 
@@ -753,4 +751,94 @@ page {
 /* 收藏 */
 .mod-btn-fav.active {
   color: #c5172c;
+}
+
+/* 图片列表 */
+.mod-img-list {
+  margin: 0 -20rpx -20rpx 0;
+}
+
+.mod-img-item {
+  float: left;
+  width: calc(33.333% - 20rpx);
+  padding-top: calc(33.333% - 20rpx);
+  border-radius: 10rpx;
+  margin: 0 20rpx 20rpx 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* 弹窗 */
+.modal-hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #d8d8d8;
+}
+
+.modal-ft {
+  display: flex;
+  padding: 20rpx 40rpx;
+  text-align: center;
+  border-top: 1rpx solid #d8d8d8;
+}
+
+.modal-ft__btn {
+  flex: 1;
+}
+
+/* 三级竖向排列 */
+.mod-col-list {
+  display: flex;
+}
+
+.mod-col-item {
+  flex: 1;
+  padding: 20rpx 0 0;
+  height: 500rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mod-col-item:not(:first-of-type) {
+  border-left: 1rpx solid #d8d8d8;
+}
+
+.mod-col-item:last-of-type {
+  flex: 1.5;
+  background: #f6f6f6;
+}
+
+.mod-col-item__list .mcil-item {
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 30rpx 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 26rpx;
+  color: #3b3b3b;
+}
+
+.mod-col-item__list .mcil-item.active {
+  color: #c5172c;
+}
+
+/* 图表 */
+.pie-chart {
+  position: relative;
+  width: 650rpx;
+  height: 500rpx;
+  margin: -50rpx 0 -50rpx;
+}
+
+.chart-total {
+  position: absolute;
+  top: 115rpx;
+  right: -15rpx;
 }

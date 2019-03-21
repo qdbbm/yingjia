@@ -1,0 +1,4 @@
+<!--pages/column/index.wxml-->
+<view class="column-chart">
+  <ff-canvas id="column-dom" canvas-id="column" opts="{{ opts }}"></ff-canvas>
+</view>
