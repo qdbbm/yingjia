@@ -92,7 +92,7 @@
   <view class="mod-chat-action">
     <van-button custom-class="btn-brown plr-20 br-0" size="large" bind:click="showHouse">我的房源</van-button>
     <view class="mod-chat-action__field">
-      <input class="mcaf-input" placeholder="点击输入内容..."></input>
+      <input class="mcaf-input" cursor-spacing="24rpx" placeholder="点击输入内容..."></input>
     </view>
     <van-button type="primary" round custom-class="btn-primary mr-25" size="small">发送</van-button>
   </view>

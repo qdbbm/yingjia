@@ -473,7 +473,7 @@ page {
 }
 
 .mod-chat-list {
-  padding: 0 25rpx 80rpx;
+  padding: 0 14rpx 80rpx;
 }
 
 .mod-chat-item {
@@ -488,13 +488,18 @@ page {
 
 .mod-chat-item__info {
   position: relative;
-  margin: 0 10rpx 0 0;
+  /* margin: 0 10rpx 0 0; */
 }
 
 .mod-chat-item__info .mcii-img {
+  position: relative;
+  z-index: 1;
+  display: block;
   width: 70rpx;
   height: 70rpx;
+  margin-bottom: -8rpx;
   border-radius: 50%;
+  border: 8rpx solid #f0f0f1;
 }
 
 .mod-chat-item__info .mcii-txt {
@@ -516,6 +521,7 @@ page {
 }
 
 .mod-chat-item__bd .mcib-txt {
+  position: relative;
   display: inline-block;
   max-width: 538rpx;
   padding: 20rpx 30rpx;
@@ -524,16 +530,26 @@ page {
   color: #4d4d4d;
   border-radius: 42rpx;
   background: #fff;
-  box-shadow: 0 1rpx 13rpx rgba(210, 210, 210, .13);
+  /* box-shadow: 0 1rpx 13rpx rgba(210, 210, 210, .13); */
   box-sizing: border-box;
+}
+
+.mod-chat-item__bd .mcib-txt:after {
+  position: absolute;
+  bottom: 0;
+  left: -20rpx;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  border-left: 40rpx solid transparent;
+  border-right: 40rpx solid transparent;
+  border-bottom: 84rpx solid #fff;
+  content: "";
+  transform: skewX(-29deg);
 }
 
 .mod-chat-item--reverse {
   flex-direction: row-reverse;
-}
-
-.mod-chat-item--reverse .mod-chat-item__info {
-  margin: 0 0 0 10rpx;
 }
 
 .mod-chat-item--reverse .mod-chat-item__bd {
@@ -544,10 +560,20 @@ page {
   text-align: left;
 }
 
+.mod-chat-item--reverse .mod-chat-item__bd .mcib-txt:after {
+  left: auto;
+  right: -20rpx;
+  transform: skewX(29deg);
+}
+
 .mod-chat-item--high .mod-chat-item__bd .mcib-txt {
   background: #c5172c;
   color: #fff;
   box-shadow: none;
+}
+
+.mod-chat-item--high .mod-chat-item__bd .mcib-txt:after {
+  border-bottom-color: #c5172c;
 }
 
 .mod-chat-action {

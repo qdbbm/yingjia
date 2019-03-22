@@ -1,4 +1,8 @@
 /* pages/weiliaoDetail/weiliaoDetail.wxss */
+page {
+  background: #f0f0f1;
+}
+
 .btn-primary {
   height: 70rpx !important;
   line-height: 70rpx !important;
