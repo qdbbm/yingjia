@@ -44,6 +44,8 @@
     "van-steps": "../../components/vant/steps/index",
     "van-transition": "../../components/vant/transition/index",
     "van-overlay": "../../components/vant/overlay/index",
-    "van-popup": "../../components/vant/popup/index"
+    "van-popup": "../../components/vant/popup/index",
+    "van-picker": "../../components/vant/picker/index",
+    "van-area": "../../components/vant/area/index"
   }
 }

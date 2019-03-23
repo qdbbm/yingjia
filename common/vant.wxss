@@ -31,6 +31,10 @@
 }
 
 /* tabbar */
+.van-tabbar-item {
+  position: relative !important;
+}
+
 .van-tabbar-item--active {
   color: #fff !important;
 }

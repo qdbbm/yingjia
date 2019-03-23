@@ -29,6 +29,14 @@
               </view>
             </view>
           </view>
+          
+          <view class="mod-filter-col flex1 ovh pl-20">
+            <view class="mod-line-list mod-line-list--center">
+              <view class="mod-line-item {{ colLeftCurrentIndex == index ? 'active' : '' }}" wx:for="{{ colLeft }}" wx:key="index" bindtap="colLeftChange" data-index="{{ index }}">
+                {{ item.txt }}
+              </view>
+            </view>
+          </view>
           <view class="mod-filter-col flex1 ovh bg-gray pl-20">
             <!-- 附近 -->
             <view class="mod-line-list mod-line-list--center" hidden="{{ colLeftCurrentIndex == 0 ? false : true }}">

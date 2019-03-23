@@ -54,17 +54,8 @@
 
       <view class="mod-form-item">
         <view class="mod-form-item__label">主营地区1：</view>
-        <view class="mod-form-item__field tar">
-          <picker
-            mode="region"
-            bindchange="bindRegionChange"
-            value="{{region}}"
-            custom-item="{{customItem}}"
-          >
-            <view class="picker">
-              {{region[0]}}-{{region[1]}}-{{region[2]}}
-            </view>
-          </picker>
+        <view class="mod-form-item__field tar" bindtap="openArea">
+          {{ region }}
         </view>
         <van-icon custom-class="ml-15" name="arrow" color="#bebebe" />
       </view>
@@ -72,17 +63,8 @@
 
       <view class="mod-form-item mod-form-item--no-bd">
         <view class="mod-form-item__label">主营地区2：</view>
-        <view class="mod-form-item__field tar">
-          <picker
-            mode="region"
-            bindchange="bindRegionChange2"
-            value="{{region2}}"
-            custom-item="{{customItem}}"
-          >
-            <view class="picker">
-              {{region2[0]}}-{{region2[1]}}-{{region2[2]}}
-            </view>
-          </picker>
+        <view class="mod-form-item__field tar" bindtap="openArea2">
+          {{ region2 }}
         </view>
         <van-icon custom-class="ml-15" name="arrow" color="#bebebe" />
       </view>
@@ -94,3 +76,29 @@
     <van-button round block type="primary" custom-class="btn-primary">提交信息</van-button>
   </view>
 </view>
+
+<!-- 主营地区1弹窗 -->
+<van-popup
+  show="{{ showArea }}"
+  position="bottom"
+  bind:close="onClose"
+>
+  <van-area
+    area-list="{{ areaList }}" 
+    bind:confirm="onConfirm"
+    bind:cancel="onClose"
+  />
+</van-popup>
+
+<!-- 主营地区2弹窗 -->
+<van-popup
+  show="{{ showArea2 }}"
+  position="bottom"
+  bind:close="onClose2"
+>
+  <van-area
+    area-list="{{ areaList }}" 
+    bind:confirm="onConfirm2"
+    bind:cancel="onClose2"
+  />
+</van-popup>

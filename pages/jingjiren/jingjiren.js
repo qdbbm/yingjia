@@ -1,4 +1,27 @@
 // pages/jingjiren/jingjiren.js
+
+const citys = {
+  '珠海市': {
+    '香洲区': [
+      '唐家湾镇',
+      '新香洲',
+      '吉大'
+    ],
+    '金湾区': [
+      '乡镇1',
+      '乡镇2',
+      '乡镇3'
+    ]
+  },
+  '中山市': {
+    '东区': [
+      '黄圃镇',
+      '南头镇',
+      '东凤镇'
+    ]
+  }
+};
+
 Page({
 
   /**
@@ -6,17 +29,104 @@ Page({
    */
   data: {
     pictures: [],
-    dcgsIndex: 0,
-    dcgsArray: ['地产公司1', '地产公司2'],
     zwIndex: 0,
     zwArray: ['职位1', '职位2'],
-    zydqIndex1: 0,
-    zydqArray1: ['地区1', '地区2'],
-    zydqIndex2: 0,
-    zydqArray2: ['地区1', '地区2'],
-    region: ['广东省', '广州市', '海珠区'],
-    customItem: '全部',
-    region2: ['广东省', '广州市', '海珠区']
+    region: '点击选择地区',
+    region2: '点击选择地区',
+    columns: [
+      {
+        values: Object.keys(citys),
+        className: 'column1'
+      },
+      {
+        values: Object.keys(citys['珠海市']),
+        className: 'column2',
+        defaultIndex: 2
+      },
+      {
+        values: citys['珠海市']['香洲区'],
+        className: 'column3',
+        defaultIndex: 3
+      }
+    ],
+    showArea: false,
+    showArea2: false,
+    areaList: {
+      province_list: {
+        110000: '珠海市',
+        120000: '中山市'
+      },
+      city_list: {
+        110100: '香洲区',
+        110201: '金湾区',
+        120100: '东区',
+        120201: '西区'
+      },
+      county_list: {
+        110101: '唐家湾镇',
+        110102: '新香洲',
+        110201: '三灶',
+        110202: '红旗',
+        120101: '黄圃镇',
+        120102: '南头镇',
+        120103: '东凤镇',
+        120201: '阜沙镇',
+        120202: '小榄镇',
+        120203: '东升镇'
+        // ....
+      }
+    }
+  },
+
+  onChange(event) {
+    const { picker, value, index } = event.detail;
+    console.log(event.detail);
+    //console.log(citys[value[0]]);
+
+    // console.log(Object.keys(citys[value[0]]));
+    // console.log(citys[value[index]][Object.keys(citys[value[0]])]);
+    //picker.setColumnValues(1, Object.keys(citys[value[0]]));
+    //picker.setColumnValues(2, citys[value[0]][Object.keys(citys[value[0]])]);
+  },
+
+  openArea: function () {
+    this.setData({
+      showArea: true
+    })
+  },
+
+  openArea2: function () {
+    this.setData({
+      showArea2: true
+    })
+  },
+
+  onClose: function () {
+    this.setData({
+      showArea: false
+    })
+  },
+
+  onClose2: function () {
+    this.setData({
+      showArea2: false
+    })
+  },
+
+  onConfirm(event) {
+    const { index, values } = event.detail;
+    this.onClose();
+    this.setData({
+      region: `${values[0].name} - ${values[1].name} - ${values[2].name}`
+    })
+  },
+
+  onConfirm2(event) {
+    const { index, values } = event.detail;
+    this.onClose2();
+    this.setData({
+      region2: `${values[0].name} - ${values[1].name} - ${values[2].name}`
+    })
   },
 
   bindPickerChange(e) {
@@ -28,20 +138,6 @@ Page({
   bindPickerChange2(e) {
     this.setData({
       zwIndex: e.detail.value
-    })
-  },
-
-  bindRegionChange(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      region: e.detail.value
-    })
-  },
-
-  bindRegionChange2(e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      region2: e.detail.value
     })
   },
 
