@@ -1,0 +1,42 @@
+.mod-table {
+  padding-top: 64rpx;
+}
+
+.mod-table-tr {
+  display: flex;
+  width: 100%;
+}
+
+.mod-table-td {
+  flex: 1;
+  overflow: hidden;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding: 0 20rpx;
+  font-size: 22rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mod-table-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #fff;
+}
+
+.mod-table-tle {
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+
+.mod-table-body .mod-table-tr:nth-of-type(2n+1) {
+  background: #ffdfdf;
+}
+
+.mod-table-body .mod-table-tr:nth-of-type(2n) {
+  background: #fff;
+}

@@ -1,4 +1,381 @@
 <!--pages/huankuan/huankuan.wxml-->
 <view class="page">
-  t
+  <view class="mod-table">
+    <view class="mod-table-head">
+      <view class="mod-table-tr">
+        <view class="mod-table-td">
+          期数
+        </view>
+        <view class="mod-table-td">
+          月供本金
+        </view>
+        <view class="mod-table-td">
+          月供利息
+        </view>
+        <view class="mod-table-td">
+          月供
+        </view>
+        <view class="mod-table-td">
+          剩余本金
+        </view>
+      </view>
+    </view>
+    <!-- end .mod-table-head -->
+
+    <view class="mod-table-content">
+      <view class="mod-table-tle">2019年</view>
+      <view class="mod-table-body">
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+            1
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1462.5元
+          </view>
+          <view class="mod-table-td">
+            2962.5元
+          </view>
+          <view class="mod-table-td">
+            53.85万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           2
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+            1
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1462.5元
+          </view>
+          <view class="mod-table-td">
+            2962.5元
+          </view>
+          <view class="mod-table-td">
+            53.85万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           2
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+            3
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1462.5元
+          </view>
+          <view class="mod-table-td">
+            2962.5元
+          </view>
+          <view class="mod-table-td">
+            53.85万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           4
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+            5
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1462.5元
+          </view>
+          <view class="mod-table-td">
+            2962.5元
+          </view>
+          <view class="mod-table-td">
+            53.85万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           6
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+      </view>
+      <!-- end .mod-table-body -->
+    </view>
+    <!-- end .mod-table-content -->
+
+    <view class="mod-table-content">
+      <view class="mod-table-tle">2020年</view>
+      <view class="mod-table-body">
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+            1
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1462.5元
+          </view>
+          <view class="mod-table-td">
+            2962.5元
+          </view>
+          <view class="mod-table-td">
+            53.85万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           2
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+            3
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1462.5元
+          </view>
+          <view class="mod-table-td">
+            2962.5元
+          </view>
+          <view class="mod-table-td">
+            53.85万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           4
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+            5
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1462.5元
+          </view>
+          <view class="mod-table-td">
+            2962.5元
+          </view>
+          <view class="mod-table-td">
+            53.85万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           6
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           7
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           8
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           9
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+
+        <view class="mod-table-tr">
+          <view class="mod-table-td">
+           10
+          </view>
+          <view class="mod-table-td">
+            1500元
+          </view>
+          <view class="mod-table-td">
+            1458.44元
+          </view>
+          <view class="mod-table-td">
+            2958.45元
+          </view>
+          <view class="mod-table-td">
+            53.7万
+          </view>
+        </view>
+        <!-- end .mod-table-tr -->
+      </view>
+      <!-- end .mod-table-body -->
+    </view>
+    <!-- end .mod-table-content -->
+  </view>
 </view>
