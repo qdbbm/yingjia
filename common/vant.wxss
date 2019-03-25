@@ -1,4 +1,3 @@
-/* button */
 .btn-primary {
   background-color: #c5172c !important;
   border-color: #c5172c !important;
@@ -30,7 +29,6 @@
   border-color: #787878 !important;
 }
 
-/* tabbar */
 .van-tabbar-item {
   position: relative !important;
 }
@@ -49,6 +47,10 @@
   border-top-left-radius: 45rpx;
   border-top-right-radius: 45rpx;
   content: "";
+}
+
+.van-tabbar--safe {
+  padding-bottom: 0 !important;
 }
 
 .custom-button {

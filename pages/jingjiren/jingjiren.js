@@ -1,27 +1,4 @@
 // pages/jingjiren/jingjiren.js
-
-const citys = {
-  '珠海市': {
-    '香洲区': [
-      '唐家湾镇',
-      '新香洲',
-      '吉大'
-    ],
-    '金湾区': [
-      '乡镇1',
-      '乡镇2',
-      '乡镇3'
-    ]
-  },
-  '中山市': {
-    '东区': [
-      '黄圃镇',
-      '南头镇',
-      '东凤镇'
-    ]
-  }
-};
-
 Page({
 
   /**
@@ -33,22 +10,6 @@ Page({
     zwArray: ['职位1', '职位2'],
     region: '点击选择地区',
     region2: '点击选择地区',
-    columns: [
-      {
-        values: Object.keys(citys),
-        className: 'column1'
-      },
-      {
-        values: Object.keys(citys['珠海市']),
-        className: 'column2',
-        defaultIndex: 2
-      },
-      {
-        values: citys['珠海市']['香洲区'],
-        className: 'column3',
-        defaultIndex: 3
-      }
-    ],
     showArea: false,
     showArea2: false,
     areaList: {
@@ -76,17 +37,6 @@ Page({
         // ....
       }
     }
-  },
-
-  onChange(event) {
-    const { picker, value, index } = event.detail;
-    console.log(event.detail);
-    //console.log(citys[value[0]]);
-
-    // console.log(Object.keys(citys[value[0]]));
-    // console.log(citys[value[index]][Object.keys(citys[value[0]])]);
-    //picker.setColumnValues(1, Object.keys(citys[value[0]]));
-    //picker.setColumnValues(2, citys[value[0]][Object.keys(citys[value[0]])]);
   },
 
   openArea: function () {

@@ -24,7 +24,8 @@
     "pages/houseDetail/houseDetail",
     "pages/oldHouseDetail/oldHouseDetail",
     "pages/column/index",
-    "pages/pie/index"
+    "pages/pie/index",
+    "pages/huankuan/huankuan"
   ],
   "window": {
     "backgroundTextStyle": "light",
