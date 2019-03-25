@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 22,
+			"current": 23,
 			"list": [
 				{
 					"id": -1,
@@ -197,6 +197,13 @@
 					"id": -1,
 					"name": "环图图表",
 					"pathName": "pages/pie/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "还款详情",
+					"pathName": "pages/huankuan/huankuan",
 					"scene": null
 				}
 			]
