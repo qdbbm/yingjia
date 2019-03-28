@@ -125,6 +125,12 @@ Page({
     showMore: false
   },
 
+  tapWl: function () {
+    wx.navigateTo({
+      url: '../../pages/weiliaoDetail/weiliaoDetail'
+    })
+  },
+
   toggleMore: function () {
     this.setData({
       showMore: !this.data.showMore

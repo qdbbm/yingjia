@@ -2,23 +2,24 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin: 0 -14px -14px 0;
+    padding-right: 10rpx;
+    margin: 0 -10px -10px 0;
 }
 
 .gallery .mod-upload-field {
   float: left;
-  width: calc(50% - 14px);
+  width: calc(50% - 10px);
   height: auto;
-  margin: 0 14px 14px 0;
-  padding-top: calc(50% - 14px);
+  margin: 0 10px 10px 0;
+  padding-top: calc(50% - 10px);
   box-sizing: border-box;
 }
 
 .gallery-item {
     float: left;
-    width: calc(50% - 14px);
-    padding-top: calc(50% - 14px);
-    margin: 0 14px 14px 0;
+    width: calc(50% - 10px);
+    padding-top: calc(50% - 10px);
+    margin: 0 10px 10px 0;
     position: relative;
     border: 1rpx solid transparent;
     box-sizing: border-box;

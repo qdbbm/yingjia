@@ -3,6 +3,8 @@
 //获取应用实例
 const app = getApp()
 
+const utils = require("../../utils/util.js")
+
 import F2 from '../../components/f2-canvas/lib/f2';
 
 let chart = null;
@@ -147,6 +149,12 @@ Page({
     },
     houseList: app.globalData.oldHouseList,
     showMore: false
+  },
+
+  tapWl: function () {
+    wx.navigateTo({
+      url: '../../pages/weiliaoDetail/weiliaoDetail'
+    })
   },
 
   toggleMore: function () {

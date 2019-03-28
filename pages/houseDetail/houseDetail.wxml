@@ -2,12 +2,8 @@
 <view class="page page--has-footer">
   <view class="detail-hd">
     <view hidden="{{ currentHdTabIndex == 0 ? false : true }}">
-      <video
-        class="houseVideo"
-        id="myVideo"
-        src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
-        enable-danmu
-      ></video>
+      <video class="houseVideo" id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+        enable-danmu></video>
     </view>
     <!-- end 视频 -->
 
@@ -17,11 +13,10 @@
     <!-- end 全景 -->
 
     <view hidden="{{ currentHdTabIndex == 2 ? false : true }}">
-      <swiper class="banner" indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff">
+      <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff">
         <block wx:for="{{bannerList}}" wx:key="index">
           <swiper-item>
-            <image src="{{item.imageUrl}}" class="banner-item"/>
+            <image src="{{item.imageUrl}}" class="banner-item" />
           </swiper-item>
         </block>
       </swiper>
@@ -29,11 +24,10 @@
     <!-- end 户型图 -->
 
     <view hidden="{{ currentHdTabIndex == 3 ? false : true }}">
-      <swiper class="banner" indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff">
+      <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" current="{{currentSwiper}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255,255,255,.4)" indicator-active-color="#fff">
         <block wx:for="{{bannerList}}" wx:key="index">
           <swiper-item>
-            <image src="{{item.imageUrl}}" class="banner-item"/>
+            <image src="{{item.imageUrl}}" class="banner-item" />
           </swiper-item>
         </block>
       </swiper>
@@ -62,18 +56,30 @@
     <!-- end 标签 -->
     <view class="flex mt-20">
       <view class="flex1">
-        <view><text class="color-gray-light">开盘</text><text class="ml-15">{{ detailInfo.date }}</text></view>
-        <view class="mt-10"><text class="color-gray-light">地址</text><text class="ml-15">{{ detailInfo.address }}</text></view>
+        <view>
+          <text class="color-gray-light">开盘</text>
+          <text class="ml-15">{{ detailInfo.date }}</text>
+        </view>
+        <view class="mt-10">
+          <text class="color-gray-light">地址</text>
+          <text class="ml-15">{{ detailInfo.address }}</text>
+        </view>
       </view>
       <view class="tar">
-        <navigator url="../../pages/baobei/baobei"><van-button round custom-class="btn-brown" hover-class="none" size="small">报备</van-button></navigator>
-        <view class="mt-10 fs-12"><text class="color-danger fs-16">{{ detailInfo.price }}</text><text class="color-danger">元</text>/㎡起</view>
+        <navigator url="../../pages/baobei/baobei">
+          <van-button round custom-class="btn-brown" hover-class="none" size="small">报备</van-button>
+        </navigator>
+        <view class="mt-10 fs-12">
+          <text class="color-danger fs-16">{{ detailInfo.price }}</text>
+          <text class="color-danger">元</text>/㎡起</view>
       </view>
     </view>
     <!-- end 开盘信息、报备 -->
 
     <view class="mt-15">
-      <view class="jiangjin">奖金<text>3000元</text></view>
+      <view class="jiangjin">奖金
+        <text>3000元</text>
+      </view>
     </view>
     <!-- end 奖金 -->
 
@@ -92,10 +98,10 @@
     <view class="mod-tab__tle bg-white">
       <view class="mod-tab__tle-item {{ current == 'jcxx' ? 'active' : '' }}" data-current="jcxx" bindtap="tabChange">基础信息</view>
       <view class="mod-tab__tle-item {{ current == 'jygz' ? 'active' : '' }}" data-current="jygz" bindtap="tabChange">结佣规则</view>
-      <view class="mod-tab__tle-item" bindtap="tapScroll">专家解读</view>  
+      <view class="mod-tab__tle-item" bindtap="tapScroll">专家解读</view>
     </view>
     <!-- end .mod-tab__tle -->
-    
+
     <view class="mod-tab__content">
       <view class="mod-tab__pane" hidden="{{ current == 'jcxx' ? false : true }}">
         <view class="plr-25 pt-40 pb-30">
@@ -131,9 +137,15 @@
               签订购房合同前切勿提前支付任何费用！要求先汇款或者不见面交易，均属诈骗！
             </view>
             <view class="mt-35 tac">
-              <van-button round plain type="primary" custom-class="btn-primary plr-40" size="small"><image class="icon-money mr-10" style="vertical-align: -4px;" src="../../images/icon-money.png"></image><text>关注报价</text></van-button>
+              <van-button round plain type="primary" custom-class="btn-primary plr-40" size="small">
+                <image class="icon-money mr-10" style="vertical-align: -4px;" src="../../images/icon-money.png"></image>
+                <text>关注报价</text>
+              </van-button>
 
-              <van-button round plain custom-class="btn-brown plr-40 ml-20" size="small"><image class="icon-notice mr-10" style="vertical-align: -4px;" src="../../images/icon-notice.png"></image><text>关注开盘</text></van-button>
+              <van-button round plain custom-class="btn-brown plr-40 ml-20" size="small">
+                <image class="icon-notice mr-10" style="vertical-align: -4px;" src="../../images/icon-notice.png"></image>
+                <text>关注开盘</text>
+              </van-button>
             </view>
           </view>
           <!-- end 房贷参考 -->
@@ -141,7 +153,8 @@
       </view>
       <!-- end 基础信息 -->
 
-      <view class="mod-tab__pane" hidden="{{ current == 'jygz' ? false : true }}">      <view class="pd-25">
+      <view class="mod-tab__pane" hidden="{{ current == 'jygz' ? false : true }}">
+        <view class="pd-25">
           结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容结佣规则内容...
         </view>
       </view>
@@ -159,11 +172,15 @@
           <image src="{{ item.imgUrl }}"></image>
         </view>
         <view class="mumi-bd">
-          <view class="mumi-bd-name">{{ item.name }}<text class="mumi-bd-tag">{{ item.tag }}</text></view>
+          <view class="mumi-bd-name">{{ item.name }}
+            <text class="mumi-bd-tag">{{ item.tag }}</text>
+          </view>
           <view class="mumi-bd-job">{{ item.job }}</view>
-          <view class="mumi-bd-txt">{{ item.txt }}<view class="mumi-bd-more">【查看更多】</view></view>
+          <view class="mumi-bd-txt">{{ item.txt }}
+            <view class="mumi-bd-more">【查看更多】</view>
+          </view>
         </view>
-      </view>  
+      </view>
     </view>
     <navigator class="tac mt-40" url="../../pages/zhuanjia/zhuanjia" hover-class="none">
       <van-button plain round size="small" custom-class="btn-default plr-35">更多>></van-button>
@@ -172,7 +189,25 @@
   <!-- end 专家解读 -->
 </view>
 
-<view class="fixed-bottom">
+<cover-view class="fixed-bottom">
+  <cover-view class="contact-action">
+    <cover-view class="mod-btn-fav flex-h-c" bindtap="tapLove">
+      <cover-image class="icon-love vam mr-15" src="../../images/icon-love.png" wx:if="{{ love ? false : true }}"></cover-image>
+      <cover-image class="icon-love-active vam mr-15" src="../../images/icon-love-active.png" wx:if="{{ love ? true : false }}"></cover-image>
+      <cover-view class="vam">收藏</cover-view>
+    </cover-view>
+
+    <cover-view class="contact-action__item" bindtap="tapWl">
+      <button class="btn contact-action__item-btn">微聊</button>
+    </cover-view>
+
+    <cover-view class="contact-action__item ml-10" bindtap="call" data-phone="{{ phoneNumber }}">
+      <button class="btn contact-action__item-btn caib--brown">电话</button>
+    </cover-view>
+  </cover-view>
+</cover-view>
+
+<!-- <view class="fixed-bottom">
   <view class="contact-action">
     <view class="contact-action__item">
       <view class="mod-btn-fav" bindtap="tapLove">
@@ -190,4 +225,4 @@
       <van-button round block custom-class="btn-brown" bindtap="call" data-phone="{{ phoneNumber }}">电话</van-button>
     </view>    
   </view>
-</view>
+</view> -->

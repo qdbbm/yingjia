@@ -294,6 +294,21 @@ page {
   text-align: center;
 }
 
+.contact-action__item-btn {
+  display: block;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #fff;
+  background: #c5172c;
+  border-radius: 40rpx;
+}
+
+.contact-action__item-btn.caib--brown {
+  background: #b4a078;
+}
+
 /* tab */
 .mod-tab__tle {
   height: 64rpx;
@@ -790,6 +805,10 @@ page {
 }
 
 /* 收藏 */
+.mod-btn-fav {
+  padding: 0 20rpx;
+}
+
 .mod-btn-fav.active {
   color: #c5172c;
 }

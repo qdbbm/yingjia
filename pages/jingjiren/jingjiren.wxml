@@ -1,7 +1,7 @@
 <!--pages/jingjiren/jingjiren.wxml-->
 <view class="page">
   <view class="plr-25 bb">
-    <view class="pt-30">
+    <view class="pt-30 ovh">
       <view>形象照片</view>
       <view class="gallery mt-25 clearfix">
         <block wx:for="{{pictures}}" wx:for-item="picturesItem" wx:for-index="picturesIndex" wx:key="pictures">
