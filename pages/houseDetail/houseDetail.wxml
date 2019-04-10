@@ -126,12 +126,24 @@
 
           <view class="mt-50">
             <view class="fs-16 fw-700">房贷参考</view>
-            <view class="pie-chart">
+            <!-- <view class="pie-chart">
               <view class="chart-total">
                 <view>月供：3847（30年）</view>
                 <view>总价：103万元</view>
               </view>
               <ff-canvas id="pie-dom" canvas-id="pie" opts="{{ opts }}"></ff-canvas>
+            </view> -->
+            <view class="mod-chart flex-h-c mt-50">
+              <image class="mod-chart-img mr-100" src="../../images/circle.png"></image>
+              <view class="mod-chart-bd">
+                <view>月供：3847（30年）</view>
+                <view>总价：103万元</view>
+                <view class="mod-chart-type mt-50 fs-12">
+                  <view class="mod-chart-type__item">首付：<text class="color-danger">30万</text>（29%）</view>
+                  <view class="mod-chart-type__item">贷款：<text class="color-danger">72万</text></view>
+                  <view class="mod-chart-type__item">利息：<text class="color-danger">67万</text></view>
+                </view>
+              </view>
             </view>
             <view class="mod-tips mt-45">
               签订购房合同前切勿提前支付任何费用！要求先汇款或者不见面交易，均属诈骗！

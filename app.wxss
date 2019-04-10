@@ -928,3 +928,34 @@ page {
   top: 70rpx;
   right: -15rpx;
 }
+
+.mod-chart-img {
+  width: 250rpx;
+  height: 250rpx;
+}
+
+.mod-chart-type__item {
+  position: relative;
+  line-height: 1.8;
+  padding: 0 0 0 34rpx;
+}
+
+.mod-chart-type__item:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background: #c5172c;
+  content: "";
+  transform: translate(0, -50%);
+}
+
+.mod-chart-type__item:nth-of-type(2)::before {
+  background: #b4a078;
+}
+
+.mod-chart-type__item:nth-of-type(3)::before {
+  background: #78b4b0;
+}

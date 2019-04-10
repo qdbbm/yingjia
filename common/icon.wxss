@@ -58,7 +58,11 @@
   height: 35rpx;
 }
 
-.icon-share,
+.icon-share {
+  width: 39rpx;
+  height: 29rpx;
+}
+
 .icon-share--white {
   width: 39rpx;
   height: 32rpx;
