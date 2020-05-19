@@ -48,5 +48,6 @@
     "van-popup": "../../components/vant/popup/index",
     "van-picker": "../../components/vant/picker/index",
     "van-area": "../../components/vant/area/index"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
